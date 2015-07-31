@@ -1,0 +1,88 @@
+﻿/*
+    DINAMICKA DEVELOPMENT
+    Documentation
+
+    1.Header
+    2.Video
+*/
+#info-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 113px;
+    height: 36px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+
+/*<========== Header ===============>*/
+body {margin:0;height:3000px;
+}
+header{
+    display:block;
+    height:155px;
+}
+.menu_area{
+    height:100%;
+}
+.navbar-default{
+    background-color:#fafafa;    
+    border-color: transparent;
+    margin-top: 0;
+    padding: 40px 0;
+}
+.past-main {
+    padding:13px 0 0;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+#Layer_1{
+    width: 220px;
+}
+.minver{    width:147px;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#top-menu li a{
+font-family: 'Droid Sans', sans-serif ;
+font-size:1.3em;
+color:#dadada;
+text-transform:uppercase;
+}
+#top-menu li a:hover{
+color:#212121;
+}
+/*<========== Video ===============>*/
+#video{
+    display:block;
+    width:100%;
+    height:655px;
+    background:#000;
+}
+video{
+        width: 100%;
+    max-height: 655px;
+}
+/*<========== Shortcut ===============>*/
+#shortcut{
+    display:block;
+    width:100%;
+    height:198px;
+    background-color:#fafafa;
+}
+.all_shorts{}
+.shortcut-holder{
+    width: 150px;
+    height: 100%;
+    display: inline-block;
+}
+.shortcut-holder div{}
+.shortcut-holder p{
+    font-family
+}
+
