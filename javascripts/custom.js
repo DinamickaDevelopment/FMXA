@@ -12,10 +12,8 @@ jQuery(function ($) {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 50) {
             $(".navbar-fixed-top").addClass('past-main');
-            $('.Layer_1').addClass('minver');
         }
         else {
-            $('.Layer_1').addClass('minver');
             $(".navbar-fixed-top").removeClass('past-main');
         }
     });
@@ -32,8 +30,10 @@ jQuery(function ($) {
         if (currentVideo.readyState == 4) { currentVideo.play(); } else { $('.slick-current video').on('canplaythrough', videoStarter); };
         $('.slick-current video').on('ended', videoChange);
     });
-    function videoStarter() { this.play(); };
-    function videoChange() { $(".Slider-with-video").slick('slickNext'); };
+    function videoStarter() { this.play();};
+    function videoChange() {
+        $(".Slider-with-video").slick('slickNext');
+    };
 
 
 });

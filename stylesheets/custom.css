@@ -2,9 +2,26 @@
     DINAMICKA DEVELOPMENT
     Documentation
 
+    #.Typography
     1.Header
     2.Video
+    3.Shorcut
+    4.Tech
+    5.StartingPoint
+    6.Arsenal
+    7.H2h
 */
+
+/*<-------------     #.Typography ------------------->*/
+h2{
+    font-family: 'Droid Serif', serif;
+    font-size: 2em;     
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+}
+p{
+    letter-spacing:0.1em;
+}
 #info-bar{
     position: fixed;
     top: 0;
@@ -15,7 +32,7 @@
     z-index: 2000;
 }
 
-/*<========== Header ===============>*/
+/*<========== 1.Header ===============>*/
 body {margin:0;height:3000px;
 }
 header{
@@ -25,39 +42,43 @@ header{
 .menu_area{
     height:100%;
 }
-.navbar-default{
+.navbar-default{ 
     background-color:#fafafa;    
     border-color: transparent;
     margin-top: 0;
     padding: 40px 0;
 }
 .past-main {
-    padding:13px 0 0;
+    padding: 11px 0 8px;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
-#Layer_1{
+#Layer_1 {
     width: 220px;
+    -moz-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
 }
-.minver{    width:147px;
-}
+.past-main svg#Layer_1{width:147px; margin:1px 0 0 0}
 ul{
   padding: 0;
   margin: 0;
   list-style: none;
 }
 #top-menu li a{
-font-family: 'Droid Sans', sans-serif ;
-font-size:1.3em;
+font-family: 'Droid Serif', serif ;
+font-size:1.063em;
 color:#dadada;
 text-transform:uppercase;
+letter-spacing:0.007em;
 }
 #top-menu li a:hover{
-color:#212121;
+color:#202020;
 }
-/*<========== Video ===============>*/
+/*<========== 2.Video ===============>*/
 #video{
     display:block;
     width:100%;
@@ -68,21 +89,244 @@ video{
         width: 100%;
     max-height: 655px;
 }
-/*<========== Shortcut ===============>*/
+.slick-slide{position:relative;}
+
+.video-info {
+    position: absolute;
+    top: calc(50% - 7em);
+    left: calc(50% - 28em);
+    z-index: 10000;
+}
+.bordered-text{
+    font-family: 'Droid Serif',serif;
+    font-size: 2em;
+    color: #fafafa;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    width: 11em;
+    height: 2em;
+    margin:0 auto 2em;
+}
+.huge-text{
+    text-transform:uppercase;
+    font-family: 'Droid Serif',serif;
+    font-size: 3.25em;
+    color: #fafafa;
+    letter-spacing: 0.2em;
+}
+/*<========== 3.Shortcut ===============>*/
 #shortcut{
     display:block;
     width:100%;
     height:198px;
     background-color:#fafafa;
 }
-.all_shorts{}
+.all_shorts{    
+    width: 50%;
+    margin: 0 auto;
+}
 .shortcut-holder{
     width: 150px;
     height: 100%;
+    margin: 44px 0;
     display: inline-block;
 }
-.shortcut-holder div{}
-.shortcut-holder p{
-    font-family
+.shortcut-svg{
+    display: table;
+    margin: 44px auto 22px;
+
+    /*display: block;
+    margin: 44px 0 22px;
+    height: 64px;
+    text-align: center;
+    line-height: 64px; posible*/
+}
+.shortcut-svg svg{
+    height:4em;
+}
+.shortcut-p{
+    font-family: 'Droid Serif', serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 44px;
+}
+/*<========== 4.Tech ===============>*/
+#Tech{
+    display:block;
+    width:100%;
+    height:890px;
+    background:#262626;
+}
+#Tech h2{
+    margin: 75px 0 27px;
+    color:#fafafa;
+}
+#Tech h2+p{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 1.25em;
+    margin: 27px 0 29px;
+    color:#fafafa;
+    width: 55%;
+}
+.tech-img-container img{
+    width:100%;
+    max-height:679px;
+}
+/*<========== 5.StartingPoint ===============>*/
+#StartingPoint{
+    display:block;
+    width:100%;
+    height:485px;
+    background-color:#fafafa;
+    text-align:center;
+
+}
+#StartingPoint h2{
+    margin: 75px 0 27px;
+    color:#202020;
+    text-align:center;
+}
+#StartingPoint h2+p{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 1.5em;
+    margin: 0 0 39px;
+    color:#202020;
+    
+}
+.animation-holder{
+    width: 100%;
+    height: 144px;
+    background-color: aquamarine;
+}
+.animation-holder + p,.animation-holder ~ span {
+    font-family: 'Roboto', sans-serif;    
+    font-size: 1.5em;
+    margin:21px 0 0 ;
+    color:#202020;
+    letter-spacing:0.1em;
+}    
+/*<========== 6.Arsenal =====================>*/
+#arsenal{
+    width:100%;
+    height:1170px;
+    background-color:#262626;
+} 
+#arsenal h2{
+    margin: 75px 0 27px;
+    color:#fafafa;
+}
+#arsenal p{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 1.25em;
+    margin: 27px 0 29px;
+    color:#fafafa;
+    width: 55%;
+}
+.arsenal-img-text{
+    width: 50%;
+    float: left;
+    position:relative;
 }
 
+.arsenal-img-text span,
+.full {
+    font-family: Roboto;
+    font-size: 2em;
+    color: #fafafa;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+.img-full img,.arsenal-img-text img
+{width:100%}
+.arsenal-img-text-full{width:100%;position:relative;}
+.arsenal-img-text-full .bordered-text {
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 5.5em);
+}
+.arsenal-textUnderBorder{
+    font-size: 1.125em;
+    display: block;
+    bottom: 55px;
+    left: calc(50% - 8em);
+    font-weight: 400;
+    font-family: Roboto;
+    color: #fafafa;
+    letter-spacing: 0.1em;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+/*<========== 7.h2h ===============>*/
+#h2h{
+    width:100%;
+    height:1348px;
+    background-color:#fafafa;
+}
+#h2h h2{
+    margin: 75px 0 27px;
+    color:#262626;
+}
+#h2h h2+p{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 1.25em;
+    margin: 27px 0 29px;
+    color:#262626;
+    width: 55%;
+}
+.h2h-img-container img{
+    height:100%;
+    width:100%;
+}
+.h2h-img-container{
+    width:100%;
+    max-height:971px;
+}
+#top-text{
+    font-family: Roboto;
+    font-size: 2em;
+    width: 100%;
+    color: #fafafa;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    position: absolute;
+    text-align: center;
+    padding: 52px;
+    opacity: 0.7;
+}
+#bot-text{
+    font-family: Roboto;
+    font-size: 2em;
+    color: #fafafa;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+.h2h-img-text .bordered-text{
+    position: relative;
+    width: 16em;
+    left: calc(50% - 8em);
+}
+#smal-text{}
+/*<========== 8. ===============>*/
+#contact{
+    width:100%;
+    height:650px;
+    background-color:#fafafa;
+}
+#contact h2{
+    margin: 75px 0 27px;
+    color:#262626;
+}
