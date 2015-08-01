@@ -10,6 +10,8 @@
     5.StartingPoint
     6.Arsenal
     7.H2h
+    8.Contact
+    9.Footer
 */
 
 /*<-------------     #.Typography ------------------->*/
@@ -76,7 +78,7 @@ text-transform:uppercase;
 letter-spacing:0.007em;
 }
 #top-menu li a:hover{
-color:#202020;
+color:#202020;background-color: transparent;
 }
 /*<========== 2.Video ===============>*/
 #video{
@@ -121,7 +123,6 @@ video{
 #shortcut{
     display:block;
     width:100%;
-    height:198px;
     background-color:#fafafa;
 }
 .all_shorts{    
@@ -158,7 +159,6 @@ video{
 #Tech{
     display:block;
     width:100%;
-    height:890px;
     background:#262626;
 }
 #Tech h2{
@@ -180,10 +180,9 @@ video{
 #StartingPoint{
     display:block;
     width:100%;
-    height:485px;
     background-color:#fafafa;
     text-align:center;
-
+   padding-bottom: 75px;
 }
 #StartingPoint h2{
     margin: 75px 0 27px;
@@ -212,7 +211,6 @@ video{
 /*<========== 6.Arsenal =====================>*/
 #arsenal{
     width:100%;
-    height:1170px;
     background-color:#262626;
 } 
 #arsenal h2{
@@ -246,7 +244,7 @@ video{
 }
 .img-full img,.arsenal-img-text img
 {width:100%}
-.arsenal-img-text-full{width:100%;position:relative;}
+.arsenal-img-text-full{width:100%;position:relative;margin-bottom:75px;}
 .arsenal-img-text-full .bordered-text {
     position: absolute;
     bottom: 60px;
@@ -269,7 +267,6 @@ video{
 /*<========== 7.h2h ===============>*/
 #h2h{
     width:100%;
-    height:1348px;
     background-color:#fafafa;
 }
 #h2h h2{
@@ -283,50 +280,179 @@ video{
     color:#262626;
     width: 55%;
 }
-.h2h-img-container img{
-    height:100%;
-    width:100%;
-}
-.h2h-img-container{
-    width:100%;
-    max-height:971px;
-}
-#top-text{
-    font-family: Roboto;
-    font-size: 2em;
+.img-text{
     width: 100%;
-    color: #fafafa;
-    font-weight: 100;
-    letter-spacing: 0.1em;
-    position: absolute;
-    text-align: center;
-    padding: 52px;
-    opacity: 0.7;
+    height: auto;
+    background: url('../images/Image5.png') center 100%;
+    background-size: cover;
+    height: 971px;
 }
-#bot-text{
+.img-text div:first-child{
+    width: 100%;
+    min-height:66%;
+    padding-top: 3%;
     font-family: Roboto;
     font-size: 2em;
     color: #fafafa;
     font-weight: 100;
     letter-spacing: 0.1em;
-    position: absolute;
     text-align: center;
-    padding: 30px;
     opacity: 0.7;
 }
-.h2h-img-text .bordered-text{
-    position: relative;
-    width: 16em;
-    left: calc(50% - 8em);
+.img-text div:nth-child(2){    
+    width: 100%;
+    min-height: 11%;
+    font-family: Roboto;
+    font-size: 2em;
+    color: #fafafa;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    text-align: center;
+    opacity: 0.7;
 }
-#smal-text{}
-/*<========== 8. ===============>*/
+.img-text div:nth-child(3){   
+    width: 100%;
+    min-height: 3%;
+    font-size: 1.125em;
+    font-weight: 400;
+    font-family: Roboto;
+    color: #fafafa;
+    letter-spacing: 0.1em;
+    text-align: center;
+    opacity: 0.7;
+}
+.img-text div:nth-child(4){
+    width:16em;
+}
+/*<========== 8.Contact ===============>*/
 #contact{
     width:100%;
-    height:650px;
     background-color:#fafafa;
 }
 #contact h2{
     margin: 75px 0 27px;
     color:#262626;
+    text-align:center;
+}
+#contactForm{
+    text-align:center;
+        margin-bottom: 75px;
+}
+.form-control::-moz-placeholder {
+  color: #999;
+  font-family:Roboto;
+  font-weight:400;}
+.form-control:-ms-input-placeholder {
+  color: #999;
+  font-family:Roboto;
+  font-weight:400;}
+.form-control::-webkit-input-placeholder {
+  color: #999;
+  font-family:Roboto;
+  font-weight:400;}
+
+.Formhalf {
+    width: 49.1%;
+    float: left;
+    margin: 5px;
+
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 62px;
+    padding: 25px 19px;
+    font-size: 14px;
+    margin: 10px;
+    line-height: 1.428571;
+    color: #262626;
+    border-radius:0;
+    letter-spacing: 0.1em;
+    background-color: #fafafa;
+    background-image: none;
+    border: 1px solid #262626;
+    -webkit-transition: border-color ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+.form-control:active{
+    border-color:initial;
+    box-shadow:0;
+}
+input.submitBtn{
+    letter-spacing: 0.1em;
+    padding: 20px 64px;
+    font-size: 2em;
+    font-weight: 300;
+    font-family: Roboto;
+    background-color: #fafafa;
+    border: 1px solid #262626;
+}
+/*<========== 9.Footer ===============>*/
+footer{
+    background-color:#262626;
+    width:100%;
+
+}
+.underlogo{
+    clear: both;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25em;
+    margin: 27px 0 29px;
+    color: #fafafa;
+}
+.info:nth-child(1){
+    width:20%;
+    float:left;
+}
+.info:nth-child(2){
+    width:80%;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 31px;
+    margin: 10px 0px;
+    font-size: 1.5em;
+}
+.icon_label{
+    font-family: Roboto;
+    font-size: 1.125em;
+    letter-spacing: 0.1em;
+    height: 23px;
+    color: #fafafa;
+    margin: 12px 0;
+    float: left;
+}
+.svg-footer{
+    width:330px;
+    margin:25px 13px 0;
+}
+.social{
+    margin: 50px 0;
+}
+.social a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    line-height: 31px;
+    margin: 0 8px;
+    float: left;
+    color: #262626;
+    font-size: 1.5em;
+    text-align: center;
+}
+footer div.row:nth-child(3){
+    background-color:#fafafa;
+}
+.rights{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #262626;
 }
