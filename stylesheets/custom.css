@@ -44,6 +44,12 @@ header{
 .menu_area{
     height:100%;
 }
+
+.navbar
+{
+    margin-bottom:0px !important;
+}
+
 .navbar-default{ 
     background-color:#fafafa;    
     border-color: transparent;
@@ -57,29 +63,81 @@ header{
     -moz-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
+
+.navbar-fixed-top .navbar-collapse
+{
+    max-height:490px !important;
+    /*margin-top:40px;*/
+}
+
+    /*.past-main .navbar-fixed-top .navbar-collapse {
+    
+        margin-top:5px;
+
+    }*/
+
+
+
 #Layer_1 {
+
+    padding:0px !important;
+    height:73px;
     width: 220px;
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
-.past-main svg#Layer_1{width:147px; margin:1px 0 0 0}
+
+.col-sm-4 #Layer_1 
+{
+    width: 147px;
+    -moz-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+
+.past-main svg#Layer_1
+{
+    height:73px;
+    width:147px; 
+    margin:1px 0 0 0
+
+}
+
 ul{
+  
   padding: 0;
   margin: 0;
   list-style: none;
 }
 #top-menu li a{
+
+line-height: 3;
+height:73px;
 font-family: 'Droid Serif', serif ;
 font-size:1.063em;
-color:#dadada;
+
 text-transform:uppercase;
 letter-spacing:0.007em;
 }
 #top-menu li a:hover{
 color:#202020;background-color: transparent;
 }
+
+    #top-menu li a.gray {
+       color:#dadada;    
+    }
+
+
+    
+    #top-menu li a.black {
+
+        color:#202020;background-color: transparent;
+    }
+
 /*<========== 2.Video ===============>*/
 #Slider-with-video 
 {
@@ -110,9 +168,14 @@ video{
 .slick-slide{position:relative;}
 
 .video-info {
+    
+    text-align:center;
+
+    width:100%;
+
     position: absolute;
     top: calc(50% - 7em);
-    left: calc(50% - 28em);
+    /*left: calc(50% - 28em);*/
     z-index: 10000;
 }
 .bordered-text{
@@ -129,9 +192,11 @@ video{
     margin:0 auto 2em;
 }
 .huge-text{
+
+    display:inline-block;
+    
     text-transform:uppercase;
     font-family: 'Droid Serif',serif;
-    font-size: 3.25em;
     color: #fafafa;
     letter-spacing: 0.2em;
 }
@@ -186,14 +251,189 @@ video{
     font-size: 1.25em;
     margin: 27px 0 29px;
     color:#fafafa;
-    width: 55%;
+    /*width: 55%;*/
 }
-.tech-img-container img{
+
+.tech-img-container 
+{
+    position:relative;
+}
+
+.tech-img-container > img{
+    
     width:100%;
     max-height:679px;
 }
+
+.tech-img-container > div 
+{
+
+    position:absolute;
+    top:calc(50% - 2em);
+    left:calc(50% - 10em);
+
+    color:white;
+    
+    font:  2.286em 'Roboto' ;
+    font-weight:100;
+
+    font-style:normal;
+    
+} 
+
 /*<========== 5.StartingPoint ===============>*/
-#StartingPoint{
+
+.conteiner_for_text 
+{    
+    
+    margin: 75px auto 70px;
+    /*width:620px;*/ 
+    height:80px;
+}
+
+.different_point 
+{
+    font: 2em 'Droid Serif', serif;
+    letter-spacing:2px;
+    width:auto; 
+    height:30px; 
+     
+}
+
+.work_backwards 
+{
+    margin: 30px 0 70px 0;
+    letter-spacing:1px;
+    font: 1.5em Roboto;
+    width:auto; 
+    height:20px; 
+    
+}
+
+.container_sequence 
+{
+
+    /*display:table-row;*/
+    display:table;
+    
+    max-width:1200px;
+    height: 60px;
+     
+    
+    font-family: "Droid Serif";
+    letter-spacing:1px;
+    
+
+    margin: 0 auto;
+}
+
+.all_containers {
+    
+    vertical-align: middle;
+    display: table-cell;
+    height: 60px;
+    border: 1px solid #696969;
+
+    
+}
+
+.block-cell
+{
+    display: table-cell;
+    font-size: 1em;
+    border: none;
+
+}
+
+.block-table
+{
+    width:100%;
+    display: table;
+}
+
+
+.first_block 
+{  
+
+   width:250px;
+ }
+
+.second_block 
+{
+    /*width:21%;*/
+ 
+}
+
+.third_block 
+{
+    /*width:14%;*/ 
+}
+
+.fourth_block 
+{
+    /*width:15%;*/ 
+}
+
+.fifth_block 
+{
+    /*width:17%;*/ 
+}
+
+.sixth_block 
+{
+    /*width:24%;*/ 
+}
+
+.seventh_block 
+{
+   
+   width:345px;
+   
+}
+
+.line 
+{
+    
+    min-width:15px;
+    height:30px;
+    border: 1px solid;
+    border-color: transparent transparent #696969  transparent  
+}
+
+
+
+.text_block {
+    font: 1.5em Roboto;
+    letter-spacing: 1px;
+    margin: 80px auto 0;
+    max-width: 980px;
+
+    -moz-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    -webkit-transition: all linear 1s;
+    transition: all linear 1s;
+}
+
+
+.X_conteiner 
+{
+ width:10%;
+ height:60px;
+}
+
+.X  
+{
+    width:190px;
+
+    height:170px;
+    
+    position:absolute;
+    z-index:5;
+ 
+    background-image:url(../images/X.png);  
+}
+
+/*#StartingPoint{
     display:block;
     width:100%;
     background-color:#fafafa;
@@ -223,7 +463,7 @@ video{
     margin:21px 0 0 ;
     color:#202020;
     letter-spacing:0.1em;
-}    
+}*/    
 /*<========== 6.Arsenal =====================>*/
 #arsenal{
     width:100%;
@@ -471,4 +711,227 @@ footer div.row:nth-child(3){
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color: #262626;
+}
+
+
+
+
+
+@media (min-width: 320px) {
+    
+/*////////////////////////////////////// HEADER 320< /////////////////////////////////////////////////*/
+
+    #top-menu li a {
+        text-align: center;
+        line-height: 3;
+        height: 50px;
+    }
+
+
+
+/*////////////////////////////////////// VIDEO SECTION 320< /////////////////////////////////////////////////*/
+
+.huge-text  /*text on video */ 
+    { 
+          font-size: 2em;
+    }
+
+/*///////////////////////////////////// ICONS SECTION 320< /////////////////////////////////////////*/
+
+    .shortcut-p {
+        font-size: 1.5em;
+    }
+
+/*////////////////////////////////////// TECH SECTION 320< /////////////////////////////////////////////////*/
+
+#Tech { /*section tech*/
+        text-align: center;
+    }
+
+.tech-img-container > div {
+        font-size: 1.5em ;
+        
+        
+    } 
+
+
+/*///////////////////////////////////// StartingPoint SECTION 320< //////////////////////////////////////////////////*/
+
+    .block-cell > .block-table
+    {
+        display:none;
+        width: 50px;
+    }
+
+    .block-cell 
+    {        
+        width: 50px !important;
+    }
+
+    .text_block 
+    {
+        font: 1.0em Roboto;
+    }
+
+    .container_sequence 
+    {
+     font-size: 1.5em;
+     font-weight:normal;
+
+    }
+
+    .X {
+        top: calc(50% - 4em);
+        left: calc(50% - 7.8em);
+    } 
+
+
+}
+
+@media (min-width: 768px) {
+
+/*////////////////////////////////////// HEADER 768< ////////////////////////////////////////////////////////*/
+
+    #top-menu li a {
+        text-align: center;
+        line-height: 3.5;
+        height: 73px;
+    }
+
+    #Layer_1 {
+        height: 73px;
+        width: 147px;
+    }
+
+    .nav > li > a {
+        padding: 10px 10px !important;
+    }
+
+/*////////////////////////////////////// VIDEO SECTION 768< /////////////////////////////////////////////////*/
+
+    .huge-text /*text on video */ {
+        font-size: 3em;
+    }
+
+/*///////////////////////////////////// ICONS SECTION 768< /////////////////////////////////////////////////*/
+
+
+
+    .shortcut-p {
+        font-size: 1em;
+    }
+
+/*///////////////////////////////////// TECH SECTION 768< //////////////////////////////////////////////////*/
+
+    #Tech { /*section tech*/
+        text-align: center;
+    }
+
+
+    .tech-img-container > div {
+        font-size: 2em ;
+        
+    } 
+
+/*///////////////////////////////////// StartingPoint SECTION 768< //////////////////////////////////////////////////*/
+
+   .block-cell > .block-table
+    {
+        display:table;
+        width:100%;
+    }
+
+   .block-cell 
+    {        
+        width: 593px;
+    }
+
+   .text_block 
+    {
+        font: 1.5em Roboto;
+    }
+
+    .container_sequence 
+    {
+     font-size: 1.0em;
+     font-weight:bold;
+
+    }
+
+    .X {
+        top: calc(50% - 6em);
+        left: calc(50% - 8em);
+    } 
+
+
+}
+
+@media (min-width: 992px) {
+
+/*////////////////////////////////////// HEADER 992< //////////////////////////////////////////////////////*/
+
+    #top-menu li a {
+        text-align: center;
+        line-height: 3.5;
+        height: 73px;
+    }
+
+
+    #Layer_1 {
+        height: 73px;
+        width: 220px;
+    }
+
+/*////////////////////////////////////// VIDEO SECTION 992< /////////////////////////////////////////////////*/
+
+    .huge-text /*text on video */ {
+        font-size: 3.25em;
+    }
+
+/*///////////////////////////////////// TECH SECTION 992< //////////////////////////////////////////////////*/
+
+
+
+    #Tech { /*section tech*/
+        text-align: initial;
+    }
+
+    .tech-img-container > div {
+        font-size: 2.286em ;
+
+        
+    }
+    
+/*///////////////////////////////////// StartingPoint SECTION 992< //////////////////////////////////////////////////*/
+
+.container_sequence 
+    {
+     font-size: 1.4em;
+     font-weight:normal;
+
+    }
+    
+.X {
+        top: calc(50% - 5em);
+        left: calc(50% - 8em);
+    } 
+}
+
+@media (min-width: 1200px) {
+
+    /*///////////////////////////////////// StartingPoint SECTION 1200< //////////////////////////////////////////////////*/
+
+    
+
+
+    .container_sequence 
+    {
+     font-size: 1.714em;
+     font-weight:normal;
+    }
+
+    .X {
+        top: calc(50% - 3em);
+        left: calc(50% - 8em);
+    }
 }
