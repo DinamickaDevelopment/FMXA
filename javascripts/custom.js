@@ -27,13 +27,27 @@ jQuery(function ($) {
     });
     $('.Slider-with-video').on('afterChange', function (event, slick, currentSlide) {
         var currentVideo = $('.slick-current video')[0];
-        if (currentVideo.readyState == 4) { currentVideo.play(); } else { $('.slick-current video').on('canplaythrough', videoStarter); };
-        $('.slick-current video').on('ended', videoChange);
+
+        if (currentVideo.readyState == 4) { currentVideo.play();
+            if ($('.slick-current+.slick-slide video').attr('preload') == "none") {
+                $('.slick-current+.slick-slide video').attr('preload', "auto");
+            }
+            else {
+                $('.slick-current video').on('canplaythrough', videoStarter);
+            };
+            $('.slick-current video').on('ended', videoChange);
+        }
     });
-    function videoStarter() { this.play();};
-    function videoChange() {
-        $(".Slider-with-video").slick('slickNext');
-    };
+
+
+        function videoStarter() { this.play(); 
+            if ($('.slick-current+.slick-slide video').attr('preload') == "none") {
+                $('.slick-current+.slick-slide video').attr('preload', "auto");
+            }
+        };
+
+
+    function videoChange() {$(".Slider-with-video").slick('slickNext');};
 
 
 });
