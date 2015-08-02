@@ -3,7 +3,8 @@
     Documentation
 
     1.Top menu fixed
-    2.Video slider properties
+    2. Current page
+    3.Video slider properties
 
 */
 
@@ -17,7 +18,25 @@ jQuery(function ($) {
             $(".navbar-fixed-top").removeClass('past-main');
         }
     });
-    //======== 2.Video slider properties =================================
+
+    //======== 2. ========================================================
+
+    var links = $("#top-menu li a");
+    links.eq(0).addClass("black");
+
+    links.click(function () {
+
+        links.removeClass("black");
+        links.addClass("gray");
+
+        $(this).addClass("black");         
+
+      });
+
+    
+
+
+    //======== 3.Video slider properties =================================
     $('#video-slide1').on('canplaythrough', videoStarter);
     $('#video-slide1').on('ended', videoChange);
 
@@ -34,6 +53,8 @@ jQuery(function ($) {
     function videoChange() {
         $(".Slider-with-video").slick('slickNext');
     };
+
+    
 
 
 });
