@@ -139,15 +139,8 @@ color:#202020;background-color: transparent;
     }
 
 /*<========== 2.Video ===============>*/
-#Slider-with-video 
-{
-    /*height:655px;*/
-
-}
-
 .embed-responsive-16by9 {
-    padding-bottom:7.03%;
-    /*height:655px;*/
+    padding-bottom:5.263%;
 }
 
 
@@ -157,13 +150,6 @@ color:#202020;background-color: transparent;
     width:100%;
     height:auto;
     background:#000;
-}
-video{
-
-        /*min-height:100%;
-        min-width:100%;
-        width:auto;
-        height:auto;*/
 }
 .slick-slide{position:relative;}
 
@@ -175,7 +161,6 @@ video{
 
     position: absolute;
     top: calc(50% - 7em);
-    /*left: calc(50% - 28em);*/
     z-index: 10000;
 }
 .bordered-text{
@@ -219,12 +204,6 @@ video{
 .shortcut-svg{
     display: table;
     margin: 44px auto 22px;
-
-    /*display: block;
-    margin: 44px 0 22px;
-    height: 64px;
-    text-align: center;
-    line-height: 64px; posible*/
 }
 .shortcut-svg svg{
     height:4em;
@@ -251,7 +230,6 @@ video{
     font-size: 1.25em;
     margin: 27px 0 29px;
     color:#fafafa;
-    /*width: 55%;*/
 }
 
 .tech-img-container 
@@ -287,7 +265,6 @@ video{
 {    
     
     margin: 75px auto 70px;
-    /*width:620px;*/ 
     height:80px;
 }
 
@@ -312,7 +289,6 @@ video{
 
 .container_sequence 
 {
-
     /*display:table-row;*/
     display:table;
     
@@ -358,21 +334,9 @@ video{
    width:250px;
  }
 
-.second_block 
-{
-    /*width:21%;*/
- 
-}
-
-.third_block 
-{
-    /*width:14%;*/ 
-}
-
-.fourth_block 
-{
-    /*width:15%;*/ 
-}
+.second_block {/*width:21%;*/}
+.third_block {/*width:14%;*/ }
+.fourth_block { /*width:15%;*/}
 
 .fifth_block 
 {
@@ -483,42 +447,48 @@ video{
 .arsenal-img-text{
     width: 50%;
     float: left;
-    position:relative;
+    height:600px
 }
-
-.arsenal-img-text span,
-.full {
+.img-phone{background:url('../images/Image container copy 2.png') center 100% no-repeat;background-size:cover;}
+.img-door{background:url('../images/Image container copy 3.png') center 100% no-repeat;background-size:cover;}
+.arsenal-img-text div{
+    width:100%;   
+    height:20%; 
     font-family: Roboto;
     font-size: 2em;
     color: #fafafa;
     font-weight: 100;
     letter-spacing: 0.1em;
-    position: absolute;
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;}
+
+.arsenal-img-text-full{margin-bottom:52px; background:url('../images/Image container copy 4.png') center 100% no-repeat;background-size:cover;height:371px}
+.arsenal-img-text-full div:nth-child(1){
+    width:100%;    
+    height:65%;
+    font-family: Roboto;
+    font-size: 2em;
+    color: #fafafa;
+    font-weight: 100;
+    letter-spacing: 0.1em;
     text-align: center;
     padding: 30px;
     opacity: 0.7;
 }
-.img-full img,.arsenal-img-text img
-{width:100%}
-.arsenal-img-text-full{width:100%;position:relative;margin-bottom:75px;}
-.arsenal-img-text-full .bordered-text {
-    position: absolute;
-    bottom: 60px;
-    left: calc(50% - 5.5em);
+.arsenal-img-text-full div:nth-child(2){
+    margin: 0 auto;
 }
-.arsenal-textUnderBorder{
+.arsenal-img-text-full div:nth-child(3){
     font-size: 1.125em;
     display: block;
-    bottom: 55px;
-    left: calc(50% - 8em);
     font-weight: 400;
     font-family: Roboto;
     color: #fafafa;
     letter-spacing: 0.1em;
-    position: absolute;
     text-align: center;
-    padding: 30px;
-    opacity: 0.7;
+    opacity: 0.7;    
+
 }
 /*<========== 7.h2h ===============>*/
 #h2h{
@@ -538,7 +508,6 @@ video{
 }
 .img-text{
     width: 100%;
-    height: auto;
     background: url('../images/Image5.png') center 100%;
     background-size: cover;
     height: 971px;
@@ -608,18 +577,17 @@ video{
   font-weight:400;}
 
 .Formhalf {
-    width: 49.1%;
+    width: 50%;
     float: left;
-    margin: 5px;
-
+    padding: 0 5px;
 }
 .form-control {
     display: block;
     width: 100%;
     height: 62px;
-    padding: 25px 19px;
+    padding: 24px 19px;
     font-size: 14px;
-    margin: 10px;
+    margin: 10px 0;
     line-height: 1.428571;
     color: #262626;
     border-radius:0;
@@ -627,14 +595,15 @@ video{
     background-color: #fafafa;
     background-image: none;
     border: 1px solid #262626;
-    -webkit-transition: border-color ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s;
-    -moz-transition: border-color ease-in-out .15s;
-    transition: border-color ease-in-out .15s;
+    -webkit-transition: box-shadow ease-in-out .5s;
+    -o-transition: box-shadow ease-in-out .5s;
+    -moz-transition: box-shadow ease-in-out .5s;
+    transition: box-shadow ease-in-out .5s;
 }
-.form-control:active{
+.unresizeble{resize:none;}
+.form-control:focus{
     border-color:initial;
-    box-shadow:0;
+    box-shadow:0 0 2px 1px rgba(0,0,0,0.5);
 }
 input.submitBtn{
     letter-spacing: 0.1em;
@@ -672,7 +641,7 @@ footer{
     border-radius: 50%;
     text-align: center;
     line-height: 31px;
-    margin: 10px 0px;
+    margin: 10px 0;
     font-size: 1.5em;
 }
 .icon_label{
@@ -785,11 +754,22 @@ footer div.row:nth-child(3){
         left: calc(50% - 7.8em);
     } 
 
-
+/*///////////////////////////////////// Arsenal SECTION 320< //////////////////////////////////////////////////*/
+    #arsenal h2{text-align:center;}
+    #arsenal p{text-align:center;width:100%;}
+    .arsenal-img-text{height:300px}
+    .arsenal-img-text div,.arsenal-img-text-full div:nth-child(1) {font-size:1.5em} 
+/*///////////////////////////////////// H2H SECTION 320< //////////////////////////////////////////////////*/
+    #h2h h2{text-align:center;}
+    #h2h h2+p{text-align:center;width:100%;}
+    .img-text{height:690px}
+    .img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}
+/*///////////////////////////////////// Contact SECTION 320< //////////////////////////////////////////////////*/
+    .Formhalf{width:100%}
 }
 
 @media (min-width: 768px) {
-
+    .container{width:732px}
 /*////////////////////////////////////// HEADER 768< ////////////////////////////////////////////////////////*/
 
     #top-menu li a {
@@ -818,7 +798,7 @@ footer div.row:nth-child(3){
 
 
     .shortcut-p {
-        font-size: 1em;
+        font-size: 0.93em;
     }
 
 /*///////////////////////////////////// TECH SECTION 768< //////////////////////////////////////////////////*/
@@ -862,12 +842,24 @@ footer div.row:nth-child(3){
         top: calc(50% - 6em);
         left: calc(50% - 8em);
     } 
+/*///////////////////////////////////// Arsenal SECTION 768< //////////////////////////////////////////////////*/
+    #arsenal h2{text-align:center;}
+    #arsenal p{text-align:center;width:100%;}
+    .arsenal-img-text{height:300px}
+    .arsenal-img-text div,.arsenal-img-text-full div:nth-child(1) {font-size:1.5em} 
+/*///////////////////////////////////// H2H SECTION 768< //////////////////////////////////////////////////*/
+    #h2h h2{text-align:center;}
+    #h2h h2+p{text-align:center;width:100%;}
+    .img-text{height:690px}
+    .img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}
+/*///////////////////////////////////// Contact SECTION 768< //////////////////////////////////////////////////*/
+    .Formhalf{width:50%}
 
 
 }
 
 @media (min-width: 992px) {
-
+        .container{width:970px}
 /*////////////////////////////////////// HEADER 992< //////////////////////////////////////////////////////*/
 
     #top-menu li a {
@@ -915,10 +907,21 @@ footer div.row:nth-child(3){
         top: calc(50% - 5em);
         left: calc(50% - 8em);
     } 
+/*///////////////////////////////////// Arsenal SECTION 992< //////////////////////////////////////////////////*/
+    #arsenal h2{text-align:initial;}
+    #arsenal p{text-align:initial;width:55%;}
+    .arsenal-img-text{height:600px}
+    .arsenal-img-text div,.arsenal-img-text-full div:nth-child(1) {font-size:2em} 
+/*///////////////////////////////////// H2H SECTION 768< //////////////////////////////////////////////////*/
+    #h2h h2{text-align:initial;}
+    #h2h h2+p{text-align:initial;width:55%;}
+    .img-text{height:971px}
+    .img-text div:first-child,.img-text div:nth-child(2){font-size:2em}
+
 }
 
 @media (min-width: 1200px) {
-
+        .container{width:1170px}
     /*///////////////////////////////////// StartingPoint SECTION 1200< //////////////////////////////////////////////////*/
 
     
