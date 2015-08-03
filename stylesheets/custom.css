@@ -15,6 +15,10 @@
 */
 
 /*<-------------     #.Typography ------------------->*/
+html, body 
+{overflow:visible !important;}
+body {margin:0}
+
 h2{
     font-family: 'Droid Serif', serif;
     font-size: 2em;     
@@ -35,8 +39,7 @@ p{
 }
 
 /*<========== 1.Header ===============>*/
-body {margin:0;height:3000px;
-}
+
 header{
     display:block;
     height:155px;
