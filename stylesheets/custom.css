@@ -15,6 +15,12 @@
 */
 
 /*<-------------     #.Typography ------------------->*/
+
+html, body 
+{
+   overflow:visible !important;
+} 
+
 h2{
     font-family: 'Droid Serif', serif;
     font-size: 2em;     
@@ -687,7 +693,8 @@ footer div.row:nth-child(3){
 
 
 @media (min-width: 320px) {
-    body{overflow-y:scroll;}
+    body
+    /*{overflow:visible !important;}*/
 /*////////////////////////////////////// HEADER 320< /////////////////////////////////////////////////*/
 
     #top-menu li a {

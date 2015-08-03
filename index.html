@@ -4,7 +4,7 @@
     <title>FMXA</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!-- CSS Files -------------->
     <!-- Bootstrap-------->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -56,18 +56,18 @@
                         </div>
 
                         <div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
-                                <ul id="top-menu" class="nav navbar-nav navbar-right ">
-                                    <li><a href="#header">Home</a></li>
-                                    <li><a href="#Services">Services</a></li>
-                                    <li><a href="#Our-lients">Our clients</a></li>
-                                    <li><a href="#Our-tech ">Our tech</a></li>
-                                    <li><a href="#insight">insight</a></li>
-                                    <li><a href="#about">about</a></li>
-                                </ul>
-                            </div>
-
+                            <ul id="top-menu" class="nav navbar-nav navbar-right ">
+                                <li><a href="#header">Home</a></li>
+                                <li><a href="#Services">Services</a></li>
+                                <li><a href="#Our-lients">Our clients</a></li>
+                                <li><a href="#Our-tech ">Our tech</a></li>
+                                <li><a href="#insight">insight</a></li>
+                                <li><a href="#about">about</a></li>
+                            </ul>
                         </div>
+
                     </div>
+                </div>
             </nav>
         </div>
         <!-- END MENU -->
@@ -96,7 +96,7 @@
                     <div class="bordered-text">Revenue Led</div>
                     <div class="huge-text">technology marketing</div>
                 </div>
-                <video  preload="none" muted class="embed-responsive-item">
+                <video preload="none" muted class="embed-responsive-item">
                     <source src="videos/Comp.mp4" type="video/mp4" />
                     <source src="videos/Comp.ogv" type="video/ogg" />
                     <source src="videos/Comp.webm" type="video/webm" />
@@ -458,8 +458,8 @@
                         <div>
                             It’s because we know the tech industry, its language <br />
                             and its customers better than anyone else
-                </div>
-            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -522,7 +522,7 @@
                             You tell us how much revenue you need to generate and we work backwards <br />
                             from that figure to create an achievable plan to make that happen
                         </p>
-                        <p data-1-center-center="opacity:0;" data--100-center-center="opacity:1;">
+                        <p data-1-center-center="opacity:0;" data-center-center="opacity:1;">
                             And we deliver on that plan, every single time.
                         </p>
                     </div>
@@ -536,7 +536,7 @@
 
     </section>
 
-    
+
     <section id="arsenal">
         <div class="container">
             <div class="row">
@@ -585,21 +585,21 @@
                 <div class="col-lg-12"><h2>contact us</h2></div>
             </div>
             <div class="row">
-                    <div class="col-lg-12">
-                        <form id="contactForm">
-                            <div class="Formhalf">
-                                <input class="form-control" type="text" tabindex="1" placeholder="Job Title" name="jTitle">
-                                <input class="form-control" type="text" tabindex="2" placeholder="Company" name="company">
-                                <input class="form-control" type="text" tabindex="3" placeholder="Phone Number" name="Phone">
-                                <input class="form-control" type="text" tabindex="4" placeholder="E-mail" name="Email">
-                            </div>
-                            <div class="Formhalf">
-                                <textarea class="form-control unresizeble" rows="12" tabindex="5" placeholder="Your message" name="massege"></textarea>
-                            </div>
-                            <input type="submit" class="submitBtn" tabindex="6" value="SUBMIT" />
-                        </form>
-                    </div>
+                <div class="col-lg-12">
+                    <form id="contactForm">
+                        <div class="Formhalf">
+                            <input class="form-control" type="text" tabindex="1" placeholder="Job Title" name="jTitle">
+                            <input class="form-control" type="text" tabindex="2" placeholder="Company" name="company">
+                            <input class="form-control" type="text" tabindex="3" placeholder="Phone Number" name="Phone">
+                            <input class="form-control" type="text" tabindex="4" placeholder="E-mail" name="Email">
+                        </div>
+                        <div class="Formhalf">
+                            <textarea class="form-control unresizeble" rows="12" tabindex="5" placeholder="Your message" name="massege"></textarea>
+                        </div>
+                        <input type="submit" class="submitBtn" tabindex="6" value="SUBMIT" />
+                    </form>
                 </div>
+            </div>
         </div>
     </section>
     <footer>
@@ -673,12 +673,14 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="javascripts/custom.js"></script>
-    <script type="text/javascript" src="javascripts/slick.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="javascripts/custom.js"></script>
+    <script type="text/javascript" src="javascripts/slick.min.js"></script>
     <script src="javascripts/skrollr.min.js"></script>
+
+    <script src="javascripts/custom.js"></script>
+
 
 
 
@@ -686,7 +688,10 @@
     <script>
         $(document).ready(function () {
 
+
             skrollr.init({
+                //skrollrBody: 'skrollr-body'
+
                 forceHeight: false
             });
 
