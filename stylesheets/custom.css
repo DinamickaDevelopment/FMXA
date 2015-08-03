@@ -687,7 +687,7 @@ footer div.row:nth-child(3){
 
 
 @media (min-width: 320px) {
-    
+    body{overflow-y:scroll;}
 /*////////////////////////////////////// HEADER 320< /////////////////////////////////////////////////*/
 
     #top-menu li a {
