@@ -4,7 +4,7 @@
     <title>FMXA</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!-- CSS Files -------------->
     <!-- Bootstrap-------->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -81,7 +81,7 @@
                     <div class="huge-text">technology marketing</div>
                 </div>
 
-                <video id="video-slide1" preload="auto" loop muted class="embed-responsive-item">
+                <video id="video-slide1" preload="auto" muted class="embed-responsive-item">
                     <source src="videos/slide1/integrated.mp4" type="video/mp4" />
                     <source src="videos/slide1/integrated.ogv" type="video/ogg" />
                     <source src="videos/slide1/integrated.webm" type="video/webm" />
@@ -522,7 +522,7 @@
                             You tell us how much revenue you need to generate and we work backwards <br />
                             from that figure to create an achievable plan to make that happen
                         </p>
-                        <p data-1-center-center="opacity:0;" data--100-center-center="opacity:1;">
+                        <p data-1-center-center="opacity:0;" data-center-center="opacity:1;">
                             And we deliver on that plan, every single time.
                         </p>
                     </div>
@@ -673,12 +673,14 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="javascripts/custom.js"></script>
-    <script type="text/javascript" src="javascripts/slick.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="javascripts/custom.js"></script>
+    <script type="text/javascript" src="javascripts/slick.min.js"></script>
     <script src="javascripts/skrollr.min.js"></script>
+
+    <script src="javascripts/custom.js"></script>
+
 
 
 
@@ -686,7 +688,10 @@
     <script>
         $(document).ready(function () {
 
+
             skrollr.init({
+                //skrollrBody: 'skrollr-body'
+
                 forceHeight: false
             });
 
