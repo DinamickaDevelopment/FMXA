@@ -102,7 +102,13 @@ header{
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
-
+.top-soc{
+    margin:7%!important;
+}
+.top-soc a{
+    background-color:#262626!important;
+    color:#fafafa!important;
+}
 
 .past-main svg#Layer_1
 {
@@ -144,19 +150,7 @@ color:#202020;background-color: transparent;
     }
 
 /*<========== 2.Video ===============>*/
-.embed-responsive-16by9 {
-    padding-bottom:5.263%;
-}
 
-
-#video{
-
-    display:block;
-    width:100%;
-    height:auto;
-    background:#000;
-}
-.slick-slide{position:relative;}
 
 .video-info {
     
@@ -190,7 +184,46 @@ color:#202020;background-color: transparent;
     color: #fafafa;
     letter-spacing: 0.2em;
 }
-/*<========== 3.Shortcut ===============>*/
+
+.absolute-pos-shortcut{    
+    position: absolute;
+    left: calc(50% - 585px);
+    bottom: 0;
+}
+.absolute-pos-shortcut~svg path{
+    fill:#fafafa;
+    opacity:0.7;
+}
+.shortcut-svg{
+    display: table;
+    margin: 44px auto 22px;
+}
+.shortcut-svg svg{
+    height:4em;
+                -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+}
+    .shortcut-svg svg path, .shortcut-svg svg rect {
+        fill: #fafafa;
+        opacity: 0.5;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+.active-svg {
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+.active-svg path,.active-svg rect{
+    opacity:1;
+}
+/*<========== 3.Shortcut === disable for a time ============>*/
 #shortcut{
     display:block;
     width:100%;
@@ -206,13 +239,7 @@ color:#202020;background-color: transparent;
     margin: 44px 0;
     display: inline-block;
 }
-.shortcut-svg{
-    display: table;
-    margin: 44px auto 22px;
-}
-.shortcut-svg svg{
-    height:4em;
-}
+
 .shortcut-p{
     font-family: 'Droid Serif', serif;
     font-size: 1.5em;

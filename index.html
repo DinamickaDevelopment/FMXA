@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/slick.css" />
     <!-- Font awesome css------->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="stylesheets/masterslider.css" rel="stylesheet" />
+    <link href="stylesheets/skins/default/style.css" rel="stylesheet" />
+
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
@@ -22,140 +25,213 @@
     
 
 </head>
-<body id="skrollr-body">
+<body>
     <header id="header">
         <!-- BEGIN MENU -->
         <div class="menu_area">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-default navbar-fixed-top" id="heightJs" role="navigation">
                 <div class="container">
                     <div class="row">
-                        <div class="navbar-header">
-
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-
-
-                            <svg class="navbar-brand" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 37.3" enable-background="new 0 0 120 37.3" xml:space="preserve">
-                            <g><path fill="#262626" d="M11,16.9V23c0,0.7,0,1.3,0.1,1.8c0.1,0.5,0.2,0.9,0.4,1.3c0.2,0.3,0.5,0.6,0.9,0.8c0.4,0.2,0.9,0.3,1.6,0.4v0.4c-0.7,0-1.4,0-2,0c-0.6,0-1.3,0-2,0c-0.7,0-1.4,0-2,0c-0.6,0-1.2,0-1.9,0v-0.4c0.6-0.1,1.1-0.2,1.5-0.4c0.4-0.2,0.6-0.5,0.8-0.8c0.2-0.3,0.3-0.8,0.4-1.3c0.1-0.5,0.1-1.1,0.1-1.8V7.3c0-0.7,0-1.3-0.1-1.8C8.7,5,8.5,4.6,8.4,4.3C8.2,4,7.9,3.7,7.5,3.5C7.1,3.3,6.6,3.2,6,3.1V2.7c1.1,0,2.2,0,3.3,0c1.1,0,2.2,0,3.2,0c1.1,0,7.7,0,8.6,0c0.9,0,1.6,0,2.3,0c0.6,0,1.2,0,1.7-0.1c0.5,0,0.9-0.1,1.2-0.1C26.1,3.2,26,4,26,4.8c0,0.4,0,0.7,0,1.1c0,0.4,0,0.7,0.1,1.1l-0.3,0c-0.2-0.4-0.4-0.9-0.6-1.3c-0.2-0.4-0.5-0.7-0.8-1c-0.3-0.3-0.8-0.5-1.3-0.7c-0.6-0.2-1.3-0.3-2.2-0.3c-1,0-7.3,0-7.9,0.1c-0.6,0-1,0.2-1.3,0.4c-0.3,0.2-0.5,0.5-0.6,1C11,5.7,11,6.2,11,7v8.5h3c0.7,0,4.4,0,4.9,0c0.5,0,1-0.1,1.3-0.2c0.3-0.1,0.6-0.3,0.8-0.5c0.2-0.2,0.3-0.6,0.3-1h0.4c0,0.7,0,1.2,0,1.6c0,0.3,0,0.7,0,0.9c0,0.2,0,0.3,0,0.4c0,0.1,0,0.3,0,0.5c0,0.2,0,0.4,0,0.6c0,0.2,0,0.5,0,0.9h-0.4c-0.1-0.4-0.2-0.7-0.4-0.9c-0.2-0.2-0.5-0.4-0.8-0.5c-0.3-0.1-0.8-0.2-1.3-0.2c-0.5,0-4.2,0-4.9,0H11z" />
-                            <path fill="#262626" d="M74,12c-1.3-2.1-3.8-6.5-4-6.8c-0.2-0.3-0.2-0.7-0.2-0.9c0-0.8,0.8-1.2,2.3-1.4V2.4c-0.4,0-0.8,0-1.1,0c-0.3,0-0.7,0-1,0c-0.3,0,0.2,0-0.1,0c-0.3,0-2.4,0-2.8,0c-0.8,0-1.6,0-2.3,0c-0.7,0-1.5,0-2.3,0v0.5C63,3,63.6,3.1,64.1,3.2c0.5,0.1,1,0.4,1.5,0.8c0.5,0.3,1,0.8,1.6,1.4c0.6,0.9,3.9,6.4,5.3,8.7L74,12z" />
-                            <path fill="#262626" d="M100.7,33.4c-12.2,5.9-23.9-17.1-24.9-18.8l4.7-6.6c0.8-1.1,1.4-1.9,2-2.6c0.6-0.6,1.1-1.1,1.6-1.5c0.5-0.4,1-0.6,1.5-0.8c0.5-0.1,1.1-0.3,1.7-0.3V2.4c-0.8,0-1.6,0-2.3,0c-0.7,0-1.5,0-2.3,0c-0.4,0-0.8,0-1.1,0c-0.3,0-0.7,0-1,0c-0.3,0-0.6,0-1,0c-0.3,0-0.7,0-1.1,0v0.5c1.5,0.2,2.3,0.7,2.3,1.4c0,0.4-0.2,0.8-0.5,1.4c-0.3,0.6-0.8,1.2-1.4,2L68.4,22.3c-0.8,1-1.4,1.9-1.9,2.5c-0.5,0.6-1,1.1-1.5,1.4c-0.5,0.3-1,0.6-1.5,0.7c-0.5,0.1-1.1,0.2-1.8,0.3v0.5c0.8,0,1.6,0,2.3,0c0.7,0,1.5,0,2.3,0c0.4,0,0.8,0,1.1,0c0.3,0,0.6,0,1,0c0.3,0,0.6,0,1,0c0.3,0,0.7,0,1.1,0v-0.5c-0.8-0.1-1.4-0.2-1.8-0.3c-0.4-0.1-0.6-0.4-0.6-0.9c0-0.2,0.1-0.5,0.2-0.8c0.1-0.3,0.3-0.6,0.5-0.9c0.2-0.3,0.4-0.7,0.7-1c0.3-0.3,0.5-0.7,0.7-1l3.9-5.5C75.7,19.2,87.4,41,100.9,34L100.7,33.4z" />
-                            <g>
-                            <path fill="#262626" d="M116,27.6c-0.5,0-0.9,0-1.2,0c-0.3,0-0.7,0-1,0c-0.3,0-0.7,0-1,0c-0.4,0-0.8,0-1.3,0c-0.5,0-0.9,0-1.2,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.2,0V27c0.6,0,1-0.1,1.3-0.1c0.3-0.1,0.6-0.2,0.7-0.3c0.2-0.1,0.3-0.2,0.3-0.4c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0-0.3-0.1-0.5c-0.1-0.2-0.2-0.6-0.4-1.1c-0.2-0.5-0.5-1.2-0.8-2.2c-0.4-0.9-0.9-2.2-1.5-3.8H98c-0.9,2.1-1.6,3.8-2,4.9c-0.4,1.1-0.6,1.9-0.6,2.5c0,0.3,0,0.5,0.1,0.7c0.1,0.2,0.3,0.4,0.5,0.5c0.2,0.1,0.6,0.2,1,0.3c0.4,0.1,0.9,0.1,1.5,0.1v0.6c-0.5,0-0.9,0-1.3,0c-0.3,0-0.7,0-1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.2,0c-0.4,0-0.8,0-1.2,0c-0.4,0-0.7,0-1,0c-0.3,0-0.7,0-1,0c-0.3,0-0.7,0-1.1,0V27c0.9-0.1,1.5-0.3,1.9-0.5c0.4-0.2,0.7-0.5,0.9-0.9c0.1-0.2,0.4-0.7,0.8-1.5c0.4-0.8,0.8-1.8,1.4-3c0.5-1.2,1.2-2.6,1.8-4.1c0.7-1.5,1.4-3.1,2.1-4.8c0.7-1.7,1.5-3.4,2.3-5.1c0.8-1.7,1.5-3.2,2.3-4.8l0.4,0c0.7,2,1.3,3.6,1.9,5.4c0.6,1.8,1.3,3.5,1.9,5.1c0.6,1.6,1.3,3.3,2,4.9c0.7,1.6,1.3,3.3,2,5c0.3,0.7,0.5,1.3,0.8,1.9c0.2,0.5,0.5,1,0.8,1.3c0.3,0.3,0.7,0.6,1.1,0.8c0.4,0.2,0.9,0.3,1.6,0.3V27.6z M98.6,16.5h7.9c-0.5-1.2-1-2.6-1.6-4.2c-0.6-1.6-1.3-3.4-2.1-5.5L98.6,16.5z" />
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <div class="navbar-header">
+                                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button> Mune adaptive btn-->
+                                <svg class="navbar-brand" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 37.3" enable-background="new 0 0 120 37.3" xml:space="preserve">
+                                <g><path fill="#262626" d="M11,16.9V23c0,0.7,0,1.3,0.1,1.8c0.1,0.5,0.2,0.9,0.4,1.3c0.2,0.3,0.5,0.6,0.9,0.8c0.4,0.2,0.9,0.3,1.6,0.4v0.4c-0.7,0-1.4,0-2,0c-0.6,0-1.3,0-2,0c-0.7,0-1.4,0-2,0c-0.6,0-1.2,0-1.9,0v-0.4c0.6-0.1,1.1-0.2,1.5-0.4c0.4-0.2,0.6-0.5,0.8-0.8c0.2-0.3,0.3-0.8,0.4-1.3c0.1-0.5,0.1-1.1,0.1-1.8V7.3c0-0.7,0-1.3-0.1-1.8C8.7,5,8.5,4.6,8.4,4.3C8.2,4,7.9,3.7,7.5,3.5C7.1,3.3,6.6,3.2,6,3.1V2.7c1.1,0,2.2,0,3.3,0c1.1,0,2.2,0,3.2,0c1.1,0,7.7,0,8.6,0c0.9,0,1.6,0,2.3,0c0.6,0,1.2,0,1.7-0.1c0.5,0,0.9-0.1,1.2-0.1C26.1,3.2,26,4,26,4.8c0,0.4,0,0.7,0,1.1c0,0.4,0,0.7,0.1,1.1l-0.3,0c-0.2-0.4-0.4-0.9-0.6-1.3c-0.2-0.4-0.5-0.7-0.8-1c-0.3-0.3-0.8-0.5-1.3-0.7c-0.6-0.2-1.3-0.3-2.2-0.3c-1,0-7.3,0-7.9,0.1c-0.6,0-1,0.2-1.3,0.4c-0.3,0.2-0.5,0.5-0.6,1C11,5.7,11,6.2,11,7v8.5h3c0.7,0,4.4,0,4.9,0c0.5,0,1-0.1,1.3-0.2c0.3-0.1,0.6-0.3,0.8-0.5c0.2-0.2,0.3-0.6,0.3-1h0.4c0,0.7,0,1.2,0,1.6c0,0.3,0,0.7,0,0.9c0,0.2,0,0.3,0,0.4c0,0.1,0,0.3,0,0.5c0,0.2,0,0.4,0,0.6c0,0.2,0,0.5,0,0.9h-0.4c-0.1-0.4-0.2-0.7-0.4-0.9c-0.2-0.2-0.5-0.4-0.8-0.5c-0.3-0.1-0.8-0.2-1.3-0.2c-0.5,0-4.2,0-4.9,0H11z" />
+                                <path fill="#262626" d="M74,12c-1.3-2.1-3.8-6.5-4-6.8c-0.2-0.3-0.2-0.7-0.2-0.9c0-0.8,0.8-1.2,2.3-1.4V2.4c-0.4,0-0.8,0-1.1,0c-0.3,0-0.7,0-1,0c-0.3,0,0.2,0-0.1,0c-0.3,0-2.4,0-2.8,0c-0.8,0-1.6,0-2.3,0c-0.7,0-1.5,0-2.3,0v0.5C63,3,63.6,3.1,64.1,3.2c0.5,0.1,1,0.4,1.5,0.8c0.5,0.3,1,0.8,1.6,1.4c0.6,0.9,3.9,6.4,5.3,8.7L74,12z" />
+                                <path fill="#262626" d="M100.7,33.4c-12.2,5.9-23.9-17.1-24.9-18.8l4.7-6.6c0.8-1.1,1.4-1.9,2-2.6c0.6-0.6,1.1-1.1,1.6-1.5c0.5-0.4,1-0.6,1.5-0.8c0.5-0.1,1.1-0.3,1.7-0.3V2.4c-0.8,0-1.6,0-2.3,0c-0.7,0-1.5,0-2.3,0c-0.4,0-0.8,0-1.1,0c-0.3,0-0.7,0-1,0c-0.3,0-0.6,0-1,0c-0.3,0-0.7,0-1.1,0v0.5c1.5,0.2,2.3,0.7,2.3,1.4c0,0.4-0.2,0.8-0.5,1.4c-0.3,0.6-0.8,1.2-1.4,2L68.4,22.3c-0.8,1-1.4,1.9-1.9,2.5c-0.5,0.6-1,1.1-1.5,1.4c-0.5,0.3-1,0.6-1.5,0.7c-0.5,0.1-1.1,0.2-1.8,0.3v0.5c0.8,0,1.6,0,2.3,0c0.7,0,1.5,0,2.3,0c0.4,0,0.8,0,1.1,0c0.3,0,0.6,0,1,0c0.3,0,0.6,0,1,0c0.3,0,0.7,0,1.1,0v-0.5c-0.8-0.1-1.4-0.2-1.8-0.3c-0.4-0.1-0.6-0.4-0.6-0.9c0-0.2,0.1-0.5,0.2-0.8c0.1-0.3,0.3-0.6,0.5-0.9c0.2-0.3,0.4-0.7,0.7-1c0.3-0.3,0.5-0.7,0.7-1l3.9-5.5C75.7,19.2,87.4,41,100.9,34L100.7,33.4z" />
+                                <g>
+                                <path fill="#262626" d="M116,27.6c-0.5,0-0.9,0-1.2,0c-0.3,0-0.7,0-1,0c-0.3,0-0.7,0-1,0c-0.4,0-0.8,0-1.3,0c-0.5,0-0.9,0-1.2,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.2,0V27c0.6,0,1-0.1,1.3-0.1c0.3-0.1,0.6-0.2,0.7-0.3c0.2-0.1,0.3-0.2,0.3-0.4c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0-0.3-0.1-0.5c-0.1-0.2-0.2-0.6-0.4-1.1c-0.2-0.5-0.5-1.2-0.8-2.2c-0.4-0.9-0.9-2.2-1.5-3.8H98c-0.9,2.1-1.6,3.8-2,4.9c-0.4,1.1-0.6,1.9-0.6,2.5c0,0.3,0,0.5,0.1,0.7c0.1,0.2,0.3,0.4,0.5,0.5c0.2,0.1,0.6,0.2,1,0.3c0.4,0.1,0.9,0.1,1.5,0.1v0.6c-0.5,0-0.9,0-1.3,0c-0.3,0-0.7,0-1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.2,0c-0.4,0-0.8,0-1.2,0c-0.4,0-0.7,0-1,0c-0.3,0-0.7,0-1,0c-0.3,0-0.7,0-1.1,0V27c0.9-0.1,1.5-0.3,1.9-0.5c0.4-0.2,0.7-0.5,0.9-0.9c0.1-0.2,0.4-0.7,0.8-1.5c0.4-0.8,0.8-1.8,1.4-3c0.5-1.2,1.2-2.6,1.8-4.1c0.7-1.5,1.4-3.1,2.1-4.8c0.7-1.7,1.5-3.4,2.3-5.1c0.8-1.7,1.5-3.2,2.3-4.8l0.4,0c0.7,2,1.3,3.6,1.9,5.4c0.6,1.8,1.3,3.5,1.9,5.1c0.6,1.6,1.3,3.3,2,4.9c0.7,1.6,1.3,3.3,2,5c0.3,0.7,0.5,1.3,0.8,1.9c0.2,0.5,0.5,1,0.8,1.3c0.3,0.3,0.7,0.6,1.1,0.8c0.4,0.2,0.9,0.3,1.6,0.3V27.6z M98.6,16.5h7.9c-0.5-1.2-1-2.6-1.6-4.2c-0.6-1.6-1.3-3.4-2.1-5.5L98.6,16.5z" />
                                 </g>
-                            <g>
-                            <path fill="#262626" d="M42,26.9L32.7,8.4l-0.9,14.8c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,1,0.2,1.7,0.7,2.2c0.5,0.5,1.3,0.8,2.5,1v0.5c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.1,0c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.1,0v-0.5c0.5-0.1,0.9-0.2,1.3-0.3c0.4-0.1,0.7-0.3,0.9-0.5c0.3-0.2,0.5-0.6,0.6-1.1c0.2-0.5,0.3-1.1,0.3-2l1.6-20.9h0.5L42.6,23L52.9,2.4h0.7l1.2,20.9c0,0.8,0.1,1.5,0.3,2c0.1,0.5,0.3,0.8,0.6,1.1c0.2,0.2,0.5,0.4,0.9,0.5c0.4,0.1,0.8,0.2,1.2,0.3v0.5c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.1,0c-0.8,0-1.5,0-2.1,0c-0.6,0-1.3,0-2.1,0v-0.5c0.4-0.1,0.8-0.2,1.2-0.3c0.4-0.1,0.7-0.2,1-0.4c0.3-0.2,0.5-0.5,0.7-0.9c0.2-0.4,0.2-0.9,0.2-1.6c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.3L51.5,8l-9.1,18.8L42,26.9z" />
+                                <g>
+                                <path fill="#262626" d="M42,26.9L32.7,8.4l-0.9,14.8c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,1,0.2,1.7,0.7,2.2c0.5,0.5,1.3,0.8,2.5,1v0.5c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.1,0c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.1,0v-0.5c0.5-0.1,0.9-0.2,1.3-0.3c0.4-0.1,0.7-0.3,0.9-0.5c0.3-0.2,0.5-0.6,0.6-1.1c0.2-0.5,0.3-1.1,0.3-2l1.6-20.9h0.5L42.6,23L52.9,2.4h0.7l1.2,20.9c0,0.8,0.1,1.5,0.3,2c0.1,0.5,0.3,0.8,0.6,1.1c0.2,0.2,0.5,0.4,0.9,0.5c0.4,0.1,0.8,0.2,1.2,0.3v0.5c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.6,0-0.9,0c-0.3,0-0.7,0-1.1,0c-0.8,0-1.5,0-2.1,0c-0.6,0-1.3,0-2.1,0v-0.5c0.4-0.1,0.8-0.2,1.2-0.3c0.4-0.1,0.7-0.2,1-0.4c0.3-0.2,0.5-0.5,0.7-0.9c0.2-0.4,0.2-0.9,0.2-1.6c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.3L51.5,8l-9.1,18.8L42,26.9z" />
                                 </g>
                                 </g>
                         </svg>
 
 
+                            </div>
                         </div>
-
-                        <div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
-                                <ul id="top-menu" class="nav navbar-nav navbar-right ">
-                                    <li><a href="#header">Home</a></li>
-                                    <li><a href="#Services">Services</a></li>
-                                    <li><a href="#Our-lients">Our clients</a></li>
-                                    <li><a href="#Our-tech ">Our tech</a></li>
-                                    <li><a href="#insight">insight</a></li>
-                                    <li><a href="#about">about</a></li>
-                                </ul>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="social top-soc">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
                             </div>
 
                         </div>
+
                     </div>
+                </div>
             </nav>
         </div>
         <!-- END MENU -->
     </header>
     <section id="video">
-        <div class="Slider-with-video">
-            <div class="embed-responsive embed-responsive-16by9">
-
-                <div class="video-info">
-                    <div class="bordered-text">Integrated</div>
-                    <div class="huge-text">technology marketing</div>
-                </div>
-
-                <video id="video-slide1" preload="auto" muted class="embed-responsive-item">
-                    <source src="videos/slide1/integrated.mp4" type="video/mp4" media="all"/>
-                    <source src="videos/slide1/integrated.ogv" type="video/ogg"  media="all"/>
+        <!-- start of masterslider -->
+        <div class="master-slider" id="masterslider" data-height="fullscreen">
+            <!-- new slide -->
+            <div class="ms-slide slide-video">
+                <!-- slide background -->
+                <img data-src="videos/slide1/Integrated.jpg" alt="Integrated" />
+                <!-- slide video layer -->
+                <video id="video1" muted="" preload="auto" data-loop="false" poster="videos/slide1/Integrated.jpg">
+                    <source src="videos/slide1/integrated.mp4" type="video/mp4" media="all" />
+                    <source src="videos/slide1/integrated.ogv" type="video/ogg" media="all" />
                     <source src="videos/slide1/integrated.webm" type="video/webm" media="all" />
                 </video>
-
-
-
+                <h2 class="ms-layer" style="left:calc(50% - 640px); top:215px; text-align:center"
+                    data-effect="right(200)"
+                    data-duration="3500"
+                    data-delay="100"
+                    data-ease="easeOutExpo">
+                    Integrated
+                </h2>
+                <h1 class="ms-layer center" style="left:0; top:300px"
+                    data-effect="bottom(short)"
+                    data-duration="2500"
+                    data-delay="800"
+                    data-ease="easeOutExpo">
+                    technology marketing
+                </h1>
             </div>
-            <div class="embed-responsive embed-responsive-16by9">
-
-                <div class="video-info">
-                    <div class="bordered-text">Revenue Led</div>
-                    <div class="huge-text">technology marketing</div>
-                </div>
-                <video  preload="none" muted class="embed-responsive-item">
-                    <source src="videos/slide1/integrated.mp4" type="video/mp4"  media="all"/>
-                    <source src="videos/slide1/integrated.ogv" type="video/ogg"  media="all"/>
-                    <source src="videos/slide1/integrated.webm" type="video/webm"  media="all"/>
+            <!-- end of slide -->
+            <!-- new slide -->
+            <div class="ms-slide slide-video">
+                <!-- slide background -->
+                <img data-src="videos/slide2/Revenue Led.jpg" alt="Revenue Led" />
+                <!-- slide video layer -->
+                <video muted="" preload="auto" data-loop="false" poster="videos/slide2/Revenue Led.jpg">
+                    <source src="videos/slide2/RevenueLed.mp4" type="video/mp4" media="all" />
+                    <source src="videos/slide2/RevenueLed.ogv" type="video/ogg" media="all" />
+                    <source src="videos/slide2/RevenueLed.webm" type="video/webm" media="all" />
                 </video>
+                <h2 class="ms-layer" style="left:calc(50% - 640px); top:215px; text-align:center"
+                    data-effect="right(200)"
+                    data-duration="3500"
+                    data-delay="100"
+                    data-ease="easeOutExpo">
+                    Revenue Led                </h2>
+                <h1 class="ms-layer center" style="left:0; top:300px"
+                    data-effect="bottom(short)"
+                    data-duration="2500"
+                    data-delay="800"
+                    data-ease="easeOutExpo">
+                    technology marketing
+                </h1>
             </div>
-
-            <div class="embed-responsive embed-responsive-16by9">
-                <div class="video-info">
-                    <div class="bordered-text">Global</div>
-                    <div class="huge-text">technology marketing</div>
-                </div>
-
-                <video preload="none" muted class="embed-responsive-item">
-                    <source src="videos/slide1/integrated.mp4" type="video/mp4"  media="all"/>
-                    <source src="videos/slide1/integrated.ogv" type="video/ogg"  media="all"/>
-                    <source src="videos/slide1/integrated.webm" type="video/webm"  media="all"/>
+            <!-- end of slide -->
+            <!-- new slide -->
+            <div class="ms-slide slide-video">
+                <!-- slide background -->
+                <img data-src="videos/slide3/Global.jpg" alt="Global" />
+                <!-- slide video layer -->
+                <video muted="" preload="auto" data-loop="false" poster="videos/slide3/Global.jpg">
+                    <source src="videos/slide3/Global.mp4" type="video/mp4" media="all" />
+                    <source src="videos/slide3/Global.ogv" type="video/ogg" media="all" />
+                    <source src="videos/slide3/Global.webm" type="video/webm" media="all" />
                 </video>
+                <h2 class="ms-layer" style="left:calc(50% - 640px); top:215px; text-align:center"
+                    data-effect="right(200)"
+                    data-duration="3500"
+                    data-delay="100"
+                    data-ease="easeOutExpo">
+                    Global                </h2>
+                <h1 class="ms-layer center" style="left:0; top:300px"
+                    data-effect="bottom(short)"
+                    data-duration="2500"
+                    data-delay="800"
+                    data-ease="easeOutExpo">
+                    technology marketing
+                </h1>
             </div>
-
-            <div class="embed-responsive embed-responsive-16by9">
-                <div class="video-info">
-                    <div class="bordered-text">High Impact</div>
-                    <div class="huge-text">technology marketing</div>
-                </div>
-
-                <video preload="none" muted class="embed-responsive-item">
-                    <source src="videos/slide1/integrated.mp4" type="video/mp4" />
-                    <source src="videos/slide1/integrated.ogv" type="video/ogg" />
-                    <source src="videos/slide1/integrated.webm" type="video/webm" />
+            <!-- end of slide -->
+            <!-- new slide -->
+            <div class="ms-slide slide-video">
+                <!-- slide background -->
+                <img data-src="videos/slide4/HighImpact.jpg" alt="High Impact" />
+                <!-- slide video layer -->
+                <video muted="" preload="auto" data-loop="false" poster="videos/slide4/HighImpact.jpg">
+                    <source src="videos/slide4/HighImpact.mp4" type="video/mp4" media="all" />
+                    <source src="videos/slide4/HighImpact.ogv" type="video/ogg" media="all" />
+                    <source src="videos/slide4/HighImpact.webm" type="video/webm" media="all" />
                 </video>
+                <h2 class="ms-layer" style="left:calc(50% - 640px); top:215px; text-align:center"
+                    data-effect="right(200)"
+                    data-duration="3500"
+                    data-delay="100"
+                    data-ease="easeOutExpo">
+                    High Impact                </h2>
+                <h1 class="ms-layer center" style="left:0; top:300px"
+                    data-effect="bottom(short)"
+                    data-duration="2500"
+                    data-delay="800"
+                    data-ease="easeOutExpo">
+                    technology marketing
+                </h1>
             </div>
-
-            <div class="embed-responsive embed-responsive-16by9">
-                <div class="video-info">
-                    <div class="bordered-text">Disruptive</div>
-                    <div class="huge-text">technology marketing</div>
-                </div>
-                <video preload="none" muted class="embed-responsive-item">
-                    <source src="videos/slide1/integrated.mp4" type="video/mp4" />
-                    <source src="videos/slide1/integrated.ogv" type="video/ogg" />
-                    <source src="videos/slide1/integrated.webm" type="video/webm" />
+            <!-- end of slide -->
+            <!-- new slide -->
+            <div class="ms-slide slide-video">
+                <!-- slide background -->
+                <img data-src="videos/slide5/Disruptive.jpg" alt="Disruptive" />
+                <!-- slide video layer -->
+                <video muted="" preload="auto" data-loop="false" poster="videos/slide5/Disruptive.jpg">
+                    <source src="videos/slide5/Disruptive.mp4" type="video/mp4" media="all" />
+                    <source src="videos/slide5/Disruptive.ogv" type="video/ogg" media="all" />
+                    <source src="videos/slide5/Disruptive.webm" type="video/webm" media="all" />
                 </video>
+                <h2 class="ms-layer" style="left:calc(50% - 640px); top:215px; text-align:center"
+                    data-effect="right(200)"
+                    data-duration="3500"
+                    data-delay="100"
+                    data-ease="easeOutExpo">
+                    Disruptive
+                </h2>
+                <h1 class="ms-layer center" style="left:0; top:300px"
+                    data-effect="bottom(short)"
+                    data-duration="2500"
+                    data-delay="800"
+                    data-ease="easeOutExpo">
+                    technology marketing
+                </h1>
             </div>
-
-            <div class="embed-responsive embed-responsive-16by9">
-                <div class="video-info">
-                    <div class="bordered-text">Human2Human</div>
-                    <div class="huge-text">technology marketing</div>
-                </div>
-                <video preload="none" muted class="embed-responsive-item">
-                    <source src="videos/slide1/integrated.mp4" type="video/mp4" />
-                    <source src="videos/slide1/integrated.ogv" type="video/ogg" />
-                    <source src="videos/slide1/integrated.webm" type="video/webm" />
+            <!-- end of slide -->
+            <!-- new slide -->
+            <div class="ms-slide slide-video">
+                <!-- slide background -->
+                <img data-src="videos/slide6/H2H.jpg" alt="Human 2 Human" />
+                <!-- slide video layer -->
+                <video muted="" preload="auto" data-loop="false" poster="videos/slide6/H2H.jpg">
+                    <source src="videos/slide6/H2H.mp4" type="video/mp4" media="all" />
+                    <source src="videos/slide6/H2H.ogv" type="video/ogg" media="all" />
+                    <source src="videos/slide6/H2H.webm" type="video/webm" media="all" />
                 </video>
+                <h2 class="ms-layer" style="left:calc(50% - 640px); top:215px; text-align:center"
+                    data-effect="right(200)"
+                    data-duration="3500"
+                    data-delay="100"
+                    data-ease="easeOutExpo">
+                    Human<sub>2</sub>Human
+                </h2>
+                <h1 class="ms-layer center" style="left:0; top:300px"
+                    data-effect="bottom(short)"
+                    data-duration="2500"
+                    data-delay="800"
+                    data-ease="easeOutExpo">
+                    technology marketing
+                </h1>
             </div>
+            <!-- end of slide -->
         </div>
-    </section>
-    <section id="shortcut">
-        <div class="container">
+        <!-- end of masterslider -->
+
+        <div class="container absolute-pos-shortcut">
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
@@ -240,7 +316,6 @@
 </g>
 </svg>
                     </div>
-                    <p class="shortcut-p">Integrated</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
@@ -275,7 +350,6 @@
 </g>
 </svg>
                     </div>
-                    <p class="shortcut-p">Revenue Led</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
@@ -297,7 +371,6 @@
 	c5.9-1.5,10.8-3.8,13.9-6.8C57.4,49.9,49.5,57.7,39.6,60.4L39.6,60.4z M39.6,60.4" />
 </svg>
                     </div>
-                    <p class="shortcut-p">Global</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
@@ -338,7 +411,6 @@
 	c5.5,0,10-4.5,10-10C42,19.5,37.5,15,32,15L32,15z" />
 </svg>
                     </div>
-                    <p class="shortcut-p">High Impact</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
@@ -417,7 +489,6 @@
 </g>
 </svg>
                     </div>
-                    <p class="shortcut-p">Disruptive</p>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
@@ -433,7 +504,6 @@
 </g>
 </svg>
                     </div>
-                    <p class="shortcut-p">Human2Human</p>
                 </div>
             </div>
         </div>
@@ -458,17 +528,12 @@
                         <div>
                             It’s because we know the tech industry, its language <br />
                             and its customers better than anyone else
-                </div>
-            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
     </section>
-
-
-
 
     <section id="StartingPoint">
         <div class="container-fluid ">
@@ -515,7 +580,7 @@
                         <div class="line"></div>
                         <div class="seventh_block all_containers"><div>Marketing Programme</div> </div>
 
-                      
+
 
                     </div>
 
@@ -540,7 +605,7 @@
 
     </section>
 
-    
+
     <section id="arsenal">
         <div class="container">
             <div class="row">
@@ -589,21 +654,21 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><h2>contact us</h2></div>
             </div>
             <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <form id="contactForm">
-                            <div class="Formhalf">
-                                <input class="form-control" type="text" tabindex="1" placeholder="Job Title" name="jTitle">
-                                <input class="form-control" type="text" tabindex="2" placeholder="Company" name="company">
-                                <input class="form-control" type="text" tabindex="3" placeholder="Phone Number" name="Phone">
-                                <input class="form-control" type="text" tabindex="4" placeholder="E-mail" name="Email">
-                            </div>
-                            <div class="Formhalf">
-                                <textarea class="form-control unresizeble" rows="12" tabindex="5" placeholder="Your message" name="massege"></textarea>
-                            </div>
-                            <input type="submit" class="submitBtn" tabindex="6" value="SUBMIT" />
-                        </form>
-                    </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <form id="contactForm">
+                        <div class="Formhalf">
+                            <input class="form-control" type="text" tabindex="1" placeholder="Job Title" name="jTitle">
+                            <input class="form-control" type="text" tabindex="2" placeholder="Company" name="company">
+                            <input class="form-control" type="text" tabindex="3" placeholder="Phone Number" name="Phone">
+                            <input class="form-control" type="text" tabindex="4" placeholder="E-mail" name="Email">
+                        </div>
+                        <div class="Formhalf">
+                            <textarea class="form-control unresizeble" rows="12" tabindex="5" placeholder="Your message" name="massege"></textarea>
+                        </div>
+                        <input type="submit" class="submitBtn" tabindex="6" value="SUBMIT" />
+                    </form>
                 </div>
+            </div>
         </div>
     </section>
     <footer>
@@ -677,48 +742,46 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="javascripts/slick.min.js"></script>
-    <script src="javascripts/skrollr.min.js"></script>
-
-    <script src="javascripts/custom.js"></script>
-
-
-
-
-
+    <script src="javascripts/masterslider.min.js"></script>
     <script>
         $(document).ready(function () {
-
-
-            skrollr.init({
-                //skrollrBody: 'skrollr-body'
-
-                forceHeight: false
-            });
-
-
-            $('.Slider-with-video').slick({
+                var sliderHeight = 670; // Smallest hieght allowed (default height)
+                if ($('#masterslider').data('height') == 'fullscreen') {
+                    var winHeight = $(window).height();
+                    sliderHeight = winHeight - 156;
+                }
+            var winHeight = $(window).height();
+            sliderHeight = winHeight - 156;
+            // Calibrate slider's height
+            var slider = new MasterSlider();
+            slider.setup('masterslider', {
+                space: 0,
+                mouse: false,
+                fullwidth: true,
+                loop: true,
+                fillMode: "fit",
                 autoplay: false,
-                arrows: false,
-                swipe: false,
-                infinite: true,
-                adaptiveHeight: true
+                width: 1280,
+                height: sliderHeight
             });
 
+            //slider.api.addEventListener('MSSliderEvent.CHANGE_END', function () {
+            //    var number = slider.api.index();
+            //    $(".shorcut-svg svg")[number+1].addClass('active-svg');
+            //});
+            // adds Arrows navigation control to the slider.
+            //slider.control('arrows');
 
+            //$('#video1').on('canplaythrough', videoStarter);
+            //$('#video1').on('ended', videoChange);
 
+            //function videoStarter() {
+            //    this.play();
+            //};
+            //function videoChange() {slider.api.next();};
         });
-
     </script>
-
-
-
-
-
-
-
+    <script src="javascripts/custom.js"></script>
 </body>
 </html>

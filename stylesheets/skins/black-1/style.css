@@ -1,0 +1,272 @@
+/**
+ *  Master Slider
+ *  Black 1
+ */
+
+.ms-skin-black-1 .ms-slide .ms-slide-vpbtn,
+.ms-skin-black-1 .ms-video-btn{
+	width: 54px;
+	height: 54px;
+	background: url('data:image/png;base64,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') /*black-skin-1.png*/ no-repeat -14px -150px;
+	top: 50%;
+	left: 50%;
+	margin: -27px 0 0 -27px;
+}
+
+.ms-skin-black-1 .ms-slide .ms-slide-vcbtn {
+	width: 27px;
+	height: 26px;
+	background: url(black-skin-1.png) no-repeat -24px -29px;
+	top: 30px;
+	right: 30px;
+}
+
+/* controls */
+
+.ms-skin-black-1 .ms-nav-next,
+.ms-skin-black-1 .ms-nav-prev {
+	width: 53px;
+	background: url(black-skin-1.png);
+	background-position: -79px -19px;
+	height: 61px;
+	cursor: pointer;
+	top: 50%;
+	left: 30px;
+	margin-top: -26px;
+	position: absolute;
+	z-index: 10;
+}
+.ms-skin-black-1 .ms-nav-next {
+	right: 30px;
+	left: auto;
+	background-position: -79px -97px;
+}
+
+.ms-skin-black-1 .ms-thumb-frame-selected {
+	opacity: 0.6;
+}
+
+.ms-skin-black-1 .ms-thumb-list.ms-dir-h {
+	bottom: -60px;
+	width: 100%;
+	height: 60px;
+}
+
+.ms-skin-black-1 .ms-thumb-list.ms-dir-v {
+	height: 100%;
+	width: 60px;
+	right: -60px;
+	top: 0;
+}
+
+.ms-skin-black-1 .ms-thumb-frame {
+	cursor: pointer;
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin: 1px 0 0 1px;
+	overflow: hidden;
+}
+
+.ms-skin-black-1 .ms-bullets.ms-dir-h {
+	position: absolute;
+	bottom: 20px;
+	right: 50%;
+	width: 100px;
+}
+
+.ms-skin-black-1 .ms-bullets.ms-dir-h .ms-bullets-count {
+	position: relative;
+	right: -50%;
+}
+
+.ms-skin-black-1 .ms-bullet {
+	width: 9px;
+	height: 9px;
+	background: white;
+	margin: 4px;
+	border: solid 1px rgb(58, 58, 58);
+}
+
+.ms-skin-black-1 .ms-bullet-selected {
+    background-color: black;
+}
+
+.ms-skin-black-1 .ms-sbar {
+	position: absolute;
+}
+
+.ms-skin-black-1 .ms-sbar.ms-dir-h {
+	left: 10px;
+	right: 10px;
+	top: 5px
+}
+
+.ms-skin-black-1 .ms-sbar.ms-dir-v {
+	top: 10px;
+	bottom: 10px;
+	right: 5px
+}
+
+.ms-skin-black-1 .ms-sbar .ms-bar {
+	height: 4px;
+	background: #DD00FF;
+	border-radius: 4px;
+}
+
+.ms-skin-black-1 .ms-sbar.ms-dir-v .ms-bar {
+	width: 4px;
+}
+
+.ms-skin-black-1 .ms-timerbar {
+	width: 100%;
+	bottom: 0px;
+	background: black;
+	position: absolute;
+	height: 2px;
+}
+
+.ms-skin-black-1 .ms-time-bar {
+	height: 1px;
+	margin-top: 1px;
+	background: #FFFFFF;
+}
+
+.ms-skin-black-1 .ms-ctimer {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	cursor: pointer;
+}
+
+.ms-skin-black-1 .ms-ctimer-bullet {}
+
+.ms-skin-black-1 .ms-tooltip{
+	position: absolute;
+	z-index: 110;
+	cursor: auto;
+}
+
+.ms-skin-black-1 .ms-tooltip-top .ms-tooltip-arrow,
+.ms-skin-black-1 .ms-tooltip-bottom .ms-tooltip-arrow{
+	border-left: solid 10px transparent;
+	border-right: solid 10px transparent;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.ms-skin-black-1 .ms-tooltip-top .ms-tooltip-arrow{
+	border-top: solid 10px;
+	border-top-color: white;
+	border-top-color: rgba(0, 0, 0, 0.8);
+	bottom: -10px;
+}
+
+.ms-skin-black-1 .ms-tooltip-bottom .ms-tooltip-arrow {
+	border-bottom: solid 10px;
+	border-bottom-color: white;
+	border-bottom-color: rgba(0, 0, 0, 0.8);
+	top: -10px;
+}
+
+.ms-skin-black-1 .ms-tooltip-right .ms-tooltip-arrow,
+.ms-skin-black-1 .ms-tooltip-left .ms-tooltip-arrow{
+	border-top: solid 10px transparent;
+	border-bottom: solid 10px transparent;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.ms-skin-black-1 .ms-tooltip-right .ms-tooltip-arrow{
+	border-right: solid 10px;
+	border-right-color: white;
+	border-right-color: rgba(0, 0, 0, 0.8);
+	left: -10px;
+}
+
+.ms-skin-black-1 .ms-tooltip-left .ms-tooltip-arrow {
+	border-left: solid 10px;
+	border-left-color: black;
+	border-left-color: rgba(0, 0, 0, 0.8);
+	right: -10px;
+}
+
+@keyframes point-anim{
+	0% 		{transform: scale(0.5); -webkit-transform: scale(0.5); -moz-transform: scale(0.5); -o-transform: scale(0.5); -ms-transform: scale(0.5);  opacity: 1; }
+	100% 	{transform: scale(0.5); -webkit-transform: scale(0.5); -moz-transform: scale(1.5); -o-transform: scale(1.5); -ms-transform: scale(1.5);  opacity: 0; }
+}
+
+@-webkit-keyframes point-anim{
+	0% 		{-webkit-transform: scale(0.5); opacity: 1; }
+	100% 	{-webkit-transform: scale(1.5);	opacity: 0; }
+}
+
+.ms-skin-black-1 .ms-tooltip-point {cursor: pointer;}
+.ms-skin-black-1 .ms-tooltip-point .ms-point-center {
+	width: 12px;
+	height: 12px; 
+	border-radius: 15px;
+	border: solid 2px #444444;
+	background: black;
+	margin: -8px 0 0 -8px;
+	position: absolute;
+	z-index: 5;
+}
+
+.ms-skin-black-1 .ms-tooltip-point .ms-point-border {
+	width: 22px;
+	height: 22px; 
+	background: white;
+	background: rgba(255, 255, 255, 0.9);
+	margin: -11px 0 0 -11px;
+	position: absolute;
+	border-radius: 15px;
+	
+	animation: point-anim 1.5s infinite ;
+	-moz-animation: point-anim 1.5s infinite;
+	-webkit-animation: point-anim 1.5s infinite;
+	-o-animation: point-anim 1.5s infinite;
+}
+
+/* In Android browser, using css animations over slider causes some crashes */
+.ms-android.ms-skin-black-1 .ms-tooltip-point .ms-point-border{
+	animation:none;
+	-moz-animation:none;
+	-webkit-animation:none;
+	-o-animation:none;
+}
+
+.ms-skin-black-1  .ms-tooltip {
+	max-width:200px;
+}
+
+.ms-skin-black-1 .ms-tooltip-cont {
+	padding: 10px;
+	background: black;
+	background: rgba(0, 0, 0, 0.8);
+	text-shadow: 0 1px 0px black;
+	color: white;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04);
+}
+
+/* retina */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	
+	.ms-skin-black-1 .ms-slide .ms-slide-vpbtn,
+	.ms-skin-black-1 .ms-video-btn,
+	.ms-skin-black-1 .ms-slide .ms-slide-vcbtn,
+	.ms-skin-black-1 .ms-nav-next,
+	.ms-skin-black-1 .ms-nav-prev{
+		background-image:url(black-skin-1-retina.png);
+		background-size: 152px 225px;
+	}
+	
+}
