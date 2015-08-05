@@ -748,9 +748,8 @@
                 any: function () {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
             };
             //Mobile Check -end
-            var sliderHeight = 640;//min slider height
             var winHeight = $(window).height();
-            if ((winHeight - 155) > 640) { sliderHeight = winHeight - 155; }
+            var sliderHeight = winHeight - 155
 
 
             //video section config            
@@ -786,7 +785,6 @@
                     height: sliderHeight
                 });
             }
-            //create desktop/mobile slider
 
           document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
           document.getElementById("video1").addEventListener('ended', videoChange);
