@@ -26,13 +26,14 @@
 
 </head>
 <body>
+    <div id="info-bar"></div>
     <header id="header">
         <!-- BEGIN MENU -->
         <div class="menu_area">
             <nav class="navbar navbar-default navbar-fixed-top" id="heightJs" role="navigation">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <div class="navbar-header">
                                 <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
                                     <span class="sr-only">Toggle navigation</span>
@@ -56,7 +57,7 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                             <div class="social top-soc">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -80,7 +81,7 @@
                 <!-- slide background -->
                 <img data-src="videos/slide1/Integrated.jpg" alt="Integrated" />
                 <!-- slide video layer -->
-                <video id="video1" muted="" preload="auto" data-loop="false" poster="videos/slide1/Integrated.jpg">
+                <video id="video1" muted=""  preload="auto" data-loop="false" poster="videos/slide1/Integrated.jpg">
                     <source src="videos/slide1/integrated.mp4" type="video/mp4" media="all" />
                     <source src="videos/slide1/integrated.ogv" type="video/ogg" media="all" />
                     <source src="videos/slide1/integrated.webm" type="video/webm" media="all" />
@@ -235,7 +236,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="shortcut-svg">
-                        <svg version="1.1" id="Integrated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg version="1.1" id="Integrated" class="active-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
 <g>
                         <g>
@@ -428,13 +429,6 @@
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#262626" d="M25.5,27.6L25.5,27.6z" />
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#262626" d="M33,4.9L33,4.9z" />
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#262626" d="M37.9,25.7L37.9,25.7z" />
-<path fill-rule="evenodd" clip-rule="evenodd" fill="#262626" d="M21.6,32.1c0.2,0.5,0,1.1-0.5,1.3c-0.5,0.2-1.1,0-1.3-0.5
-		c-0.3-0.8-0.6-1.6-0.8-2.5c-0.2-0.9-0.3-1.8-0.3-2.7c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1c0,0.8,0.1,1.5,0.2,2.3
-		C21.1,30.7,21.3,31.4,21.6,32.1z" />
-<path fill-rule="evenodd" clip-rule="evenodd" fill="#262626" d="M25.7,18.3c-0.6,0.4-1.1,0.9-1.7,1.4c-0.5,0.5-1,1.1-1.4,1.7
-		c-0.4,0.6-0.7,1.2-1,1.9c-0.2,0.5-0.8,0.7-1.3,0.5c-0.5-0.2-0.8-0.8-0.5-1.3c0.3-0.8,0.8-1.6,1.2-2.2c0.5-0.7,1-1.4,1.6-2
-		c0.6-0.6,1.3-1.1,2-1.6v0c0.7-0.4,1.5-0.9,2.2-1.2c0.8-0.3,1.7-0.6,2.6-0.8c0.9-0.2,1.7-0.3,2.6-0.3c0.5,0,1,0.4,1,1
-		c0,0.5-0.4,1-1,1c-0.8,0-1.5,0.1-2.3,0.2c-0.7,0.2-1.5,0.4-2.1,0.7C27,17.6,26.3,17.9,25.7,18.3z" />
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#262626" d="M49.7,26.1c-0.7,0.4-1.3,0.9-1.9,1.3c0,0.2,0,0.4,0,0.7
 		c0,1.7-0.3,3.4-0.8,4.9c-0.5,1.6-1.3,3.1-2.2,4.4c-1.8,2.4-3.3,4-4.4,5.3c-2.2,2.5-3.3,3.7-3.5,7h-9.7c-0.2-3.3-1.3-4.5-3.5-7v0
 		c-1.1-1.3-2.6-2.9-4.4-5.3c-1-1.3-1.7-2.8-2.3-4.4c-0.5-1.5-0.8-3.2-0.8-4.9c0-1.1,0.1-2.3,0.4-3.3c-0.7-0.1-1.3-0.2-1.9-0.4
@@ -746,40 +740,80 @@
     <script src="javascripts/masterslider.min.js"></script>
     <script>
         $(document).ready(function () {
-                var sliderHeight = 670; // Smallest hieght allowed (default height)
-                if ($('#masterslider').data('height') == 'fullscreen') {
-                    var winHeight = $(window).height();
-                    sliderHeight = winHeight - 156;
+            var isMobile = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function () {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function () {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
                 }
+            };
+            document.getElementById('info-bar').innerHTML = isMobile.any();
+            if(isMobile.any()){alert('mobile')}
             var winHeight = $(window).height();
             sliderHeight = winHeight - 156;
             // Calibrate slider's height
+
             var slider = new MasterSlider();
             slider.setup('masterslider', {
                 space: 0,
                 mouse: false,
                 fullwidth: true,
                 loop: true,
-                fillMode: "fit",
+                swipe:false,
                 autoplay: false,
                 width: 1280,
                 height: sliderHeight
             });
 
-            //slider.api.addEventListener('MSSliderEvent.CHANGE_END', function () {
-            //    var number = slider.api.index();
-            //    $(".shorcut-svg svg")[number+1].addClass('active-svg');
-            //});
-            // adds Arrows navigation control to the slider.
-            //slider.control('arrows');
+          document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
+          document.getElementById("video1").addEventListener('ended', videoChange);
+          
+          var startTimeout = setTimeout(function () {
 
-            //$('#video1').on('canplaythrough', videoStarter);
-            //$('#video1').on('ended', videoChange);
+              slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
+                  // Shortcut indikator logic
+                  var number = slider.api.index();
+                  for (var i = 0; i < 6; i++) { $(".shortcut-svg svg").eq(i).attr("class", ""); }
+                  $(".shortcut-svg svg").eq(number).attr("class", "active-svg");
+              });
 
-            //function videoStarter() {
-            //    this.play();
-            //};
-            //function videoChange() {slider.api.next();};
+
+              //Video download logic
+              slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
+                  var curVideo = slider.api.view.currentSlide.bgvideo;
+
+                  if (curVideo.readyState == 4) {
+                      curVideo.play();
+                  }
+                  else {
+                      curVideo.addEventListener('canplaythrough', videoStarter);
+                  };
+                  curVideo.addEventListener('ended', videoChange);
+              });
+          }, 10);
+
+            function videoStarter() {
+                this.play();
+            };
+            function videoChange() {
+                slider.api.next();
+                this.removeEventListener('canplaythrough', videoStarter);
+                this.removeEventListener('ended', videoChange);
+            };
+
         });
     </script>
     <script src="javascripts/custom.js"></script>

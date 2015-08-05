@@ -103,7 +103,7 @@ header{
     transition: all .5s ease 0s;
 }
 .top-soc{
-    margin:7%!important;
+    margin:12% 0!important;
 }
 .top-soc a{
     background-color:#262626!important;
@@ -205,7 +205,7 @@ color:#202020;background-color: transparent;
         -webkit-transition: all .5s;
         transition: all .5s;
 }
-    .shortcut-svg svg path, .shortcut-svg svg rect {
+.shortcut-svg svg path, .shortcut-svg svg rect {
         fill: #fafafa;
         opacity: 0.5;
         -moz-transition: all .5s;
@@ -221,7 +221,7 @@ color:#202020;background-color: transparent;
     transform: scale(1.4);
 }
 .active-svg path,.active-svg rect{
-    opacity:1;
+    opacity:1!important;
 }
 /*<========== 3.Shortcut === disable for a time ============>*/
 #shortcut{
