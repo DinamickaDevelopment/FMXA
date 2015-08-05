@@ -26,7 +26,6 @@
 
 </head>
 <body>
-    <div id="info-bar"></div>
     <header id="header">
         <!-- BEGIN MENU -->
         <div class="menu_area">
@@ -740,30 +739,26 @@
     <script src="javascripts/masterslider.min.js"></script>
     <script>
         $(document).ready(function () {
-            var isMobile = {
-                Android: function () {
-                    return navigator.userAgent.match(/Android/i);
-                },
-                BlackBerry: function () {
-                    return navigator.userAgent.match(/BlackBerry/i);
-                },
-                iOS: function () {
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-                },
-                Opera: function () {
-                    return navigator.userAgent.match(/Opera Mini/i);
-                },
-                Windows: function () {
-                    return navigator.userAgent.match(/IEMobile/i);
-                },
-                any: function () {
-                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-                }
-            };
-            document.getElementById('info-bar').innerHTML = isMobile.any();
-            if(isMobile.any()){alert('mobile')}
+            //var isMobile = {
+            //    Android: function () {return navigator.userAgent.match(/Android/i);},
+            //    BlackBerry: function () {return navigator.userAgent.match(/BlackBerry/i);},
+            //    iOS: function () {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+            //    Opera: function () {return navigator.userAgent.match(/Opera Mini/i);},
+            //    Windows: function () {return navigator.userAgent.match(/IEMobile/i);},
+            //    any: function () {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+            //};
+            //Mobile Check -end
             var winHeight = $(window).height();
-            sliderHeight = winHeight - 156;
+
+            sliderHeight = winHeight - 158;
+
+            //video section config            
+            //videoSectionHeight = (winHeight - 157) + "px";
+            //$("#video").css("height", videoSectionHeight);
+            //window.onresize = function () {
+            //    var temp = (document.getElementsByClassName("ms-view")[0].clientHeight + 1) + "px";
+            //    $("#video").css("height", temp);
+            //}
             // Calibrate slider's height
 
             var slider = new MasterSlider();
