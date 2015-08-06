@@ -748,9 +748,7 @@
                 any: function () {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
             };
             //Mobile Check -end
-            var sliderHeight = 670;
-            var winHeight = $(window).height();
-            if ((winHeight) > 670) {sliderHeight = winHeight - 150}
+
 
             //video section config            
             //videoSectionHeight = (winHeight - 157) + "px";
@@ -760,8 +758,14 @@
             //    $("#video").css("height", temp);
             //}
 
-            // Calibrate slider's height
+            // Calibrate slider's height   
+
+            var winHeight = $(window).height(), sliderHeight;
             if (isMobile.any()) {
+
+                sliderHeight = 670;
+                if ((winHeight) > 670) { sliderHeight = winHeight - 150 }
+
                 var slider = new MasterSlider();
                 slider.setup('masterslider', {
                     space: 0,
@@ -774,6 +778,8 @@
                     height: sliderHeight
                 });
             } else {
+
+                sliderHeight = winHeight - 150
                 var slider = new MasterSlider();
                 slider.setup('masterslider', {
                     space: 0,
