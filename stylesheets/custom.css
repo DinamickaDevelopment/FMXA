@@ -187,7 +187,6 @@ color:#202020;background-color: transparent;
 
 .absolute-pos-shortcut{    
     position: absolute;
-    left: calc(50% - 585px);
     bottom: 0;
 }
 .absolute-pos-shortcut~svg path{
@@ -196,10 +195,8 @@ color:#202020;background-color: transparent;
 }
 .shortcut-svg{
     display: table;
-    margin: 44px auto 22px;
 }
 .shortcut-svg svg{
-    height:4em;
                 -moz-transition: all .5s;
         -o-transition: all .5s;
         -webkit-transition: all .5s;
@@ -743,7 +740,13 @@ footer div.row:nth-child(3){
     { 
           font-size: 1.3em;
     }
-
+.absolute-pos-shortcut{
+    left:calc(50% - 219px);
+}
+    .shortcut-svg svg {
+        height:3.1em;
+    }
+    .shortcut-svg {margin:0 auto 22px}
 /*///////////////////////////////////// ICONS SECTION 320< /////////////////////////////////////////*/
 
     .shortcut-p {
@@ -844,7 +847,13 @@ footer div.row:nth-child(3){
     .huge-text /*text on video */ {
         font-size: 3em;
     }
-
+    .absolute-pos-shortcut{
+    left:calc(50% - 366px);
+}
+    .shortcut-svg svg {
+        height:4em;
+    }
+    .shortcut-svg {margin:0 auto 44px}
 /*///////////////////////////////////// ICONS SECTION 768< /////////////////////////////////////////////////*/
 
 
@@ -938,6 +947,9 @@ footer div.row:nth-child(3){
         font-size: 3.25em;
     }
 
+    .absolute-pos-shortcut{
+    left:calc(50% - 485px);
+}
 /*///////////////////////////////////// TECH SECTION 992< //////////////////////////////////////////////////*/
 
 
@@ -988,6 +1000,11 @@ footer .col-sm-offset-1{margin-left:0!important}
 
 @media (min-width: 1200px) {
         .container{width:1170px}
+/*////////////////////////////////////// VIDEO SECTION 1200< /////////////////////////////////////////////////*/
+            .absolute-pos-shortcut{
+    left:calc(50% - 585px);
+}
+
     /*///////////////////////////////////// StartingPoint SECTION 1200< //////////////////////////////////////////////////*/
 
     
