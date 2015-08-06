@@ -748,9 +748,9 @@
                 any: function () {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
             };
             //Mobile Check -end
+            var sliderHeight = 320;
             var winHeight = $(window).height();
-            var sliderHeight = winHeight - 150
-
+            if ((winHeight - 150) > 320) {sliderHeight = winHeight - 150}
 
             //video section config            
             //videoSectionHeight = (winHeight - 157) + "px";
