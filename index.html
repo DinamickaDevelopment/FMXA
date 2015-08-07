@@ -551,7 +551,7 @@
 
                         <div class="container_sequence text-center">
 
-                            <div class="first_block all_containers text-center"><div style="display:inline-block"> Revenue Target</div></div>
+                            <div class="first_block all_containers text-center"> Revenue Target</div>
                             <div class="line"></div>
 
                             <div class="block-cell" data-1-center-center="width:593px; font-size:1em" data-0-center-center=" width:0px; font-size:0">
@@ -745,9 +745,24 @@
 
 
         <script src="javascripts/skrollr.min.js"></script>
+        
+
 
         <script type="text/javascript">
-        
+
+            mobileCheck = function () {
+                return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            }
+
+            if (!mobileCheck()) {
+                var obj = skrollr.init({
+                    forceHeight: false
+                });
+            }
+
+            
+                        
+
         </script>
         
         <script src="javascripts/masterslider.min.js"></script>
@@ -755,16 +770,6 @@
         <script>
             $(document).ready(function () {
 
-
-                mobileCheck = function () {
-                    return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
-                }
-
-                if (!mobileCheck()) {
-                    skrollr.init({
-                        forceHeight: false
-                    });
-                }
 
                 var isMobile = {
                     Android: function () { return navigator.userAgent.match(/Android/i); },
@@ -859,13 +864,18 @@
                     this.removeEventListener('ended', videoChange);
                 };
                 //Video download logic - end
+              
+                
+                obj.refresh();
 
             });
+
         </script>
 
 
 
         <script src="javascripts/custom.js"></script>
+
 
     </div>
 </body>
