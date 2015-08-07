@@ -742,34 +742,29 @@
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
+        
         <script src="javascripts/skrollr.min.js"></script>
         
-
-
         <script type="text/javascript">
 
-            mobileCheck = function () {
-                return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            window.onload = function () {
+
+                mobileCheck = function () {
+                    return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+                }
+
+                if (!mobileCheck()) {
+                    var obj = skrollr.init({
+                        forceHeight: false
+                    });
+                }
             }
-
-            if (!mobileCheck()) {
-                var obj = skrollr.init({
-                    forceHeight: false
-                });
-            }
-
-            
-                        
-
         </script>
         
         <script src="javascripts/masterslider.min.js"></script>
 
         <script>
             $(document).ready(function () {
-
 
                 var isMobile = {
                     Android: function () { return navigator.userAgent.match(/Android/i); },
@@ -865,17 +860,12 @@
                 };
                 //Video download logic - end
               
-                
-
             });
 
         </script>
-
-
-
+        
         <script src="javascripts/custom.js"></script>
-
-
+        
     </div>
 </body>
 </html>
