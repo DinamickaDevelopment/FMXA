@@ -86,23 +86,24 @@ header{
 #Layer_1 {
 
     padding:0 !important;
-    height:73px;
-    width: 220px;
+    /*height:73px;
+    width: 220px;*/
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
 
-.col-sm-4 #Layer_1 
+/*.col-sm-4 #Layer_1 
 {
     width: 147px;
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
-}
+}*/
 .top-soc{
+    height: 32px;
     margin:12% 0!important;
 }
 .top-soc a{
@@ -722,9 +723,22 @@ footer div.row:nth-child(3){
 
 
 @media (min-width: 320px) {
-    body
+    /*body*/
     /*{overflow:visible !important;}*/
 /*////////////////////////////////////// HEADER 320< /////////////////////////////////////////////////*/
+
+    #Layer_1 {
+
+    
+    height:73px;
+    width: 145px;
+    
+}
+    #header .col-xs-6 
+    {
+        padding: 0;
+    }
+
 
     #top-menu li a {
         text-align: center;
@@ -831,8 +845,9 @@ footer div.row:nth-child(3){
 }
 
 @media (min-width: 768px) {
-    .container{width:732px}
 /*////////////////////////////////////// HEADER 768< ////////////////////////////////////////////////////////*/
+    
+    .container{width:732px}
 
     #top-menu li a {
         text-align: center;
@@ -840,10 +855,18 @@ footer div.row:nth-child(3){
         height: 73px;
     }
 
-    #Layer_1 {
+
+       #Layer_1 
+       {
+
+            height:73px;
+            width: 220px;
+       }
+
+    /*#Layer_1 {
         height: 73px;
         width: 147px;
-    }
+    }*/
 
     .nav > li > a {
         padding: 10px 10px !important;
