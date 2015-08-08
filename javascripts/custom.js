@@ -33,9 +33,10 @@ jQuery(function ($) {
       });
 
 
-    //======== 4.Adaptive height =================================
+    //======== 4.Very complicated onLoad Function =================================
 
     $(document).ready(function () {
+        //Mobile Check
         var isMobile = {
             Android: function () { return navigator.userAgent.match(/Android/i); },
             BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
@@ -45,7 +46,7 @@ jQuery(function ($) {
             any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
         };
         //Mobile Check -end
-        // Calibrate slider's height   
+        // Calibrate slider's behavior   
 
         var winHeight = $(window).height(), sliderHeight;
 
@@ -87,7 +88,15 @@ jQuery(function ($) {
                 width: 1280,
                 height: sliderHeight
             });
-
+            //Shortcut button
+            for (var i = 0; i < document.getElementsByClassName('shortcut-svg').length; i++) {
+                document.getElementsByClassName('shortcut-svg')[i].addEventListener('click', slideChangeClick, true);
+            }
+            function slideChangeClick(e) {
+                var slidenumber = this.dataset.numberslide - 1;
+                slider.api.gotoSlide(slidenumber);
+            }
+            //Shortcut button - end
             //Video download logic
             document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
             document.getElementById("video1").addEventListener('ended', videoChange);
