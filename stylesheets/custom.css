@@ -756,10 +756,10 @@ footer div.row:nth-child(3){
           font-size: 1.3em;
     }
 .absolute-pos-shortcut{
-    left:calc(50% - 219px);
+    left:calc(50% - 167px);
 }
     .shortcut-svg svg {
-        height:3.1em;
+        height:2.3em;
     }
     .shortcut-svg {margin:0 auto 22px}
 /*///////////////////////////////////// ICONS SECTION 320< /////////////////////////////////////////*/

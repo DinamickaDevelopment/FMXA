@@ -102,6 +102,7 @@ jQuery(function ($) {
             //Shortcut button
             for (var i = 0; i < document.getElementsByClassName('shortcut-svg').length; i++) {
                 document.getElementsByClassName('shortcut-svg')[i].addEventListener('click', slideChangeClick, true);
+                //document.getElementsByClassName('shortcut-svg')[i].addEventListener('touchend', slideChangeClick, true);    it doesnt work Possible cause event 'touchend' and skrollr.js
             }
             function slideChangeClick(e) {
                 var slidenumber = this.dataset.numberslide - 1;
