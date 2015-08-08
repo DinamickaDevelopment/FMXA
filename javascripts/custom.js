@@ -74,6 +74,17 @@ jQuery(function ($) {
                 width: 1280,
                 height: sliderHeight
             });
+
+            var startTimeout = setTimeout(function () {//Asynchronous initialization for mobile
+                slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
+                // Shortcut indikator logic
+                var number = slider.api.index();
+                for (var i = 0; i < 6; i++) { $(".shortcut-svg svg").eq(i).attr("class", ""); }
+                $(".shortcut-svg svg").eq(number).attr("class", "active-svg");
+                    // Shortcut indikator logic - end
+            }, 10);//Asynchronous initialization for mobile -end
+
+            });
         } else {
 
             sliderHeight = winHeight - 150
