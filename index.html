@@ -24,8 +24,12 @@
 
     
 
+
 </head>
 <body>
+
+    <div id="skrollr-body">
+
     <header id="header">
         <!-- BEGIN MENU -->
         <div class="menu_area">
@@ -80,7 +84,7 @@
                 <!-- slide background -->
                 <img data-src="videos/slide1/Integrated.jpg" alt="Integrated" />
                 <!-- slide video layer -->
-                <video id="video1" muted=""  preload="auto" data-loop="false" poster="videos/slide1/Integrated.jpg">
+                    <video id="video1" muted="" preload="auto" data-loop="false" poster="videos/slide1/Integrated.jpg">
                     <source src="videos/slide1/integrated.mp4" type="video/mp4" media="all" />
                     <source src="videos/slide1/integrated.ogv" type="video/ogg" media="all" />
                     <source src="videos/slide1/integrated.webm" type="video/webm" media="all" />
@@ -116,7 +120,8 @@
                     data-duration="3500"
                     data-delay="100"
                     data-ease="easeOutExpo">
-                    Revenue Led                </h2>
+                        Revenue Led
+                    </h2>
                 <h1 class="ms-layer center" style="left:0; top:300px"
                     data-effect="bottom(short)"
                     data-duration="2500"
@@ -141,7 +146,8 @@
                     data-duration="3500"
                     data-delay="100"
                     data-ease="easeOutExpo">
-                    Global                </h2>
+                        Global
+                    </h2>
                 <h1 class="ms-layer center" style="left:0; top:300px"
                     data-effect="bottom(short)"
                     data-duration="2500"
@@ -166,7 +172,8 @@
                     data-duration="3500"
                     data-delay="100"
                     data-ease="easeOutExpo">
-                    High Impact                </h2>
+                        High Impact
+                    </h2>
                 <h1 class="ms-layer center" style="left:0; top:300px"
                     data-effect="bottom(short)"
                     data-duration="2500"
@@ -544,11 +551,11 @@
 
                     <div class="container_sequence text-center">
 
-                        <div class="first_block all_containers"><div style="padding:0 5px;">Revenue Target</div></div>
+                            <div class="first_block all_containers text-center"> Revenue Target</div>
                         <div class="line"></div>
 
-                        <div class="block-cell" data-1-center-center="width:593px; opacity:1; font-size:1em" data--50-center-center="opacity:0; width:0px; font-size:0">
-                            <div class=" block-table">
+                            <div class="block-cell" data-1-center-center="width:593px; font-size:1em" data-0-center-center=" width:0px; font-size:0">
+                                <div class=" block-table" data-1-center-center="display:table" data-0-center-center="display:none">
 
                                 <div class="second_block all_containers">&nbsp;Orders&nbsp;</div>
                                 <div class="line"></div>
@@ -563,15 +570,13 @@
                                 <div class="line"></div>
                                 <div class="sixth_block all_containers">&nbsp;Contacts&nbsp;</div>
                             </div>
-                        </div>
-
-                        <div class="X" data-1-center-center="opacity:0;" data--100-center-center="opacity:1;">
+                                <div class="X" data-1-center-center="opacity:0;" data--10-center-center="opacity:1;">
 
                         </div>
+                            </div>
 
-
-                        <div class="line"></div>
-                        <div class="seventh_block all_containers"><div>Marketing Programme</div> </div>
+                            <div class="line "></div>
+                            <div class="text-center seventh_block all_containers">Marketing Programme</div>
 
 
 
@@ -584,7 +589,7 @@
                             You tell us how much revenue you need to generate and we work backwards <br />
                             from that figure to create an achievable plan to make that happen
                         </p>
-                        <p data-1-center-center="opacity:0;" data-center-center="opacity:1;">
+                            <p data-1-bottom="opacity:0;" data--200-bottom="opacity:1;">
                             And we deliver on that plan, every single time.
                         </p>
                     </div>
@@ -597,6 +602,7 @@
         </div>
 
     </section>
+
 
 
     <section id="arsenal">
@@ -736,7 +742,31 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <script src="javascripts/skrollr.min.js"></script>
+        
+        <script type="text/javascript">
+
+            window.onload = function () {
+
+                //mobileCheck = function () {
+                //    return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+                //}
+
+                //if (!mobileCheck()) {
+
+                    var obj = skrollr.init({
+                        forceHeight: false
+
+                    });
+                //}
+                }
+
+        </script>
+        
     <script src="javascripts/masterslider.min.js"></script>
     <script src="javascripts/custom.js"></script>
+        
+    </div>
 </body>
 </html>

@@ -16,10 +16,10 @@
 
 /*<-------------     #.Typography ------------------->*/
 
-html, body 
+/*html, body 
 {
    overflow:visible !important;
-} 
+}*/ 
 
 h2{
     font-family: 'Droid Serif', serif;
@@ -86,23 +86,24 @@ header{
 #Layer_1 {
 
     padding:0 !important;
-    height:73px;
-    width: 220px;
+    /*height:73px;
+    width: 220px;*/
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
 
-.col-sm-4 #Layer_1 
+/*.col-sm-4 #Layer_1 
 {
     width: 147px;
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
-}
+}*/
 .top-soc{
+    height: 32px;
     margin:12% 0!important;
 }
 .top-soc a{
@@ -296,7 +297,7 @@ color:#202020;background-color: transparent;
 {    
     
     margin: 75px auto 70px;
-    height:80px;
+    /*height:80px;*/
 }
 
 .different_point 
@@ -348,8 +349,10 @@ color:#202020;background-color: transparent;
 
 .block-cell
 {
+    position:relative;
+
     display: table-cell;
-    font-size: 1em;
+    /*font-size: 24px;*/
     border: none;
 
 }
@@ -363,8 +366,8 @@ color:#202020;background-color: transparent;
 
 .first_block 
 {  
-
-   width:250px;
+    text-align:center;    
+    padding: 0 5px;
  }
 
 .second_block {/*width:21%;*/}
@@ -383,9 +386,9 @@ color:#202020;background-color: transparent;
 
 .seventh_block 
 {
-   
-   width:345px;
-   
+     text-align:center;
+     padding: 0 5px;
+      
 }
 
 .line 
@@ -412,23 +415,21 @@ color:#202020;background-color: transparent;
 }
 
 
-.X_conteiner 
-{
- width:10%;
- height:60px;
-}
 
 .X  
 {
     width:190px;
-
     height:170px;
     
+    top:-36px;
+    left: -39px;
+
     position:absolute;
     z-index:5;
  
     background-image:url(../images/X.png);  
 }
+
 
 /*#StartingPoint{
     display:block;
@@ -723,9 +724,22 @@ footer div.row:nth-child(3){
 
 
 @media (min-width: 320px) {
-    body
+    /*body*/
     /*{overflow:visible !important;}*/
 /*////////////////////////////////////// HEADER 320< /////////////////////////////////////////////////*/
+
+    #Layer_1 {
+
+    
+    height:73px;
+    width: 145px;
+    
+}
+    #header .col-xs-6 
+    {
+        padding: 0;
+    }
+
 
     #top-menu li a {
         text-align: center;
@@ -769,7 +783,7 @@ footer div.row:nth-child(3){
 
 /*///////////////////////////////////// StartingPoint SECTION 320< //////////////////////////////////////////////////*/
 
-    .block-cell > .block-table
+   .block-cell > .block-table
     {
         display:none;
         width: 50px;
@@ -787,15 +801,22 @@ footer div.row:nth-child(3){
 
     .container_sequence 
     {
-     font-size: 1.5em;
+     font-size: 16px;
      font-weight:normal;
 
     }
 
-    .X {
-        top: calc(50% - 3em);
-        left: calc(50% - 4.7em);
-    } 
+    .X  
+
+    {
+        width: 133px;
+        height: 119px;
+        top: -18px;
+        left: -18px;
+        background-size: 133px 119px;
+
+    }
+ 
 
 /*///////////////////////////////////// Arsenal SECTION 320< //////////////////////////////////////////////////*/
     #arsenal h2{text-align:center;}
@@ -825,8 +846,9 @@ footer div.row:nth-child(3){
 }
 
 @media (min-width: 768px) {
-    .container{width:732px}
 /*////////////////////////////////////// HEADER 768< ////////////////////////////////////////////////////////*/
+    
+    .container{width:732px}
 
     #top-menu li a {
         text-align: center;
@@ -834,10 +856,18 @@ footer div.row:nth-child(3){
         height: 73px;
     }
 
-    #Layer_1 {
+
+       #Layer_1 
+       {
+
+            height:73px;
+            width: 220px;
+       }
+
+    /*#Layer_1 {
         height: 73px;
         width: 147px;
-    }
+    }*/
 
     .nav > li > a {
         padding: 10px 10px !important;
@@ -877,7 +907,7 @@ footer div.row:nth-child(3){
 
 /*///////////////////////////////////// StartingPoint SECTION 768< //////////////////////////////////////////////////*/
 
-   .block-cell > .block-table
+.block-cell > .block-table
     {
         display:table;
         width:100%;
@@ -887,7 +917,7 @@ footer div.row:nth-child(3){
     {        
         width: 593px;
     }
-
+       
    .text_block 
     {
         font: 1.5em Roboto;
@@ -895,15 +925,23 @@ footer div.row:nth-child(3){
 
     .container_sequence 
     {
-     font-size: 1.0em;
-     font-weight:bold;
+     font-size: 16px;
+     /*font-weight:bold;*/
 
     }
 
-    .X {
-        top: calc(50% - 5em);
-        left: calc(50% - 8em);
-    } 
+    .X  
+
+    {
+      width:190px;
+      height:170px;
+    
+      top:-36px;
+      left: -39px;
+
+      background-size: 190px 170px;
+
+    }
 /*///////////////////////////////////// Arsenal SECTION 768< //////////////////////////////////////////////////*/
     #arsenal h2{text-align:center;}
     #arsenal p{text-align:center;width:100%;}
@@ -967,18 +1005,30 @@ footer div.row:nth-child(3){
     
 /*///////////////////////////////////// StartingPoint SECTION 992< //////////////////////////////////////////////////*/
 
+.block-cell > .block-table
+    {
+        display:table;
+        width:100%;
+    }
+
+   .block-cell 
+    {        
+        width: 593px;
+    }
+
+
 .container_sequence 
     {
-     font-size: 1.4em;
+     font-size: 20px;
      font-weight:normal;
 
     }
     
-.X {
+/*.X {
    
       top: calc(50% - 3.5em);
       left: calc(50% - 5.5em);
-    }
+    }*/
 /*///////////////////////////////////// Arsenal SECTION 992< //////////////////////////////////////////////////*/
     #arsenal h2{text-align:initial;}
     #arsenal p{text-align:initial;width:55%;}
@@ -1009,16 +1059,14 @@ footer .col-sm-offset-1{margin-left:0!important}
     /*///////////////////////////////////// StartingPoint SECTION 1200< //////////////////////////////////////////////////*/
 
     
-
-
     .container_sequence 
     {
-     font-size: 1.714em;
+     font-size: 24px;
      font-weight:normal;
     }
 
-    .X {
+    /*.X {
         top: calc(50% - 3em);
         left: calc(50% - 4.5em);
-    }
+    }*/
 }
