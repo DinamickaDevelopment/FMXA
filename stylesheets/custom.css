@@ -197,10 +197,11 @@ color:#202020;background-color: transparent;
     display: table;
 }
 .shortcut-svg svg{
-                -moz-transition: all .5s;
+        -moz-transition: all .5s;
         -o-transition: all .5s;
         -webkit-transition: all .5s;
         transition: all .5s;
+        cursor:pointer;
 }
 .shortcut-svg svg path, .shortcut-svg svg rect {
         fill: #fafafa;

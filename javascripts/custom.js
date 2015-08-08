@@ -34,19 +34,94 @@ jQuery(function ($) {
 
 
     //======== 4.Adaptive height =================================
-    //Идея не работает, контейнер меняет высоту в любую точку времени, при скроле вниз блок брезается
-    //$(window).resize(function () {
-    //    initContainer();
-    //});
 
-    //function initContainer() {
-    //    var windowWidth = $(window).width(),windowHeight = $(window).height(),
-    //        navbarHeight = $('#heightJs').height();
-    //    containerHeight = windowHeight - navbarHeight;
+    $(document).ready(function () {
+        var isMobile = {
+            Android: function () { return navigator.userAgent.match(/Android/i); },
+            BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+            iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+            Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+            Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+            any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+        };
+        //Mobile Check -end
+        // Calibrate slider's height   
 
-    //    for (var i = 0; i < document.getElementsByClassName("ms-slide").length; i++) {
-    //        document.getElementsByClassName("ms-slide")[i].style.height = containerHeight + "px";
-    //    }
-    //}
+        var winHeight = $(window).height(), sliderHeight;
+
+
+        if (isMobile.any()) {
+
+            for (var i = document.getElementsByTagName("video").length; i > 0; i--) {
+                var node = document.getElementsByTagName("video")[0];
+                if (node.parentNode) {
+                    node.parentNode.removeChild(node);
+                }
+            }
+
+            sliderHeight = 670;
+            if ((winHeight) > 670) { sliderHeight = winHeight - 150 }
+
+            var slider = new MasterSlider();
+            slider.setup('masterslider', {
+                space: 0,
+                mouse: false,
+                fullwidth: true,
+                loop: true,
+                swipe: false,
+                autoplay: true,
+                width: 1280,
+                height: sliderHeight
+            });
+        } else {
+
+            sliderHeight = winHeight - 150
+            var slider = new MasterSlider();
+            slider.setup('masterslider', {
+                space: 0,
+                mouse: false,
+                fullwidth: true,
+                loop: true,
+                swipe: false,
+                autoplay: false,
+                width: 1280,
+                height: sliderHeight
+            });
+
+            //Video download logic
+            document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
+            document.getElementById("video1").addEventListener('ended', videoChange);
+
+            var startTimeout = setTimeout(function () {//Asynchronous initialization
+
+                slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
+                    // Shortcut indikator logic
+                    var number = slider.api.index();
+                    for (var i = 0; i < 6; i++) { $(".shortcut-svg svg").eq(i).attr("class", ""); }
+                    $(".shortcut-svg svg").eq(number).attr("class", "active-svg");
+                    // Shortcut indikator logic - end
+                });
+                slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
+                    var curVideo = slider.api.view.currentSlide.bgvideo;
+                    if (curVideo.readyState == 4) { curVideo.play(); }
+                    else { curVideo.addEventListener('canplaythrough', videoStarter); };
+                    curVideo.addEventListener('ended', videoChange);
+                });
+
+            }, 10);//Asynchronous initialization -end
+
+            function videoStarter() { this.play(); };
+            function videoChange() {
+                slider.api.next();
+                this.removeEventListener('canplaythrough', videoStarter);
+                this.removeEventListener('ended', videoChange);
+            };//Video download logic - end
+
+        }//end of mibile chek
+
+
+
+
+    });
 
 });
