@@ -152,14 +152,7 @@ color:#202020;background-color: transparent;
 
 /*<========== 2.Video ===============>*/
 
-.ms-slide video{
-display:none;
 
-}
-.ms-slide-bgcont img{
-    margin-left:0!important;
-    margin-top:0!important;
-}
 .video-info {
     
     text-align:center;
@@ -254,19 +247,21 @@ display:none;
     margin: 0 0 44px;
 }
 /*<========== 4.Tech ===============>*/
-#Tech{
+#Tech_text{
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
     display:block;
     width:100%;
     background:#262626;
 }
-#Tech h2{
-    margin: 75px 0 27px;
+#Tech_text h2{
+    margin: 3% 0 1%;
     color:#fafafa;
 }
-#Tech h2+p{
+#Tech_text h2+p{
     font-family: 'Roboto', sans-serif;    
     font-size: 1.25em;
-    margin: 27px 0 29px;
+    margin: 1% 0 1%;
     color:#fafafa;
 }
 
@@ -296,7 +291,42 @@ display:none;
   font-weight: 100;
   font-style: normal;
     
-} 
+}
+
+#Tech_block 
+{
+    background:#262626;
+}
+
+#Tech_block a.section {
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:#fafafa;
+    background:#262626;
+   
+    font: 21px Roboto;
+
+
+}
+
+#Tech_block a.section:hover {
+    color:black;
+    background:#fafafa;  
+    
+
+}
+
+    #Tech_block a.section:hover img {
+
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+
+    #Tech_block a.section > span {
+        display:block;
+    } 
+
 
 /*<========== 5.StartingPoint ===============>*/
 
@@ -475,13 +505,13 @@ display:none;
     background-color:#262626;
 } 
 #arsenal h2{
-    margin: 75px 0 27px;
+    margin: 3% 0 1%;
     color:#fafafa;
 }
 #arsenal p{
     font-family: 'Roboto', sans-serif;    
     font-size: 1.25em;
-    margin: 27px 0 29px;
+    margin: 1% 0 1%;
     color:#fafafa;
     width: 55%;
 }
@@ -490,8 +520,8 @@ display:none;
     float: left;
     height:600px
 }
-.img-phone{background:url('../images/Image container copy 2.png') center 100% no-repeat;background-size:cover;}
-.img-door{background:url('../images/Image container copy 3.png') center 100% no-repeat;background-size:cover;}
+/*.img-phone{background:url('../images/Image container copy 2.png') center 100% no-repeat;background-size:cover;}
+.img-door{background:url('../images/Image container copy 3.png') center 100% no-repeat;background-size:cover;}*/
 .arsenal-img-text div{
     width:100%;   
     height:20%; 
@@ -517,75 +547,84 @@ display:none;
     padding: 30px;
     opacity: 0.7;
 }
-.arsenal-img-text-full div:nth-child(2){
-    margin: 0 auto;
-}
-.arsenal-img-text-full div:nth-child(3){
-    font-size: 1.125em;
+
+.first_block_text, .second_block_text {
+    font-size: 21px;
     display: block;
-    font-weight: 400;
+    font-weight: 100;
     font-family: Roboto;
+    
     color: #fafafa;
     letter-spacing: 0.1em;
     text-align: center;
-    opacity: 0.7;    
+    /*opacity: 0.7;*/    
 
 }
+
+#img_bg 
+{
+    background-image:url(../images/Assets/FullArsenal.jpg);
+    background-size:cover;
+}
+
 /*<========== 7.h2h ===============>*/
 #h2h{
     width:100%;
     background-color:#fafafa;
 }
 #h2h h2{
-    margin: 75px 0 27px;
+    margin: 3% 0 1%;
     color:#262626;
 }
 #h2h h2+p{
     font-family: 'Roboto', sans-serif;    
     font-size: 1.25em;
-    margin: 27px 0 29px;
+    margin: 1% 0 1%;
     color:#262626;
     width: 55%;
 }
 .img-text{
     width: 100%;
-    background: url('../images/Image5.png') center 100%;
+    background: url('../images/Assets/H2H.jpg') center 100%;
     background-size: cover;
-    height: 971px;
+    padding-top:7%;
+    
 }
 .img-text div:first-child{
-    width: 100%;
-    min-height:66%;
-    padding-top: 3%;
-    font-family: Roboto;
-    font-size: 2em;
-    color: #fafafa;
+    font-size: 21px;
+    display: block;
     font-weight: 100;
+    font-family: Roboto;
+    
+    color: #fafafa;
     letter-spacing: 0.1em;
     text-align: center;
-    opacity: 0.7;
+    
 }
 .img-text div:nth-child(2){    
     width: 100%;
     min-height: 11%;
     font-family: Roboto;
-    font-size: 2em;
+    font-size: 18px;
     color: #fafafa;
     font-weight: 100;
     letter-spacing: 0.1em;
     text-align: center;
-    opacity: 0.7;
+    margin-top:1.2em;
 }
 .img-text div:nth-child(3){   
-    width: 100%;
-    min-height: 3%;
-    font-size: 1.125em;
-    font-weight: 400;
-    font-family: Roboto;
-    color: #fafafa;
-    letter-spacing: 0.1em;
-    text-align: center;
-    opacity: 0.7;
+    
+  font-family: 'Droid Serif',serif;
+  font-size: 2em;
+  color: #fafafa;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  width: 15em;
+  height: 2em;
+  margin: 0 auto 2em;
 }
 .img-text div:nth-child(4){
     display:table;
@@ -777,9 +816,7 @@ footer div.row:nth-child(3){
 
 /*////////////////////////////////////// TECH SECTION 320< /////////////////////////////////////////////////*/
 
-#Tech { /*section tech*/
-        text-align: center;
-    }
+
 
 .tech-img-container > div {
         font-size: 1.5em ;
@@ -834,7 +871,7 @@ footer div.row:nth-child(3){
     #h2h h2{text-align:center;}
     #h2h h2+p{text-align:center;width:100%;}
     .img-text{height:690px}
-    .img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}
+    /*.img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}*/
 
     .bordered-text {
      font-size:1.5em;
@@ -902,9 +939,6 @@ footer div.row:nth-child(3){
 
 /*///////////////////////////////////// TECH SECTION 768< //////////////////////////////////////////////////*/
 
-    #Tech { /*section tech*/
-        text-align: center;
-    }
 
 
     .tech-img-container > div {
@@ -958,7 +992,7 @@ footer div.row:nth-child(3){
     #h2h h2{text-align:center;}
     #h2h h2+p{text-align:center;width:100%;}
     .img-text{height:690px}
-    .img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}
+    /*.img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}*/
 
     .bordered-text {
      font-size:2em;
@@ -1045,7 +1079,8 @@ footer div.row:nth-child(3){
     #h2h h2{text-align:initial;}
     #h2h h2+p{text-align:initial;width:55%;}
     .img-text{height:971px}
-    .img-text div:first-child,.img-text div:nth-child(2){font-size:2em}
+    
+    /*.img-text div:first-child,.img-text div:nth-child(2){font-size:2em}*/
 /*///////////////////////////////////// Footer SECTION 992< //////////////////////////////////////////////////*/
 footer .col-sm-offset-1{margin-left:0!important}
     .underlogo{font-size: 1.25em;margin: 1% 0 2%;}

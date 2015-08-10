@@ -51,6 +51,8 @@ jQuery(function ($) {
         var winHeight = $(window).height(), sliderHeight;
 
 
+
+
         if (isMobile.any()) {
 
             for (var i = document.getElementsByTagName("video").length; i > 0; i--) {
@@ -77,12 +79,12 @@ jQuery(function ($) {
 
             var startTimeout = setTimeout(function () {//Asynchronous initialization for mobile
                 slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
-                // Shortcut indikator logic
-                var number = slider.api.index();
-                for (var i = 0; i < 6; i++) { $(".shortcut-svg svg").eq(i).attr("class", ""); }
-                $(".shortcut-svg svg").eq(number).attr("class", "active-svg");
+                    // Shortcut indikator logic
+                    var number = slider.api.index();
+                    for (var i = 0; i < 6; i++) { $(".shortcut-svg svg").eq(i).attr("class", ""); }
+                    $(".shortcut-svg svg").eq(number).attr("class", "active-svg");
                     // Shortcut indikator logic - end
-            }, 10);//Asynchronous initialization for mobile -end
+                }, 10);//Asynchronous initialization for mobile -end
 
             });
         } else {
@@ -124,19 +126,14 @@ jQuery(function ($) {
                 });
                 slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
                     var curVideo = slider.api.view.currentSlide.bgvideo;
-                    if (curVideo.readyState == 4) {
-                        curVideo.style.display = "inline-block"; curVideo.style.marginTop = "0px"; curVideo.style.marginLeft = "0px"; curVideo.play();
-                    }
+                    if (curVideo.readyState == 4) { curVideo.play(); }
                     else { curVideo.addEventListener('canplaythrough', videoStarter); };
                     curVideo.addEventListener('ended', videoChange);
                 });
 
             }, 10);//Asynchronous initialization -end
 
-            function videoStarter() {
-                this.style.display = "inline-block"; this.style.marginTop = "0px"; this.style.marginLeft = "0px";
-                this.play();
-            };
+            function videoStarter() { this.play(); };
             function videoChange() {
                 slider.api.next();
                 this.removeEventListener('canplaythrough', videoStarter);
@@ -145,7 +142,64 @@ jQuery(function ($) {
 
         }//end of mibile chek
 
+        // Section Tech. Insert heigth;
+        
+        var Section_menu = winHeight - 91; // minus menu
+        $("#Tech").css("height", Section_menu + "px");
 
+        // Tech Text block
+        Tech_text = Section_menu * 0.3;
+        $("#Tech_text").css("height", Tech_text);
+
+        // Tech block
+        SectioTechBlockHeight = (Section_menu - Tech_text); // minus text section
+        $("#Tech_block").css("height", SectioTechBlockHeight);
+
+
+        var oneRow = SectioTechBlockHeight / 2;
+
+        $("#Tech_block  a").css("height", oneRow + "px"); // height for each one block
+        //$("#Tech_block  a").css("width", oneRow + "px"); // width for each one block
+
+                
+        var height_for_svg = oneRow * 0.4 ; // height for svg graphics
+        $("#Tech_block  img").css("height", height_for_svg );
+
+        //// align center
+        var padding = (oneRow - height_for_svg - 25) /2; // padding top and bottomn for img and span
+        $("#Tech_block a").css({paddingTop:padding, paddingBottom:padding });
+
+        var height_for_span = oneRow * 0.6; // height for text
+        $("#Tech_block  span").css({ heigth: height_for_span, marginTop: padding/2 });
+        
+        // Arsenal. Insert heigth;
+
+        $("#arsenal").css("height", Section_menu); 
+
+        // img block height 
+        var arsenal_header = Section_menu * 0.35;
+        $("#arsenal_header").css("height", arsenal_header);
+
+        img_height = Section_menu * 0.65;
+
+        $("#img_bg").css("height", img_height);
+
+        first_text = img_height * 0.5; // height for first block text
+        $(".first_block_text").css({paddingTop: 20, height: first_text });
+        
+        //second_text = img_height * 0.25; // height for second block text
+        //$(".second_block_text").css({ height: second_text });
+
+
+        //SECTION h2h 
+
+        $("#h2h").css("height", Section_menu);
+
+        var h2h_header = Section_menu * 0.3;
+        $("#h2h_header").css("height", h2h_header); // Set a h2h_header height
+
+        var img_text  = Section_menu * 0.7;
+        $(".img-text").css("height", img_text); // Set a img block height in h2h
 
 
     });
