@@ -44,7 +44,7 @@ p{
 
 header{
     display:block;
-    height:155px;
+    height:99px;
 }
 .menu_area{
     height:100%;
@@ -157,9 +157,10 @@ color:#202020;background-color: transparent;
 display:none;
 }
 
-.ms-slide-bgcont img{
+.ms-slide-bgcont img{    
+    margin-top:-50px!important;
     margin-left:0!important;
-    margin-top:0!important;
+
 }
 .video-info {
     

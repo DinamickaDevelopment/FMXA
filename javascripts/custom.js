@@ -9,14 +9,14 @@
 
 jQuery(function ($) {
     //======== 1.Top menu fixed =================================
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 50) {
-            $(".navbar-fixed-top").addClass('past-main');
-        }
-        else {
-            $(".navbar-fixed-top").removeClass('past-main');
-        }
-    });
+    //$(window).scroll(function () {
+    //    if ($(window).scrollTop() > 50) {
+    //        $(".navbar-fixed-top").addClass('past-main');
+    //    }
+    //    else {
+    //        $(".navbar-fixed-top").removeClass('past-main');
+    //    }
+    //});         mini header logic
 
     //======== 2. ========================================================
 
@@ -63,7 +63,7 @@ jQuery(function ($) {
             }
 
             sliderHeight = 670;
-            if ((winHeight) > 670) { sliderHeight = winHeight - 150 }
+            if ((winHeight) > 670) { sliderHeight = winHeight - 99 }
 
             var slider = new MasterSlider();
             slider.setup('masterslider', {
@@ -89,7 +89,7 @@ jQuery(function ($) {
             });
         } else {
 
-            sliderHeight = winHeight - 150
+            sliderHeight = winHeight - 99
             var slider = new MasterSlider();
             slider.setup('masterslider', {
                 space: 0,
@@ -126,14 +126,14 @@ jQuery(function ($) {
                 });
                 slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
                     var curVideo = slider.api.view.currentSlide.bgvideo;
-                    if (curVideo.readyState == 4) { curVideo.play(); curVideo.style.display = "inline-block"; curVideo.style.marginTop = "0"; curVideo.style.marginLeft = "0"; }
+                    if (curVideo.readyState == 4) { curVideo.play(); curVideo.style.display = "inline-block"; curVideo.style.marginTop = "-50px"; curVideo.style.marginLeft = "0"; }
                     else { curVideo.addEventListener('load', videoStarter); };
                     curVideo.addEventListener('ended', videoChange);
                 });
 
             }, 10);//Asynchronous initialization -end
 
-            function videoStarter() { this.style.display = "inline-block"; this.style.marginTop = "0"; this.style.marginLeft = "0"; this.play(); };
+            function videoStarter() { this.style.display = "inline-block"; this.style.marginTop = "-50px"; this.style.marginLeft = "0"; this.play(); };
             function videoChange() {
                 slider.api.next();
                 this.removeEventListener('load', videoStarter);
