@@ -124,14 +124,16 @@ jQuery(function ($) {
                 });
                 slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
                     var curVideo = slider.api.view.currentSlide.bgvideo;
-                    if (curVideo.readyState == 4) { curVideo.play(); }
+                    if (curVideo.readyState == 4) { curVideo.style.display = "block"; curVideo.style.marginTop = "0px"; curVideo.style.marginLeft = "0px"; curVideo.play(); }
                     else { curVideo.addEventListener('canplaythrough', videoStarter); };
                     curVideo.addEventListener('ended', videoChange);
                 });
 
             }, 10);//Asynchronous initialization -end
 
-            function videoStarter() { this.play(); };
+            function videoStarter() {
+                this.style.display = "block"; this.style.marginTop = "0px"; this.style.marginLeft = "0px"; this.play();
+            };
             function videoChange() {
                 slider.api.next();
                 this.removeEventListener('canplaythrough', videoStarter);

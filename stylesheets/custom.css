@@ -152,7 +152,9 @@ color:#202020;background-color: transparent;
 
 /*<========== 2.Video ===============>*/
 
-
+.ms-slide video{
+    display:none;
+}
 .video-info {
     
     text-align:center;
