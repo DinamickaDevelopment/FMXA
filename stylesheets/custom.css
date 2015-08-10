@@ -257,6 +257,7 @@ display:none;
 }
 /*<========== 4.Tech ===============>*/
 #Tech_text{
+    height:200px;
     border-bottom: 2px solid white;
     border-top: 2px solid white;
     display:block;
@@ -513,6 +514,12 @@ display:none;
     width:100%;
     background-color:#262626;
 } 
+#arsenal_header{
+    height:147px;
+}
+.full {
+    margin-bottom: 5em;
+}
 #arsenal h2{
     margin: 3% 0 1%;
     color:#fafafa;
@@ -572,7 +579,7 @@ display:none;
 
 #img_bg 
 {
-    background-image:url(../images/Assets/FullArsenal.jpg);
+    background:url(../images/Assets/FullArsenal.jpg) center;
     background-size:cover;
 }
 
@@ -580,6 +587,9 @@ display:none;
 #h2h{
     width:100%;
     background-color:#fafafa;
+}
+#h2h_heaser{
+    height:195px;
 }
 #h2h h2{
     margin: 3% 0 1%;
@@ -719,6 +729,7 @@ footer{
     font-size: 1em;
     margin: 1% 0 2%;
     color: #fafafa;
+    letter-spacing: 0.05em;
 }
 .info:nth-child(1){
     float:left;
@@ -748,7 +759,7 @@ footer{
 }
 .svg-footer{
     width:330px;
-    margin:25px 13px 0;
+    margin:25px 0 0;
 }
 .social{
     margin: 15% 0;
@@ -773,7 +784,7 @@ footer div.row:nth-child(3){
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color: #262626;
-    padding: 22px;
+    padding: 12px 0;
 }
 
 
@@ -1094,8 +1105,8 @@ footer div.row:nth-child(3){
     /*.img-text div:first-child,.img-text div:nth-child(2){font-size:2em}*/
 /*///////////////////////////////////// Footer SECTION 992< //////////////////////////////////////////////////*/
 footer .col-sm-offset-1{margin-left:0!important}
-    .underlogo{font-size: 1em;margin: 1% 0 2%;}
-    .svg-footer{width:330px;margin:25px 13px 0;} 
+    .underlogo{font-size: 1em;margin: 3% 0 6%;}
+    .svg-footer{width:330px;margin:25px 0 0;} 
     .social {margin: 15% 0;}
     .social a {margin: 0 1%;}
     .rights{margin:0;text-align:initial;}
