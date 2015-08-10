@@ -124,7 +124,9 @@ jQuery(function ($) {
                 });
                 slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
                     var curVideo = slider.api.view.currentSlide.bgvideo;
-                    if (curVideo.readyState == 4) { curVideo.style.display = "block"; curVideo.play(); }
+                    if (curVideo.readyState == 4) {
+                        curVideo.style.display = "inline-block"; curVideo.style.marginTop = "0px"; curVideo.style.marginLeft = "0px"; curVideo.play();
+                    }
                     else { curVideo.addEventListener('canplaythrough', videoStarter); };
                     curVideo.addEventListener('ended', videoChange);
                 });
@@ -132,7 +134,8 @@ jQuery(function ($) {
             }, 10);//Asynchronous initialization -end
 
             function videoStarter() {
-                this.style.display = "block"; this.style.marginTop = "0px"; this.style.marginLeft = "0px"; this.play();
+                this.style.display = "inline-block"; this.style.marginTop = "0px"; this.style.marginLeft = "0px";
+                this.play();
             };
             function videoChange() {
                 slider.api.next();

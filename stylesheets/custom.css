@@ -153,7 +153,12 @@ color:#202020;background-color: transparent;
 /*<========== 2.Video ===============>*/
 
 .ms-slide video{
-    display:none;
+display:none;
+
+}
+.ms-slide-bgcont img{
+    margin-left:0!important;
+    margin-top:0!important;
 }
 .video-info {
     
