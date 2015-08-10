@@ -127,7 +127,7 @@ jQuery(function ($) {
                 slider.api.addEventListener(MSSliderEvent.CHANGE_END, function () {
                     var curVideo = slider.api.view.currentSlide.bgvideo;
                     if (curVideo.readyState == 4) { curVideo.play(); curVideo.style.display = "inline-block"; curVideo.style.marginTop = "0"; curVideo.style.marginLeft = "0"; }
-                    else { curVideo.addEventListener('canplaythrough', videoStarter); };
+                    else { curVideo.addEventListener('load', videoStarter); };
                     curVideo.addEventListener('ended', videoChange);
                 });
 
@@ -136,7 +136,7 @@ jQuery(function ($) {
             function videoStarter() { this.style.display = "inline-block"; this.style.marginTop = "0"; this.style.marginLeft = "0"; this.play(); };
             function videoChange() {
                 slider.api.next();
-                this.removeEventListener('canplaythrough', videoStarter);
+                this.removeEventListener('load', videoStarter);
                 this.removeEventListener('ended', videoChange);
             };//Video download logic - end
 
