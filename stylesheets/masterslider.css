@@ -24,7 +24,7 @@
         text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.1);
         text-transform: uppercase;
         font-family: Roboto, Arial, sans-serif;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.2em;
     }
 
 .master-slider h2 {
@@ -35,7 +35,7 @@
 	width:100%;
 	text-shadow: 1px 1px 1px rgba(7, 7, 7, 0.1);
     text-transform:uppercase;
-        letter-spacing:0.1em;
+        letter-spacing:0.075em;
 }
 
 .master-slider p {

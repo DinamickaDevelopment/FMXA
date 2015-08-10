@@ -312,7 +312,7 @@ display:none;
     text-decoration:none;
     color:#fafafa;
     background:#262626;
-   
+   letter-spacing:0.1em;
     font: 21px Roboto;
 
 
@@ -589,6 +589,7 @@ display:none;
     font-size: 1.25em;
     margin: 1% 0 1%;
     color:#262626;
+    letter-spacing:0.1em;
     width: 55%;
 }
 .img-text{
@@ -618,7 +619,7 @@ display:none;
     font-weight: 100;
     letter-spacing: 0.1em;
     text-align: center;
-    margin-top:1.2em;
+    margin-top:9.2em;
 }
 .img-text div:nth-child(3){   
     
@@ -713,7 +714,7 @@ footer{
 .underlogo{
     clear: both;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25em;
+    font-size: 1em;
     margin: 1% 0 2%;
     color: #fafafa;
 }
@@ -888,7 +889,7 @@ footer div.row:nth-child(3){
 /*///////////////////////////////////// Contact SECTION 320< //////////////////////////////////////////////////*/
     .Formhalf{width:100%}
 /*///////////////////////////////////// Footer SECTION 320< //////////////////////////////////////////////////*/
-    .underlogo{font-size: 1.1em;margin: 4% 0 6%;}
+    .underlogo{font-size: 1em;margin: 4% 0 6%;}
     .svg-footer{width:60%;margin:20px 0 0;} 
     .social {margin: 6% 0;}
     .social a {margin: -2% 2% 7%;}
@@ -1091,7 +1092,7 @@ footer div.row:nth-child(3){
     /*.img-text div:first-child,.img-text div:nth-child(2){font-size:2em}*/
 /*///////////////////////////////////// Footer SECTION 992< //////////////////////////////////////////////////*/
 footer .col-sm-offset-1{margin-left:0!important}
-    .underlogo{font-size: 1.25em;margin: 1% 0 2%;}
+    .underlogo{font-size: 1em;margin: 1% 0 2%;}
     .svg-footer{width:330px;margin:25px 13px 0;} 
     .social {margin: 15% 0;}
     .social a {margin: 0 1%;}
