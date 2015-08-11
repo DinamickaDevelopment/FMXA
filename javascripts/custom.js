@@ -5,6 +5,7 @@
     1.Top menu fixed
     2.Current page
     4.Adaptive height
+    5.Height configuratiom 
 */
 
 jQuery(function ($) {
@@ -142,6 +143,7 @@ jQuery(function ($) {
 
         }//end of mibile chek
 
+        //======== 5.Height configuratiom =================================
         // Section Tech. Insert heigth;
         
         var Section_menu = winHeight - 91; // minus menu
@@ -170,22 +172,24 @@ jQuery(function ($) {
 
         $("#arsenal").css("height", Section_menu); 
 
-        // img block height 
         img_height = Section_menu - 147;
 
         $("#img_bg").css("height", img_height);
 
         first_text = img_height * 0.55; // height for first block text
+        paddingForBordered = img_height * 0.02;
         $(".first_block_text").css({paddingTop: 98, height: first_text });
+        $(".full").css({ margingBottom: paddingForBordered });
+
+
         
-        //second_text = img_height * 0.25; // height for second block text
-        //$(".second_block_text").css({ height: second_text });
 
 
         //SECTION h2h 
         var img_text  = Section_menu - 195;
         $(".img-text").css("height", img_text); // Set a img block height in h2h
-
+        marginTopval = img_text * img_text/2400;
+        $("#item-for-margin").css({ marginTop: marginTopval });
 
     });
 

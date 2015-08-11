@@ -104,7 +104,7 @@ header{
 }*/
 .top-soc{
     height: 32px;
-    margin:12% 0!important;
+    margin:12% 8%!important;
 }
 .top-soc a{
     background-color:#262626!important;
@@ -115,7 +115,7 @@ header{
 {
     height:73px;
     width:147px; 
-    margin:1px 0 0 0
+    margin:1px 0  0 14px;
 
 }
 
@@ -517,9 +517,7 @@ display:none;
 #arsenal_header{
     height:147px;
 }
-.full {
-    margin-bottom: 5em;
-}
+
 #arsenal h2{
     margin: 3% 0 1%;
     color:#fafafa;
@@ -630,7 +628,6 @@ display:none;
     font-weight: 100;
     letter-spacing: 0.1em;
     text-align: center;
-    margin-top:9.2em;
 }
 
 .img-text div:nth-child(3){   
