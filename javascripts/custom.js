@@ -178,7 +178,8 @@ jQuery(function ($) {
 
         first_text = img_height * 0.55; // height for first block text
         paddingForBordered = img_height * 0.02;
-        $(".first_block_text").css({paddingTop: 98, height: first_text });
+        paddingForFirstBlock = img_height * 0.08;
+        $(".first_block_text").css({ paddingTop: paddingForFirstBlock, height: first_text });
         $(".full").css({ margingBottom: paddingForBordered });
 
 
