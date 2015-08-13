@@ -23,7 +23,7 @@
 
 h2{
     font-family: 'Droid Serif', serif;
-    font-size: 2em;     
+         
     text-transform:uppercase;
     letter-spacing:0.1em;
 }
@@ -104,7 +104,7 @@ header{
 }*/
 .top-soc{
     height: 32px;
-    margin:12% 8%!important;
+    margin:22px 0!important;
 }
 .top-soc a{
     background-color:#262626!important;
@@ -113,8 +113,8 @@ header{
 
 .past-main svg#Layer_1
 {
-    height:73px;
-    width:147px; 
+    /*height:73px;
+    width:147px;*/ 
     margin:1px 0  0 14px;
 
 }
@@ -154,12 +154,17 @@ color:#202020;background-color: transparent;
 
 
 .ms-slide video{
+    /*position:relative;
+    top:-80px;*/
 display:none;
+margin-top: 0 !important;
 }
 
-.ms-slide-bgcont img{    
-    margin-top:-50px!important;
-    margin-left:0!important;
+.ms-slide-bgcont img{
+    /*position:relative;*/
+    /*top:-80px;*/    
+    margin-top:0  !important;
+    margin-left:0 !important;
 
 }
 .video-info {
@@ -257,7 +262,7 @@ display:none;
 }
 /*<========== 4.Tech ===============>*/
 #Tech_text{
-    height:200px;
+    min-height:195px;
     border-bottom: 2px solid white;
     border-top: 2px solid white;
     display:block;
@@ -265,13 +270,13 @@ display:none;
     background:#262626;
 }
 #Tech_text h2{
-    margin: 3% 0 1%;
+    
     color:#fafafa;
 }
 #Tech_text h2+p{
+    padding:0;
     font-family: 'Roboto', sans-serif;    
     font-size: 1.25em;
-    margin: 1% 0 1%;
     color:#fafafa;
 }
 
@@ -314,8 +319,8 @@ display:none;
     text-decoration:none;
     color:#fafafa;
     background:#262626;
-   letter-spacing:0.1em;
-    font: 21px Roboto;
+    letter-spacing:0.1em;
+    font-family: Roboto;
 
 
 }
@@ -327,10 +332,16 @@ display:none;
 
 }
 
-    #Tech_block a.section:hover img {
+    #Tech_block a.section:hover svg path {
 
-        -webkit-filter: invert(100%);
-        filter: invert(100%);
+        fill: black;
+ 
+    }
+
+    #Tech_block a.section:hover svg rect {
+
+        fill: black;
+ 
     }
 
     #Tech_block a.section > span {
@@ -349,7 +360,8 @@ display:none;
 
 .different_point 
 {
-    font: 2em 'Droid Serif', serif;
+    font-family:'Droid Serif', serif;
+    
     letter-spacing:2px;
     width:auto; 
     height:auto;
@@ -361,7 +373,8 @@ display:none;
 {
     margin: 0 0 70px 0;
     letter-spacing:1px;
-    font: 1.5em Roboto;
+    font-family:Roboto;
+    
     width:auto; 
     height:auto; 
     
@@ -450,7 +463,7 @@ display:none;
 
 
 .text_block {
-    font: 1.5em Roboto;
+    font-family: Roboto;
     letter-spacing: 1px;
     margin: 80px auto 0;
     max-width: 980px;
@@ -515,7 +528,7 @@ display:none;
     background-color:#262626;
 } 
 #arsenal_header{
-    height:147px;
+   min-height: 140px;
 }
 
 #arsenal h2{
@@ -523,11 +536,10 @@ display:none;
     color:#fafafa;
 }
 #arsenal p{
+    padding:0;
     font-family: 'Roboto', sans-serif;    
-    font-size: 1.25em;
-    margin: 1% 0 1%;
     color:#fafafa;
-    width: 55%;
+    /*width: 55%;*/
 }
 .arsenal-img-text{
     width: 50%;
@@ -540,7 +552,7 @@ display:none;
     width:100%;   
     height:20%; 
     font-family: Roboto;
-    font-size: 2em;
+    
     color: #fafafa;
     font-weight: 100;
     letter-spacing: 0.1em;
@@ -563,7 +575,6 @@ display:none;
 }
 
 .first_block_text, .second_block_text {
-    font-size: 21px;
     display: block;
     font-weight: 100;
     font-family: Roboto;
@@ -571,7 +582,6 @@ display:none;
     color: #fafafa;
     letter-spacing: 0.1em;
     text-align: center;
-    /*opacity: 0.7;*/    
 
 }
 
@@ -587,19 +597,19 @@ display:none;
     background-color:#fafafa;
 }
 #h2h_heaser{
-    height:195px;
+    min-height:195px;
 }
 #h2h h2{
-    margin: 3% 0 1%;
+    /*margin: 3% 0 1%;*/
     color:#262626;
 }
 #h2h h2+p{
     font-family: 'Roboto', sans-serif;    
-    font-size: 1.25em;
-    margin: 1% 0 1%;
+    padding:0 !important;
+    /*margin: 1% 0 2%;*/
     color:#262626;
     letter-spacing:0.1em;
-    width: 55%;
+    /*width: 55%;*/
 }
 .img-text{
     width: 100%;
@@ -608,7 +618,7 @@ display:none;
     padding-top:7%;
     
 }
-.img-text div:first-child{
+.img-text .container{
     font-size: 21px;
     display: block;
     font-weight: 100;
@@ -619,7 +629,7 @@ display:none;
     text-align: center;
     
 }
-.img-text div:nth-child(2){    
+.img-text #item-for-margin{    
     width: 100%;
     min-height: 11%;
     font-family: Roboto;
@@ -630,7 +640,7 @@ display:none;
     text-align: center;
 }
 
-.img-text div:nth-child(3){   
+.img-text .bordered-text{   
     
   font-family: 'Droid Serif',serif;
   font-size: 2em;
@@ -789,8 +799,16 @@ footer div.row:nth-child(3){
 
 
 @media (min-width: 320px) {
-    /*body*/
-    /*{overflow:visible !important;}*/
+    
+    /*h2 
+        {
+          font-size: 1.5em !important;
+        }
+
+        h2 + p {
+            font-size: 1em !important;
+        }*/
+
 /*////////////////////////////////////// HEADER 320< /////////////////////////////////////////////////*/
 
     #Layer_1 {
@@ -816,6 +834,15 @@ footer div.row:nth-child(3){
 
 /*////////////////////////////////////// VIDEO SECTION 320< /////////////////////////////////////////////////*/
 
+   .master-slider h2 {
+        font-size: 2.02em !important;
+        
+    }
+
+    .master-slider h1 {
+        font-size: 1.15em !important;
+    }
+
 .huge-text  /*text on video */ 
     { 
           font-size: 1.3em;
@@ -824,7 +851,7 @@ footer div.row:nth-child(3){
     left:calc(50% - 167px);
 }
     .shortcut-svg svg {
-        height:2.3em;
+        height:2.0em;
     }
     .shortcut-svg {margin:0 auto 22px}
 /*///////////////////////////////////// ICONS SECTION 320< /////////////////////////////////////////*/
@@ -835,16 +862,40 @@ footer div.row:nth-child(3){
 
 /*////////////////////////////////////// TECH SECTION 320< /////////////////////////////////////////////////*/
 
+   #Tech_text h2  {
+        font-size: 1.25em;
+        margin: 9% 0 1%;
+    }
 
+    #Tech_text h2 + p {
+        margin: 4% 0 2%;
+        font-size: 0.93em;
+    }
 
-.tech-img-container > div {
+/*.tech-img-container > div {
         font-size: 1.5em ;
         
         
-    } 
+    }*/ 
+
+#Tech_block a.section 
+    {
+    
+          font-size:1.15em;
+
+    }
 
 
 /*///////////////////////////////////// StartingPoint SECTION 320< //////////////////////////////////////////////////*/
+
+    .different_point {
+        font-size: 1.25em;
+    }
+
+    .work_backwards 
+    {
+      font-size: 1.15em ;
+    }
 
    .block-cell > .block-table
     {
@@ -859,7 +910,7 @@ footer div.row:nth-child(3){
 
     .text_block 
     {
-        font: 1.0em Roboto;
+        font-size: 1.15em;
     }
 
     .container_sequence 
@@ -882,15 +933,37 @@ footer div.row:nth-child(3){
  
 
 /*///////////////////////////////////// Arsenal SECTION 320< //////////////////////////////////////////////////*/
-    #arsenal h2{text-align:center;}
-    #arsenal p{text-align:center;width:100%;}
-    .arsenal-img-text{height:300px}
-    .arsenal-img-text div,.arsenal-img-text-full div:nth-child(1) {font-size:1.5em} 
+    #arsenal h2 {
+        font-size: 1.25em;
+        margin: 9% 0 1%;
+    }
+    #arsenal p
+    {
+          margin: 4% 0 2%;
+          font-size: 0.93em;
+
+    }
+
+    .first_block_text, .second_block_text 
+    {
+        font-size: 0.93em;
+    }
+
+   
+     .arsenal-img-text{height:300px}
+    
 /*///////////////////////////////////// H2H SECTION 320< //////////////////////////////////////////////////*/
-    #h2h h2{text-align:center;}
-    #h2h h2+p{text-align:center;width:100%;}
-    .img-text{height:690px}
-    /*.img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}*/
+    #h2h h2
+    {
+        font-size: 1.25em;
+        margin: 9% 0 1%;
+
+    }
+    #h2h h2+p
+    {
+          margin: 4% 0 2%;
+          font-size: 0.93em;
+        }
 
     .bordered-text {
      font-size:1.5em;
@@ -909,6 +982,9 @@ footer div.row:nth-child(3){
 }
 
 @media (min-width: 768px) {
+
+
+
 /*////////////////////////////////////// HEADER 768< ////////////////////////////////////////////////////////*/
     
     .container{width:732px}
@@ -938,6 +1014,15 @@ footer div.row:nth-child(3){
 
 /*////////////////////////////////////// VIDEO SECTION 768< /////////////////////////////////////////////////*/
 
+        .master-slider h2 {
+        font-size: 4.05em !important;
+    }
+
+    .master-slider h1 {
+        font-size: 1.86em !important;
+    }
+
+
     .huge-text /*text on video */ {
         font-size: 3em;
     }
@@ -945,7 +1030,7 @@ footer div.row:nth-child(3){
     left:calc(50% - 366px);
 }
     .shortcut-svg svg {
-        height:4em;
+        height:3em;
     }
     .shortcut-svg {margin:0 auto 44px}
 /*///////////////////////////////////// ICONS SECTION 768< /////////////////////////////////////////////////*/
@@ -958,14 +1043,41 @@ footer div.row:nth-child(3){
 
 /*///////////////////////////////////// TECH SECTION 768< //////////////////////////////////////////////////*/
 
+    #Tech_text h2  {
+        font-size: 1.86em;
+        margin: 7% 0 1%;
+    }
 
+
+
+    #Tech_text h2 + p {
+        margin: 0;
+        font-size: 1.15em;
+    }
 
     .tech-img-container > div {
         font-size: 2em ;
         
     } 
 
+    #Tech_block a.section 
+    {
+    
+          font-size:1.15em;
+
+    }
+
+
 /*///////////////////////////////////// StartingPoint SECTION 768< //////////////////////////////////////////////////*/
+
+    .different_point {
+        font-size: 1.86em;
+    }
+
+    .work_backwards 
+    {
+      font-size: 1.15em ;
+    }
 
 .block-cell > .block-table
     {
@@ -980,7 +1092,7 @@ footer div.row:nth-child(3){
        
    .text_block 
     {
-        font: 1.5em Roboto;
+        font-size: 1.15em;
     }
 
     .container_sequence 
@@ -1003,15 +1115,37 @@ footer div.row:nth-child(3){
 
     }
 /*///////////////////////////////////// Arsenal SECTION 768< //////////////////////////////////////////////////*/
-    #arsenal h2{text-align:center;}
-    #arsenal p{text-align:center;width:100%;}
+    #arsenal h2
+    {
+        font-size: 1.86em;
+        /*text-align:center;*/
+
+    }
+    #arsenal p
+    {
+        font-size:1.15em;
+        margin:0;
+    }
+
+    .first_block_text, .second_block_text 
+    {
+        font-size: 1.15em;
+    }
+
     .arsenal-img-text{height:300px}
-    .arsenal-img-text div,.arsenal-img-text-full div:nth-child(1) {font-size:1.5em} 
+    
 /*///////////////////////////////////// H2H SECTION 768< //////////////////////////////////////////////////*/
-    #h2h h2{text-align:center;}
-    #h2h h2+p{text-align:center;width:100%;}
-    .img-text{height:690px}
-    /*.img-text div:first-child,.img-text div:nth-child(2){font-size:1.5em}*/
+    #h2h h2
+    {
+          font-size: 1.86em;
+          margin: 7% 0 1%;
+    }
+    #h2h h2+p
+    {
+          margin: 0;
+          font-size: 1.15em;
+
+    }
 
     .bordered-text {
      font-size:2em;
@@ -1042,6 +1176,19 @@ footer div.row:nth-child(3){
 
 /*////////////////////////////////////// VIDEO SECTION 992< /////////////////////////////////////////////////*/
 
+    .master-slider h2 {
+        font-size: 4.5em !important;
+    }
+
+    .master-slider h1 {
+        font-size: 2.05em !important;
+    }
+
+
+    .shortcut-svg svg {
+        height: 3em;
+    }
+
     .huge-text /*text on video */ {
         font-size: 3.25em;
     }
@@ -1051,19 +1198,48 @@ footer div.row:nth-child(3){
 }
 /*///////////////////////////////////// TECH SECTION 992< //////////////////////////////////////////////////*/
 
+    #Tech_text h2  {
+        padding: 1.5% 0 1%;
+        margin: 0;
+        font-size: 2.05em;
+    }
 
+    #Tech_text h2 + p {
+        font-size: 1.27em;
+    }
 
     #Tech { /*section tech*/
         text-align: initial;
     }
 
-    .tech-img-container > div {
+    /*.tech-img-container > div {
         font-size: 2.286em ;
 
         
+    }*/
+
+    #Tech_block a.section 
+    {
+    
+          font-size:1.27em;
+
     }
     
 /*///////////////////////////////////// StartingPoint SECTION 992< //////////////////////////////////////////////////*/
+
+    .different_point {
+        font-size: 2.05em;
+    }
+
+    .work_backwards 
+    {
+      font-size: 1.27em ;
+    }
+
+    .text_block 
+    {
+        font-size: 1.27em;
+    }
 
 .block-cell > .block-table
     {
@@ -1083,21 +1259,45 @@ footer div.row:nth-child(3){
      font-weight:normal;
 
     }
-    
-/*.X {
-   
-      top: calc(50% - 3.5em);
-      left: calc(50% - 5.5em);
-    }*/
+
+
+
 /*///////////////////////////////////// Arsenal SECTION 992< //////////////////////////////////////////////////*/
-    #arsenal h2{text-align:initial;}
-    #arsenal p{text-align:initial;width:55%;}
+
+    #arsenal h2{
+          padding: 1.5% 0 1%;
+          margin: 0;
+
+        font-size: 2.05em;
+        text-align:initial;
+
+    }
+
+    #arsenal p
+    {
+        font-size:1.27em;
+
+    }
+
+    .first_block_text, .second_block_text 
+    {
+        font-size: 1.27em;
+    }
+
     .arsenal-img-text{height:600px}
-    .arsenal-img-text div,.arsenal-img-text-full div:nth-child(1) {font-size:2em} 
+    
+
 /*///////////////////////////////////// H2H SECTION 992< //////////////////////////////////////////////////*/
-    #h2h h2{text-align:initial;}
-    #h2h h2+p{text-align:initial;width:55%;}
-    .img-text{height:971px}
+    #h2h h2 {
+        padding: 1.5% 0 1%;
+        margin: 0;
+        font-size: 2.05em;
+    }
+    #h2h h2+p
+    {
+      font-size: 1.27em;
+    }
+    
     
     /*.img-text div:first-child,.img-text div:nth-child(2){font-size:2em}*/
 /*///////////////////////////////////// Footer SECTION 992< //////////////////////////////////////////////////*/
@@ -1111,23 +1311,98 @@ footer .col-sm-offset-1{margin-left:0!important}
 }
 
 @media (min-width: 1200px) {
-        .container{width:1170px}
+        
+    .container{width:1170px}
+         
+        
 /*////////////////////////////////////// VIDEO SECTION 1200< /////////////////////////////////////////////////*/
-            .absolute-pos-shortcut{
-    left:calc(50% - 585px);
-}
 
-    /*///////////////////////////////////// StartingPoint SECTION 1200< //////////////////////////////////////////////////*/
+    .master-slider h2 {
+        font-size: 5em !important;
+    }
 
+    .master-slider h1 {
+        font-size: 2.28em !important;
+    }
+
+
+
+    .shortcut-svg svg {
+        height: 4em;
+    }
+
+    .absolute-pos-shortcut {
+        left: calc(50% - 585px);
+    }
+
+/*///////////////////////////////////// TECH SECTION 1200< //////////////////////////////////////////////////*/
+
+    #Tech_text h2 
+    {
+        font-size:2.28em;
+    }
+
+    #Tech_text h2 + p
+    {
+        font-size:1.42em;
+    }
+
+    #Tech_block a.section 
+    {
     
+          font-size:1.42em;
+
+    }
+
+/*///////////////////////////////////// StartingPoint SECTION 1200< //////////////////////////////////////////////////*/
+
+    .different_point {
+        font-size: 2.28em;
+    }
+
+    .work_backwards 
+    {
+      font-size: 1.42em ;
+    }
+
+    .text_block 
+    {
+        font-size: 1.42em;
+    }
+
     .container_sequence 
     {
      font-size: 24px;
      font-weight:normal;
     }
 
-    /*.X {
-        top: calc(50% - 3em);
-        left: calc(50% - 4.5em);
-    }*/
+
+    /*///////////////////////////////////// Arsenal SECTION 1200< //////////////////////////////////////////////////*/
+
+    #arsenal h2{font-size:2.28em}
+
+    #arsenal p{font-size:1.42em}
+
+    .first_block_text, .second_block_text 
+    {
+        font-size: 1.42em;
+    }
+    
+    /*///////////////////////////////////// H2H SECTION 1200< //////////////////////////////////////////////////*/
+    
+    #h2h h2
+    {
+        font-size: 2.28em;
+    }
+    
+    #h2h h2+p
+    {
+          font-size: 1.42em;
+    }
+    
+    
+    
+/*///////////////////////////////////// Footer SECTION 1200< //////////////////////////////////////////////////*/
+
+
 }

@@ -54,6 +54,17 @@ jQuery(function ($) {
 
 
 
+        // This function change a slide when user click on the svg picture
+
+        function slideChangeClick(e) {
+
+            var slidenumber = this.dataset.numberslide - 1;
+            slider.api.gotoSlide(slidenumber);
+        }
+
+        //Shortcut button
+        var all_Slider_Buttons = $(".shortcut-svg");
+        
         if (isMobile.any()) {
 
             for (var i = document.getElementsByTagName("video").length; i > 0; i--) {
@@ -73,10 +84,14 @@ jQuery(function ($) {
                 fullwidth: true,
                 loop: true,
                 swipe: false,
-                autoplay: true,
+                autoplay: false,
                 width: 1280,
                 height: sliderHeight
             });
+
+            // Add touch event for slider buttons in Descktop versions 
+            
+            all_Slider_Buttons.on('touchstart', slideChangeClick); // it doesnt work Possible cause event 'touchend' and skrollr.js
 
             var startTimeout = setTimeout(function () {//Asynchronous initialization for mobile
                 slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
@@ -88,7 +103,8 @@ jQuery(function ($) {
                 }, 10);//Asynchronous initialization for mobile -end
 
             });
-        } else {
+        } else
+        {
 
             sliderHeight = winHeight - 99
             var slider = new MasterSlider();
@@ -102,15 +118,11 @@ jQuery(function ($) {
                 width: 1280,
                 height: sliderHeight
             });
-            //Shortcut button
-            for (var i = 0; i < document.getElementsByClassName('shortcut-svg').length; i++) {
-                document.getElementsByClassName('shortcut-svg')[i].addEventListener('click', slideChangeClick, true);
-                //document.getElementsByClassName('shortcut-svg')[i].addEventListener('touchend', slideChangeClick, true);    it doesnt work Possible cause event 'touchend' and skrollr.js
-            }
-            function slideChangeClick(e) {
-                var slidenumber = this.dataset.numberslide - 1;
-                slider.api.gotoSlide(slidenumber);
-            }
+
+            // Add click event for slider buttons in Descktop versions 
+
+            all_Slider_Buttons.on('click', slideChangeClick);
+
             //Shortcut button - end
             //Video download logic
             document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
@@ -147,9 +159,11 @@ jQuery(function ($) {
         // Section Tech. Insert heigth;
         
         var Section_menu = winHeight - 91; // minus menu
+
+
         // Tech block
-        SectioTechBlockHeight = (Section_menu - 200); // minus text section
-        $("#Tech_block").css("height", SectioTechBlockHeight);
+        SectioTechBlockHeight = (Section_menu - 195); // minus text section
+        $("#Tech_block").css("min-height", SectioTechBlockHeight);
 
 
         var oneRow = SectioTechBlockHeight / 2;
@@ -159,7 +173,7 @@ jQuery(function ($) {
 
                 
         var height_for_svg = oneRow * 0.4 ; // height for svg graphics
-        $("#Tech_block  img").css("height", height_for_svg );
+        $("#Tech_block  svg").css("height", height_for_svg );
 
         //// align center
         var padding = (oneRow - height_for_svg - 25) /2; // padding top and bottomn for img and span
@@ -168,13 +182,14 @@ jQuery(function ($) {
         var height_for_span = oneRow * 0.6; // height for text
         $("#Tech_block  span").css({ heigth: height_for_span, marginTop: padding/2 });
         
+
         // Arsenal. Insert heigth;
 
-        $("#arsenal").css("height", Section_menu); 
+        //$("#arsenal_header").css("height", Section_menu);
 
-        img_height = Section_menu - 147;
+        img_height = Section_menu - 140;
 
-        $("#img_bg").css("height", img_height);
+        $("#img_bg").css("min-height", img_height);
 
         first_text = img_height * 0.55; // height for first block text
         paddingForBordered = img_height * 0.02;
@@ -188,7 +203,7 @@ jQuery(function ($) {
 
         //SECTION h2h 
         var img_text  = Section_menu - 195;
-        $(".img-text").css("height", img_text); // Set a img block height in h2h
+        $(".img-text").css("min-height", img_text); // Set a img block height in h2h
         marginTopval = img_text * img_text/2400;
         $("#item-for-margin").css({ marginTop: marginTopval });
 
