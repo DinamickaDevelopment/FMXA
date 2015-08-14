@@ -657,7 +657,7 @@ margin-top: 0 !important;
   text-transform: uppercase;
   width: 15em;
   height: 2em;
-  margin: 0 auto;
+  margin: 0 auto 10%;
 }
 .img-text div:nth-child(4){
     display:table;
