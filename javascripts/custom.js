@@ -84,7 +84,7 @@ jQuery(function ($) {
                 fullwidth: true,
                 loop: true,
                 swipe: false,
-                autoplay: false,
+                autoplay: true,
                 width: 1280,
                 height: sliderHeight
             });
@@ -114,7 +114,7 @@ jQuery(function ($) {
                 fullwidth: true,
                 loop: true,
                 swipe: false,
-                autoplay: false,
+                autoplay: true,
                 width: 1280,
                 height: sliderHeight
             });

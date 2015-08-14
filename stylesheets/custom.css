@@ -463,18 +463,25 @@ margin-top: 0 !important;
 
 
 .text_block {
+    text-align:center;
     font-family: Roboto;
     letter-spacing: 1px;
     margin: 80px auto 0;
     max-width: 980px;
-
+    padding:0 !important;
     -moz-transition: all linear 1s;
     -o-transition: all linear 1s;
     -webkit-transition: all linear 1s;
     transition: all linear 1s;
 }
 
+    .text_block p {
+      margin:0;
+    }
 
+    .text_block p:last-child {
+      margin: 0 0 47px 0;
+    }
 
 .X  
 {
@@ -619,7 +626,7 @@ margin-top: 0 !important;
     
 }
 .img-text .container{
-    font-size: 21px;
+    
     display: block;
     font-weight: 100;
     font-family: Roboto;
@@ -633,7 +640,6 @@ margin-top: 0 !important;
     width: 100%;
     min-height: 11%;
     font-family: Roboto;
-    font-size: 18px;
     color: #fafafa;
     font-weight: 100;
     letter-spacing: 0.1em;
@@ -643,7 +649,6 @@ margin-top: 0 !important;
 .img-text .bordered-text{   
     
   font-family: 'Droid Serif',serif;
-  font-size: 2em;
     color: #fafafa;
     letter-spacing: 0.1em;
   line-height: 2em;
@@ -652,7 +657,7 @@ margin-top: 0 !important;
   text-transform: uppercase;
   width: 15em;
   height: 2em;
-  margin: 0 auto 2em;
+  margin: 0 auto;
 }
 .img-text div:nth-child(4){
     display:table;
@@ -684,7 +689,9 @@ margin-top: 0 !important;
 .form-control::-webkit-input-placeholder {
   color: #999;
   font-family:Roboto;
-  font-weight:400;}
+  font-weight:400;
+
+}
 
 .Formhalf {
     width: 50%;
@@ -752,24 +759,32 @@ footer{
     background-color: #fafafa;
     border-radius: 50%;
     text-align: center;
-    line-height: 31px;
-    margin: 13% auto 0;
-    font-size: 1.5em;
+    
+    margin: 0 auto 13% auto;
+    font-size: 1.3em;
 }
+
+.icon-mail {
+    line-height: 31px;
+
+}
+
+.icon-tel {
+    line-height: 34px;
+}
+
 .icon_label{
     font-family: Roboto;
-    font-size: 1.125em;
     letter-spacing: 0.1em;
     line-height: 31px;
     color: #fafafa;
-    margin: 3% 0 0;
+  
 }
 .svg-footer{
     width:330px;
     margin:25px 0 0;
 }
 .social{
-    margin: 15% 0;
 }
 .social a{
     display: block;
@@ -779,7 +794,8 @@ footer{
     border-radius: 50%;
     line-height: 31px;
     margin: 0 1%;
-    float: left;
+    
+    
     color: #262626;
     font-size: 1.5em;
     text-align: center;
@@ -894,7 +910,7 @@ footer div.row:nth-child(3){
 
     .work_backwards 
     {
-      font-size: 1.15em ;
+      font-size: 0.93em ;
     }
 
    .block-cell > .block-table
@@ -910,12 +926,12 @@ footer div.row:nth-child(3){
 
     .text_block 
     {
-        font-size: 1.15em;
+        font-size: 0.93em;
     }
 
     .container_sequence 
     {
-     font-size: 16px;
+     font-size: 0.93em;
      font-weight:normal;
 
     }
@@ -965,17 +981,44 @@ footer div.row:nth-child(3){
           font-size: 0.93em;
         }
 
+     .img-text .container 
+    {
+        font-size:0.93em;
+    }
+
+      .img-text #item-for-margin 
+    {
+        font-size: 0.93em;
+    }
+
     .bordered-text {
-     font-size:1.5em;
+     font-size:1.25em;
     }
 
 /*///////////////////////////////////// Contact SECTION 320< //////////////////////////////////////////////////*/
     .Formhalf{width:100%}
 /*///////////////////////////////////// Footer SECTION 320< //////////////////////////////////////////////////*/
-    .underlogo{font-size: 1em;margin: 4% 0 6%;}
-    .svg-footer{width:60%;margin:20px 0 0;} 
-    .social {margin: 6% 0;}
-    .social a {margin: -2% 2% 7%;}
+    .underlogo
+    {
+        font-size: 0.93em;
+        margin: 4% 0 6%;
+
+    }
+    
+    .svg-footer
+    {
+        height:73px;
+        width:145px;
+        margin:20px 0 0;} 
+
+    .info {
+        font-size:0.93em;
+    }
+
+
+    .social a {
+        float: right;
+    }
     .rights{margin: 3% 0;text-align:center;}
     .disapear{display:none!important;}
 
@@ -1097,8 +1140,7 @@ footer div.row:nth-child(3){
 
     .container_sequence 
     {
-     font-size: 16px;
-     /*font-weight:bold;*/
+     font-size: 1.15em;
 
     }
 
@@ -1147,13 +1189,42 @@ footer div.row:nth-child(3){
 
     }
 
-    .bordered-text {
-     font-size:2em;
+     .img-text .container 
+    {
+        font-size:1.15em;
     }
+
+     .img-text #item-for-margin 
+    {
+        font-size: 1.03em;
+    }
+
+   .bordered-text {
+     font-size:1.86em;
+    }
+
 
 /*///////////////////////////////////// Contact SECTION 768< //////////////////////////////////////////////////*/
     .Formhalf{width:50%}
 /*///////////////////////////////////// Footer SECTION 768< //////////////////////////////////////////////////*/
+
+
+
+.svg-footer{
+        height:73px;
+        width:220px;
+        margin:25px 0 0;
+
+}
+
+ .underlogo{
+              font-size: 1.03em;
+
+    }
+
+    .info {
+        font-size:1.03em;
+    }
 
 }
 
@@ -1255,7 +1326,7 @@ footer div.row:nth-child(3){
 
 .container_sequence 
     {
-     font-size: 20px;
+     font-size: 1.27em;
      font-weight:normal;
 
     }
@@ -1298,14 +1369,42 @@ footer div.row:nth-child(3){
       font-size: 1.27em;
     }
     
+    .img-text .container 
+    {
+        font-size:1.27em;
+    }
+
+    .img-text #item-for-margin 
+    {
+        font-size: 1.15em;
+    }
+
+    .bordered-text {
+     font-size:2.05em;
+    }
     
-    /*.img-text div:first-child,.img-text div:nth-child(2){font-size:2em}*/
 /*///////////////////////////////////// Footer SECTION 992< //////////////////////////////////////////////////*/
 footer .col-sm-offset-1{margin-left:0!important}
-    .underlogo{font-size: 1em;margin: 3% 0 6%;}
-    .svg-footer{width:330px;margin:25px 0 0;} 
-    .social {margin: 30% 0;}
-    .social a {margin: 0 1%;}
+    .underlogo{
+              font-size: 1.15em;
+               margin: 3% 0 6%;
+
+    }
+    
+    .svg-footer{
+        height:73px;
+        width:220px;
+        margin:25px 0 0;} 
+    
+    .info {
+        font-size:1.15em;
+    }
+
+    .social a {
+
+        float:left;
+
+    }
     .rights{margin:0;text-align:initial;}
     .disapear{display:block!important}
 }
@@ -1372,7 +1471,7 @@ footer .col-sm-offset-1{margin-left:0!important}
 
     .container_sequence 
     {
-     font-size: 24px;
+     font-size: 1.42em;
      font-weight:normal;
     }
 
@@ -1399,10 +1498,31 @@ footer .col-sm-offset-1{margin-left:0!important}
     {
           font-size: 1.42em;
     }
-    
-    
+
+    .img-text .container 
+    {
+        font-size:1.42em;
+    }
+
+    .img-text #item-for-margin 
+    {
+        font-size: 1.28em;
+    }
+
+    .bordered-text {
+     font-size:2.28em;
+    }
     
 /*///////////////////////////////////// Footer SECTION 1200< //////////////////////////////////////////////////*/
+
+ .underlogo{
+              font-size: 1.28em;
+
+    }
+
+ .info {
+        font-size:1.28em;
+    }
 
 
 }
