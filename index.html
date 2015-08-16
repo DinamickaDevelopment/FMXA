@@ -31,6 +31,10 @@
 
     <div id="skrollr-body">
 
+        <div id="preloader" style="display: block;">
+            <div id="status" style="display: block;">&nbsp;</div>
+        </div>
+
         <header id="header">
             <!-- BEGIN MENU -->
             <div class="menu_area">
@@ -1226,7 +1230,18 @@
 
             window.onload = function () {
 
-               
+                var preloader = document.getElementById("preloader");
+                preloader.style.display = "none";
+
+                var preloader = document.getElementById("status");
+                preloader.style.display = "none";
+
+
+                //document.getElementById("status").style = "display: none";
+
+         //       <div id="preloader" style="display: block;">
+         //    <div id="status" style="display: block;">&nbsp;</div>
+         //</div>
 
                 var obj = skrollr.init({
                     forceHeight: false

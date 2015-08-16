@@ -9,6 +9,13 @@
 */
 
 jQuery(function ($) {
+
+
+    $(window).resize(function () {
+
+        location.reload();
+    });
+
     //======== 1.Top menu fixed =================================
     //$(window).scroll(function () {
     //    if ($(window).scrollTop() > 50) {
