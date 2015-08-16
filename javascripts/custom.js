@@ -235,7 +235,7 @@ jQuery(function ($) {
 
             event.preventDefault();
 
-            $("#myModal").modal('show');
+            $(".modal").modal('show');
         }
 
 
