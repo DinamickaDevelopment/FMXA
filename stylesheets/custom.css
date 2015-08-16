@@ -732,6 +732,12 @@ input.submitBtn{
     background-color: #fafafa;
     border: 1px solid #262626;
 }
+
+.modal.in .modal-dialog 
+{
+    font-family:Roboto;
+}
+
 /*<========== 9.Footer ===============>*/
 footer{
     background-color:#262626;

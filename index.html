@@ -1077,13 +1077,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <form id="contactForm">
                             <div class="Formhalf">
-                                <input class="form-control" type="text" tabindex="1" placeholder="Job Title" name="jTitle">
-                                <input class="form-control" type="text" tabindex="2" placeholder="Company" name="company" >
-                                <input class="form-control"  tabindex="3" placeholder="Phone Number" name="Phone" >
-                                <input class="form-control" type="text" tabindex="4" placeholder="E-mail" name="Email" >
+                                <input class="form-control" type="text" tabindex="1" placeholder="Job Title" name="jTitle" required>
+                                <input class="form-control" type="text" tabindex="2" placeholder="Company" name="company" required>
+                                <input class="form-control" type="tel" tabindex="3" placeholder="Phone Number" name="Phone" required>
+                                <input class="form-control" type="email" tabindex="4" placeholder="E-mail" name="Email" required >
                             </div>
                             <div class="Formhalf">
-                                <textarea class="form-control unresizeble" rows="12" tabindex="5" placeholder="Your message" name="massege"></textarea>
+                                <textarea class="form-control unresizeble" rows="12" tabindex="5" placeholder="Your message" name="massege" required></textarea>
                             </div>
                             <input type="submit" class="submitBtn" tabindex="6" value="SUBMIT" />
                         </form>
@@ -1099,7 +1099,7 @@
                             <h4 class="modal-title">Confirmation</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Thank you for your message, someone will be in touch shortly</p>
+                            <p style="margin:0">Thank you for your message, someone will be in touch shortly</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
