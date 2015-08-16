@@ -74,6 +74,10 @@ jQuery(function ($) {
                 }
             }
 
+            // Add picture for DISRUPTIVE block
+
+            $("#Img_Disruptive").attr("data-src", "videos/slide5/DisruptiveMobile.jpg");
+
             sliderHeight = 670;
             if ((winHeight) > 670) { sliderHeight = winHeight - 99 }
 
@@ -89,9 +93,9 @@ jQuery(function ($) {
                 height: sliderHeight
             });
 
-            // Add touch event for slider buttons in Descktop versions 
+            // Add touch event for slider buttons in Mobile versions 
             
-            all_Slider_Buttons.on('touchstart', slideChangeClick); // it doesnt work Possible cause event 'touchend' and skrollr.js
+            all_Slider_Buttons.on('touchstart', slideChangeClick); 
 
             var startTimeout = setTimeout(function () {//Asynchronous initialization for mobile
                 slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
@@ -105,6 +109,11 @@ jQuery(function ($) {
             });
         } else
         {
+
+
+            // Add picture for DISRUPTIVE block
+
+            $("#Img_Disruptive").attr("data-src", "videos/slide5/Disruptive.jpg");
 
             sliderHeight = winHeight - 99
             var slider = new MasterSlider();
@@ -191,21 +200,49 @@ jQuery(function ($) {
 
         $("#img_bg").css("min-height", img_height);
 
-        first_text = img_height * 0.55; // height for first block text
+        first_text = img_height * 0.5; // height for first block text
         paddingForBordered = img_height * 0.02;
         paddingForFirstBlock = img_height * 0.08;
+
         $(".first_block_text").css({ paddingTop: paddingForFirstBlock, height: first_text });
         $(".full").css({ margingBottom: paddingForBordered });
 
 
         
 
-
         //SECTION h2h 
-        var img_text  = Section_menu - 195;
+        var img_text  = Section_menu - 165;
         $(".img-text").css("min-height", img_text); // Set a img block height in h2h
-        marginTopval = img_text * img_text/2400;
-        $("#item-for-margin").css({ marginTop: marginTopval });
+
+
+        // insert paddind and height for first text block in h2h block
+        first_text = img_text * 0.5;
+        paddingForBordered = img_text * 0.08;
+
+        $("#h2h_first_text").css({ paddingTop: paddingForBordered, minHeight: first_text });
+
+        //marginTopval = img_text * img_text / 24000;
+        //$("#item-for-margin").css({ marginTop: marginTopval });
+        //$("#item-for-margin").css({ marginBottom: marginTopval });
+
+
+
+        /////////////////////////Madal window after submit event
+
+        function ModalFunction(event)
+        {
+            if (event == undefined) event = window.event;
+
+            event.preventDefault();
+
+            $("#myModal").modal('show');
+        }
+
+
+
+        $("form").on("submit", ModalFunction)
+
+
 
     });
 

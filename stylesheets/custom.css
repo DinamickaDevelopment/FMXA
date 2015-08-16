@@ -178,6 +178,7 @@ margin-top: 0 !important;
     z-index: 10000;
 }
 .bordered-text{
+    visibility:hidden;
     font-family: 'Droid Serif',serif;
     font-size: 2em;
     color: #fafafa;
@@ -188,7 +189,7 @@ margin-top: 0 !important;
     text-transform: uppercase;
     width: 11em;
     height: 2em;
-    margin:1.5em auto 2em;
+    margin:1.5em auto 30px;
 }
 .huge-text{
 
@@ -604,7 +605,7 @@ margin-top: 0 !important;
     background-color:#fafafa;
 }
 #h2h_heaser{
-    min-height:195px;
+    min-height:165px;
 }
 #h2h h2{
     /*margin: 3% 0 1%;*/
@@ -622,10 +623,9 @@ margin-top: 0 !important;
     width: 100%;
     background: url('../images/Assets/H2H.jpg') center 100%;
     background-size: cover;
-    padding-top:7%;
     
 }
-.img-text .container{
+#h2h_first_text{
     
     display: block;
     font-weight: 100;
@@ -636,7 +636,8 @@ margin-top: 0 !important;
     text-align: center;
     
 }
-.img-text #item-for-margin{    
+#item-for-margin{
+    margin: 1.5em auto;    
     width: 100%;
     min-height: 11%;
     font-family: Roboto;
@@ -649,15 +650,15 @@ margin-top: 0 !important;
 .img-text .bordered-text{   
     
   font-family: 'Droid Serif',serif;
-    color: #fafafa;
-    letter-spacing: 0.1em;
+  color: #fafafa;
+  letter-spacing: 0.1em;
   line-height: 2em;
-    text-align: center;
+  text-align: center;
   border: 1px solid rgba(255,255,255,0.7);
   text-transform: uppercase;
   width: 15em;
   height: 2em;
-  margin: 0 auto 10%;
+  margin: 0 auto 30px;
 }
 .img-text div:nth-child(4){
     display:table;
@@ -981,14 +982,14 @@ footer div.row:nth-child(3){
           font-size: 0.93em;
         }
 
-     .img-text .container 
+     #h2h_first_text 
     {
         font-size:0.93em;
     }
 
       .img-text #item-for-margin 
     {
-        font-size: 0.93em;
+        font-size: 0.83em;
     }
 
     .bordered-text {
@@ -1189,7 +1190,7 @@ footer div.row:nth-child(3){
 
     }
 
-     .img-text .container 
+     #h2h_first_text
     {
         font-size:1.15em;
     }
@@ -1369,7 +1370,7 @@ footer div.row:nth-child(3){
       font-size: 1.27em;
     }
     
-    .img-text .container 
+    #h2h_first_text 
     {
         font-size:1.27em;
     }
@@ -1499,7 +1500,7 @@ footer .col-sm-offset-1{margin-left:0!important}
           font-size: 1.42em;
     }
 
-    .img-text .container 
+    #h2h_first_text 
     {
         font-size:1.42em;
     }
