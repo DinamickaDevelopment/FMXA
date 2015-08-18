@@ -147,7 +147,9 @@ jQuery(function ($) {
                 slider.api.next();
                 this.removeEventListener('load', videoStarter);
                 this.removeEventListener('ended', videoChange);
-            };//Video download logic - end
+            };
+
+            //Video download logic - end
 
             document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
             document.getElementById("video1").addEventListener('ended', videoChange);
