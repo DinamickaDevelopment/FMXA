@@ -131,6 +131,191 @@ h2{
     display: block;
 }
 /* styles for BtnClick logick - end*/
+/*Styles for 2-nd animation*/
+#Icons1_svg {
+    position: fixed;
+    width: 426px;
+    height: 85px;
+    top: calc(50% - 112px);
+    left: calc(50% - 585px);
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    z-index: 1;
+    opacity: 0;
+}
+.SVG-container{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+}
+.svg_2_anim {
+    -moz-animation: second 2s linear forwards;
+    -o-animation: second 2s linear forwards;
+    -webkit-animation: second 2s linear forwards;
+    animation: second 2s linear forwards;
+}
+@-moz-keyframes FadeOut{
+    0% {
+        width:426px;
+        height: 85px;
+        opacity: 0;
+        top: calc(50% - 112px);
+        left: calc(50% - 585px);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    5%{opacity:1}
+    80%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:1
+    }
+    90%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:1
+    }
+    100%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:0
+    }
+}
+
+@-webkit-keyframes FadeOut{
+    0% {
+        width:426px;
+        height: 85px;
+        opacity: 0;
+        top: calc(50% - 112px);
+        left: calc(50% - 585px);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    5%{opacity:1}
+    80%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:1
+    }
+    90%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:1
+    }
+    100%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:0
+    }
+}
+
+@keyframes second {
+    0% {
+        width:426px;
+        height: 85px;
+        opacity: 0;
+        top: calc(50% - 112px);
+        left: calc(50% - 585px);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    5%{opacity:1}
+    80%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:1
+    }
+    90%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:1
+    }
+    100%{
+        width:100%;
+        height:34%;
+        top: 0;
+        left: 0;
+        -moz-transform: scale(3.2);
+        -ms-transform: scale(3.2);
+        -o-transform: scale(3.2);
+        -webkit-transform: scale(3.2);
+        transform: scale(3.2);
+        opacity:0
+    }
+}
+
+/*Styles for 2-nd animation - end*/
 
 /*
     <================ 1.Funnel ===================>

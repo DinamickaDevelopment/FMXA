@@ -6,17 +6,8 @@ jQuery(function ($) {
     for (var i = 0; i < document.getElementsByClassName("btn_container").length; i++) {
         document.getElementsByClassName("btn_container")[i].addEventListener("click", ClickFunction, true);
     }
-    //function ClickFunction(e){
-    //    var id = "#" + e.target.dataset.idholder, section = "#" + e.target.dataset.section, selector;
-    //    selector = section + " " + id;
-    //    //Cleane all blocks from "active" style
-    //    $(section + " #caseContainer").removeClass("active");
-    //    $(section + " #videoContainer").removeClass("active");
-    //    $(section + " #docContainer").removeClass("active");
 
-    //    $(selector).addClass("active");
-    //} !-й вариант логики кнопок, принцып одновременной активности одного блока
-
+    //BTN-click logic
     function ClickFunction(e){
         var id = "#" + e.target.dataset.idholder, section = "#" + e.target.dataset.section, selector;
         selector = section + " " + id;
@@ -33,4 +24,25 @@ jQuery(function ($) {
 
         }
     }
+    ////BTN-click logic - end
+
+    //window.addEventListener("scroll", scroled, false);
+    //var flag = true;
+    //function scroled(e) {
+
+    //    var a = $('#Icons1_svg');
+
+    //    if (flag) {
+
+    //        $('#Icons1_svg').addClass('svg_2_anim');
+    
+    //    setTimeout(function () {
+    //        window.removeEventListener("scroll", scroled, false);
+    //    },2000);
+
+
+    //    }
+
+    //    window.pageXOffset = "0";
+    //}
 }); 
