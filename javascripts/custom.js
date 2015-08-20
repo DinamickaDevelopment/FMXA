@@ -141,6 +141,16 @@ jQuery(function ($) {
 
             //Shortcut button - end
             //Video download logic
+
+            function videoStarter() { this.style.display = "inline-block"; this.style.marginTop = "-50px"; this.style.marginLeft = "0"; this.play(); };
+            function videoChange() {
+                slider.api.next();
+                this.removeEventListener('load', videoStarter);
+                this.removeEventListener('ended', videoChange);
+            };
+
+            //Video download logic - end
+
             document.getElementById("video1").addEventListener('canplaythrough', videoStarter);
             document.getElementById("video1").addEventListener('ended', videoChange);
 
@@ -162,12 +172,7 @@ jQuery(function ($) {
 
             }, 10);//Asynchronous initialization -end
 
-            function videoStarter() { this.style.display = "inline-block"; this.style.marginTop = "-50px"; this.style.marginLeft = "0"; this.play(); };
-            function videoChange() {
-                slider.api.next();
-                this.removeEventListener('load', videoStarter);
-                this.removeEventListener('ended', videoChange);
-            };//Video download logic - end
+
 
         }//end of mibile chek
 

@@ -740,7 +740,11 @@ margin-top: 0 !important;
     -moz-transition: box-shadow ease-in-out .5s;
     transition: box-shadow ease-in-out .5s;
 }
-.unresizeble{resize:none;}
+.unresizeble{
+    height: 278px !important;
+    resize:none;
+
+}
 .form-control:focus{
     border-color:initial;
     box-shadow:0 0 2px 1px rgba(0,0,0,0.5);
