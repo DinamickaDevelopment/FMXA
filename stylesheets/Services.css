@@ -1,1 +1,215 @@
-﻿
+﻿/*
+    DINAMICKA DEVELOPMENT
+    Documentation
+
+    1.Funnel
+    2.G2Market
+    3.Sales
+    4.Contact_info
+    5.Awarness
+    6.Marketing
+    7.All styles for ContactForm and Footer located in Custom.css;
+*/
+
+/*------------temp style--------------*/
+SVG-imitation{
+
+}
+/*-----------Global style--------*/
+h2{
+    font-family: 'Droid Serif';
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    color: #262626;
+    text-transform: uppercase;
+    line-height: 58px;
+    margin: 0;
+    vertical-align: bottom;
+    display: inline-block
+}
+#Global {
+    height: 54px;
+    margin-right: 3px;
+    display: inline-block;
+/*Позднее применить этот стиль к всем СВГ в заголовках*/
+}
+.title{
+    margin:60px auto 35px;
+    text-align:center;
+}
+.maintext{
+    font-family:Roboto;
+    font-size:24px;
+    letter-spacing:0.1em;
+    color:#262626;
+    text-align:left;
+    margin-bottom: 35px;
+}
+.mainimg{
+    width:100%;
+    height:520px;
+    background-size:cover;
+    background-position:center;
+    margin-bottom: 35px;
+
+}
+.btn_container{
+        width: 100%;
+    text-align: center;
+}
+.bordered-btn {
+    font-family: Roboto;
+    font-size: 32px;
+    color: #fafafa;
+    font-weight: 300;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #FAFAFA;
+    margin: 35px 54px;
+    position: relative;
+    cursor: pointer;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.bordered-btn:hover,.active-btn{
+    background-color:#fafafa;
+    color:#262626;
+}
+.bordered-btn:after{
+    content: '';
+    border-right: 1px solid #fafafa;
+    position: absolute;
+    top: -36px;
+    display: block;
+    height: 36px;
+    width: 1px;
+    left: calc(50%);
+}
+/* styles for BtnClick logick*/
+.unvisible {
+    width: 67%;
+    margin: 0 auto;
+    height: 0;
+    overflow: hidden;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.active{height:380px}
+.caseItem{
+    width: 77%;
+    height: 280px;
+    margin: 30px auto;
+    background-image: url('../images/tempFile.png');
+    background-color: powderblue;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+.videoItem{
+    width: 77%;
+    height: 130px;
+    margin: 30px auto;
+    background-image: url('../images/tempPlay.png');
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+.docItem{
+    width: 77%;
+    height: 280px;
+    margin: 30px auto;
+    background-image: url('../images/tempFile.png');
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+/* styles for BtnClick logick - end*/
+
+/*
+    <================ 1.Funnel ===================>
+*/
+#funnel h2{
+    color: #fafafa;
+    width: 100%;
+    text-align: center;
+    margin: 76px 0 32px;
+}
+#funnel .maintext{
+    color: #fafafa;
+    text-align: center;
+    font-size: 16px;
+    width: 50%;
+    margin: 0 auto;
+}
+.lt_sp{
+    letter-spacing:0.1em;
+}
+#Stage{
+    margin:35px auto 0;
+}
+
+/*
+    <=-=-=-=-=-=-=-=-=-=-Animation section=-=-=-=-=-=--=-=-=-=-=-=->
+*/
+.fadeout-anim {
+    -moz-animation: FadeOut 1s ease-out forwards;
+    -o-animation: FadeOut 1s ease-out forwards;
+    -webkit-animation: FadeOut 1s ease-out forwards;
+    animation: FadeOut 1s ease-out forwards;
+}
+@-moz-keyframes FadeOut{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@-webkit-keyframes FadeOut{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes FadeOut{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+/*
+    <=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=>
+*/
+/*
+    <================ 2.G2Market ===================>
+*/
+#G2Market .mainimg{
+    background-image:url('../images/Assets/Rectangle 3.png');
+}
+
+/*
+    <================ 3.Sales ===================>
+*/
+#Sales .mainimg{
+    background-image:url('../images/Assets/Rectangle 3 copy.png');
+}
+/*
+    <================ 4.Contact_info ===================>
+*/
+#Contact_info .mainimg{
+    background-image:url('../images/Assets/Rectangle 3 copy 2.png');
+}
+/*
+    <================ 5.Awarness ===================>
+*/
+#Awarness .mainimg{
+    background-image:url('../images/Assets/Rectangle 3 copy 3.png');
+}
+
+/*
+    <================ 6.Marketing ===================>
+*/
+#Marketing .mainimg{
+    background-image:url('../images/Assets/Rectangle 3 copy 4.png');
+}
