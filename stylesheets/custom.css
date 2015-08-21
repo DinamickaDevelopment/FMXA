@@ -696,6 +696,7 @@ margin-top: 0 !important;
     margin: 75px 0 27px;
     color:#262626;
     text-align:center;
+    display:inherit;
 }
 #contactForm{
     text-align:center;

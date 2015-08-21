@@ -18,7 +18,7 @@ SVG-imitation{
 /*-----------Global style--------*/
 h2{
     font-family: 'Droid Serif';
-    font-size: 32px;
+    font-size: 2.28em;
     letter-spacing: 0.1em;
     color: #262626;
     text-transform: uppercase;
@@ -27,11 +27,10 @@ h2{
     vertical-align: bottom;
     display: inline-block
 }
-#Global {
+#Global,#Bulb,#Diagram,#Loupe,#Talk,#Thunderbolt {
     height: 54px;
     margin-right: 3px;
     display: inline-block;
-/*Позднее применить этот стиль к всем СВГ в заголовках*/
 }
 .title{
     margin:60px auto 35px;
@@ -39,7 +38,7 @@ h2{
 }
 .maintext{
     font-family:Roboto;
-    font-size:24px;
+    font-size:1.71em;
     letter-spacing:0.1em;
     color:#262626;
     text-align:left;
@@ -59,7 +58,7 @@ h2{
 }
 .bordered-btn {
     font-family: Roboto;
-    font-size: 32px;
+    font-size: 2.28em;
     color: #fafafa;
     font-weight: 300;
     display: inline-block;
@@ -109,6 +108,7 @@ h2{
     background-repeat: no-repeat;
     background-position: center;
     display: block;
+        background-size: contain;
 }
 .videoItem{
     width: 77%;
@@ -119,6 +119,7 @@ h2{
     background-repeat: no-repeat;
     background-position: center;
     display: block;
+        background-size: contain;
 }
 .docItem{
     width: 77%;
@@ -129,11 +130,12 @@ h2{
     background-repeat: no-repeat;
     background-position: center;
     display: block;
+        background-size: contain;
 }
 /* styles for BtnClick logick - end*/
 /*Styles for 2-nd animation*/
 #Icons1_svg {
-    position: fixed;
+    position: absolute;
     width: 426px;
     height: 85px;
     top: calc(50% - 112px);
@@ -340,6 +342,43 @@ h2{
     margin:35px auto 0;
 }
 
+
+
+.forMobileBlock {
+    margin: 10px 0;
+}
+.text-container{
+    width:100%;
+    background-color:#fafafa;
+    margin: 10px auto;    
+}
+.first-char {
+    margin: 0;
+    width: auto;
+    height: auto;
+    display: block;
+    font-family: droid-serif, serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-align:  center;
+
+}
+.second-char {
+    margin: 0;
+    width: auto;
+    height: auto;
+    display: block;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    text-align:  center;
+}
+
 /*
     <=-=-=-=-=-=-=-=-=-=-Animation section=-=-=-=-=-=--=-=-=-=-=-=->
 */
@@ -398,3 +437,105 @@ h2{
 #Marketing .mainimg{
     background-image:url('../images/Assets/Rectangle 3 copy 4.png');
 }
+
+
+
+
+
+/*
+    for 320
+*/
+@media (min-width: 320px) {
+
+/*=-=-=-=-=-=-=-=- General 320px*/
+h2{font-size:2.28em;}
+.maintext{font-size:1.2em;}
+.mainimg{height:220px;}
+.bordered-btn{font-size: 1em;padding: 6px;margin: 33px 2px;}
+.title{margin:7px auto 20px;}
+
+
+.unvisible{width:67%;}
+.active{height:140px;}
+.caseItem,.docItem{width: 100%;height: 100px;}
+.videoItem{width: 100%;height: 40px;}
+
+/* =-=-=-=-=-=-=-=-=- funnel 320px*/
+
+#funnel h2 {margin: 5px 0 5px;}
+#funnel .maintext{width:100%;font-size:1em;}
+
+}
+
+
+@media (min-width: 768px) {
+
+/*=-=-=-=-=-=-=-=- General 320px*/
+h2{font-size:2.28em;}
+.maintext{font-size:1.3em;}
+.mainimg{height:350px;}
+.bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 15px;}
+.title{margin:7px auto 20px;}
+
+
+.unvisible{width:100%;}
+.active{height:270px;}
+.caseItem,.docItem{width: 95%;height: 280px;background-size: initial;}
+.videoItem{width: 95%;height: 85px;background-size: initial;}
+
+/* =-=-=-=-=-=-=-=-=- funnel 320px*/
+
+#funnel h2 {margin: 5px 0 5px;}
+#funnel .maintext{width:100%;font-size:1.3em;}
+}
+
+@media(min-width: 992px){
+    /*=-=-=-=-=-=-=-=- General 320px*/
+h2{font-size:2.28em;}
+.maintext{font-size:1.8em;}
+.mainimg{height:450px;}
+.bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 15px;}
+.title{margin:7px auto 20px;}
+
+
+.unvisible{width:100%;}
+.active{height:350px;}
+.caseItem,.docItem{width: 77%;height: 280px;background-size: initial;}
+.videoItem{width: 77%;height: 130px;background-size: initial;}
+
+/* =-=-=-=-=-=-=-=-=- funnel 320px*/
+
+#funnel h2 {margin: 5px 0 5px;}
+#funnel .maintext{width:100%;font-size:1.2em;}
+}
+
+
+@media(min-width: 1170px){
+    /*=-=-=-=-=-=-=-=- General 320px*/
+h2{font-size:2.28em;}
+.maintext{font-size:1.8em;}
+.mainimg{height:520px;}
+.bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 54px;}
+.title{margin:60px auto 35px;}
+
+
+.unvisible{width:67%;}
+.active{height:380px;}
+.caseItem,.docItem{width: 77%;height: 280px;background-size: initial;}
+.videoItem{width: 77%;height: 130px;background-size: initial;}
+
+/* =-=-=-=-=-=-=-=-=- funnel 320px*/
+
+#funnel h2 {margin: 76px 0 32px;}
+#funnel .maintext{width:50%;font-size:1.15em;}
+}
+
+
+
+
+
+
+
+
+
+
