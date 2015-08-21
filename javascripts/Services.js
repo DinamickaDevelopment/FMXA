@@ -8,8 +8,9 @@ jQuery(function ($) {
     }
 
     //BTN-click logic
-    function ClickFunction(e){
-        var id = "#" + e.target.dataset.idholder, section = "#" + e.target.dataset.section, selector;
+    function ClickFunction(e) {
+        if (e.target.className == "bordered-btn" || e.target.className == "bordered-btn active-btn") {
+            var id = "#" + e.target.dataset.idholder, section = "#" + e.target.dataset.section, selector;
         selector = section + " " + id;
 
         //Cleane all blocks from "active" style
@@ -23,6 +24,8 @@ jQuery(function ($) {
 
 
         }
+        }
+  
     }
     ////BTN-click logic - end
 
