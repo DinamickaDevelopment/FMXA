@@ -492,7 +492,6 @@ h2{font-size:2.28em;}
 @media(min-width: 992px){
     /*=-=-=-=-=-=-=-=- General 320px*/
 h2{font-size:2.28em;}
-.maintext{font-size:1.8em;}
 .mainimg{height:450px;}
 .bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 15px;}
 .title{margin:7px auto 20px;}
@@ -513,11 +512,18 @@ h2{font-size:2.28em;}
 @media(min-width: 1170px){
     /*=-=-=-=-=-=-=-=- General 320px*/
 h2{font-size:2.28em;}
-.maintext{font-size:1.8em;}
-.mainimg{height:520px;}
+.mainimg{height:290px;}
 .bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 54px;}
 .title{margin:60px auto 35px;}
 
+#Stage {
+        margin:0 auto;
+        -moz-transform: scale(.8);
+        -ms-transform: scale(.8);
+        -o-transform: scale(.8);
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+}
 
 .unvisible{width:67%;}
 .active{height:380px;}
@@ -526,8 +532,40 @@ h2{font-size:2.28em;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 320px*/
 
-#funnel h2 {margin: 76px 0 32px;}
+#funnel h2 {margin: 5px 0 5px;}
 #funnel .maintext{width:50%;font-size:1.15em;}
+}
+
+
+@media(min-width:1368px){
+
+.mainimg{height:520px;}
+
+#funnel .maintext{font-size:1.15em;}
+
+h2{font-size:2.28em;}
+
+.maintext{font-size:1.8em;}
+
+.bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 54px;}
+
+.title{margin:60px auto 35px;}
+
+#Stage {
+        margin:35px auto 0;
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+}
+
+.unvisible{width:67%;}
+.active{height:380px;}
+.caseItem,.docItem{width: 77%;height: 280px;background-size: initial;}
+.videoItem{width: 77%;height: 130px;background-size: initial;}
+    #funnel h2 {    margin: 76px 0 32px;}
+
 }
 
 
