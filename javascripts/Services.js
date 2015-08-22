@@ -3,6 +3,11 @@
 
 jQuery(function ($) {
 
+    $(window).resize(function () {
+
+        location.reload();
+    });
+
     for (var i = 0; i < document.getElementsByClassName("btn_container").length; i++) {
         document.getElementsByClassName("btn_container")[i].addEventListener("click", ClickFunction, true);
     }
@@ -27,6 +32,7 @@ jQuery(function ($) {
         }
   
     }
+
     ////BTN-click logic - end
 
     //window.addEventListener("scroll", scroled, false);
