@@ -63,16 +63,22 @@ jQuery(function ($) {
         if ($("#pseudoBody").css("display") == "block" && scrolled == 0) {
             FunenAnimReady = false;
             DisableScroll(true);
-            $("#pseudoBody").fadeOut("fast");
+            $("#pseudoBody").css({ "transform": "scale(0.7)", "opacity": "0" });
             $('#SVG-container').css({ 'top': 'calc(50% - 202px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '85px' });
-            var reverstime,reverstime1 = setTimeout(function () {
+
+            var reverstime, reverstime1, reverstime2;
+            reverstime = setTimeout(function () {
+                $("#pseudoBody").css("display", "none");
+            }, 400)
+            reverstime1 = setTimeout(function () {
+
                 $('#SVG-container').css("opacity", "0");
-                reverstime = setTimeout(function () {
+                reverstime2 = setTimeout(function () {
                     $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,0px)');
                     $('#Stage_Icons_strips').css("left", '0');
                     FunenAnimReady = true;
                 },100);
-            }, 700)
+            }, 1600)
         }
     }
     function DisableScroll(bool) {
@@ -86,28 +92,40 @@ jQuery(function ($) {
         } else {
             if (window.removeEventListener)
                 window.removeEventListener('DOMMouseScroll', preventDefault, false);
-            window.onmousewheel = document.onmousewheel = null;
-            window.onwheel = null;
+            window.onmousewheel = document.onmousewheel = WheelReversanim;
+            window.onwheel = WheelReversanim;
             window.ontouchmove = null;
             document.onkeydown = null;
         }
         var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+        function WheelReversanim(e) {
+            if (e.deltaY < 0) {
+                Animation_revers();
+            }
+        }
+
         function preventDefault(e) {
             e = e || window.event;
             if (e.preventDefault)
                 e.preventDefault();
             e.returnValue = false;
+            //Case when after animation scroll top
+
 
             //Animation
-            if (FunenAnimReady) {
+            if (FunenAnimReady && e.deltaY > 0) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
             $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
             var time1, time = setTimeout(function () {
                 $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
                 time1 = setTimeout(function () {
-                    $("#pseudoBody").fadeIn("fast");
+                    $("#pseudoBody").css("display","block");
                     DisableScroll(false);
-                }, 1000);
+                    setTimeout(function () {
+                        $("#pseudoBody").css({ "transform": "scale(1)","opacity":"1" });
+                    }, 50)
+                }, 550);
             }, 1100);
             }//Animation - end
         }
@@ -117,16 +135,19 @@ jQuery(function ($) {
                 return false;
             }
             //Animation
-            if (FunenAnimReady) {
+            if (FunenAnimReady && e.deltaY > 0) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
                 $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
                 var time1, time = setTimeout(function () {
                     $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
                     time1 = setTimeout(function () {
-                        $("#pseudoBody").fadeIn("fast");
+                        $("#pseudoBody").css("display", "block");
                         DisableScroll(false);
-                    }, 1000);
-                }, 1900);
+                        setTimeout(function () {
+                            $("#pseudoBody").css({ "transform": "scale(1)", "opacity": "1" });
+                        }, 50)
+                    }, 550);
+                }, 1100);
             }//Animation - end
 
         }
