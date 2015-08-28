@@ -108,7 +108,7 @@ jQuery(function ($) {
                     $("#pseudoBody").fadeIn("fast");
                     DisableScroll(false);
                 }, 1000);
-            }, 1900);
+            }, 1100);
             }//Animation - end
         }
         function preventDefaultForScrollKeys(e) {
