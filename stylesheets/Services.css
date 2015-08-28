@@ -134,12 +134,15 @@ h2{
 }
 /* styles for BtnClick logick - end*/
 /*Styles for 2-nd animation*/
-#Icons1_svg {
+#SVG-container {
     position: absolute;
-    width: 426px;
+    width: 200px;
+    background-color:#fafafa;
     height: 85px;
-    top: calc(50% - 112px);
-    left: calc(50% - 585px);
+    margin-top:90px;
+    top: calc(50% - 202px);
+    left: calc(50% - 100px);
+    background-image:url('../images/Icons1.svg');
     -moz-transform-origin: top;
     -ms-transform-origin: top;
     -o-transform-origin: top;
@@ -147,174 +150,22 @@ h2{
     transform-origin: top;
     z-index: 1;
     opacity: 0;
+    -moz-transition: top 1s,left 1s,width 1s,height 1s,opacity .1s;
+    -o-transition: top 1s,left 1s,width 1s,height 1s,opacity .1s;
+    -webkit-transition: top 1s,left 1s,width 1s,height 1s,opacity .1s;
+    transition: top 1s,left 1s,width 1s,height 1s,opacity .1s;
 }
-.SVG-container{
-    height:100%;
-    width:100%;
-    overflow:hidden;
-    position:absolute;
-    top:0;
-}
-.svg_2_anim {
-    -moz-animation: second 2s linear forwards;
-    -o-animation: second 2s linear forwards;
-    -webkit-animation: second 2s linear forwards;
-    animation: second 2s linear forwards;
-}
-@-moz-keyframes FadeOut{
-    0% {
-        width:426px;
-        height: 85px;
-        opacity: 0;
-        top: calc(50% - 112px);
-        left: calc(50% - 585px);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    5%{opacity:1}
-    80%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:1
-    }
-    90%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:1
-    }
-    100%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:0
-    }
-}
-
-@-webkit-keyframes FadeOut{
-    0% {
-        width:426px;
-        height: 85px;
-        opacity: 0;
-        top: calc(50% - 112px);
-        left: calc(50% - 585px);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    5%{opacity:1}
-    80%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:1
-    }
-    90%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:1
-    }
-    100%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:0
-    }
-}
-
-@keyframes second {
-    0% {
-        width:426px;
-        height: 85px;
-        opacity: 0;
-        top: calc(50% - 112px);
-        left: calc(50% - 585px);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    5%{opacity:1}
-    80%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:1
-    }
-    90%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:1
-    }
-    100%{
-        width:100%;
-        height:34%;
-        top: 0;
-        left: 0;
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
-        opacity:0
-    }
+#pseudoBody {
+    display: none;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
 }
 
 /*Styles for 2-nd animation - end*/
@@ -322,13 +173,13 @@ h2{
 /*
     <================ 1.Funnel ===================>
 */
-#funnel h2{
+#funnelH2{
     color: #fafafa;
     width: 100%;
     text-align: center;
     margin: 76px 0 32px;
 }
-#funnel .maintext{
+#funneltext{
     color: #fafafa;
     text-align: center;
     font-size: 16px;
@@ -382,6 +233,21 @@ h2{
 /*
     <=-=-=-=-=-=-=-=-=-=-Animation section=-=-=-=-=-=--=-=-=-=-=-=->
 */
+#Stage_Text_strips {
+    clip: rect(0px, 894px,468px,0px);
+
+    -moz-transition: clip ease-out 1s;
+    -o-transition: clip ease-out 1s;
+    -webkit-transition: clip ease-out 1s;
+    transition: clip ease-out 1s;
+}
+#Stage_Icons_strips {
+    -moz-transition: left ease-in-out 1s;
+    -o-transition: left ease-in-out 1s;
+    -webkit-transition: left ease-in-out 1s;
+    transition: left ease-in-out 1s;
+}
+
 .fadeout-anim {
     -moz-animation: FadeOut 1s ease-out forwards;
     -o-animation: FadeOut 1s ease-out forwards;
@@ -462,8 +328,8 @@ h2{font-size:2.28em;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 320px*/
 
-#funnel h2 {margin: 5px 0 5px;}
-#funnel .maintext{width:100%;font-size:1em;}
+#funnelH2 {margin: 5px 0 5px;}
+#funneltext{width:100%;font-size:1em;}
 
 }
 
@@ -485,8 +351,8 @@ h2{font-size:2.28em;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 320px*/
 
-#funnel h2 {margin: 5px 0 5px;}
-#funnel .maintext{width:100%;font-size:1.3em;}
+#funnelH2 {margin: 5px 0 5px;}
+#funneltext{width:100%;font-size:1.3em;}
 }
 
 @media(min-width: 992px){
@@ -504,8 +370,8 @@ h2{font-size:2.28em;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 320px*/
 
-#funnel h2 {margin: 5px 0 5px;}
-#funnel .maintext{width:100%;font-size:1.2em;}
+#funnelH2 {margin: 5px 0 5px;}
+#funneltext{width:100%;font-size:1.2em;}
 }
 
 
@@ -532,8 +398,8 @@ h2{font-size:2.28em;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 320px*/
 
-#funnel h2 {margin: 5px 0 5px;}
-#funnel .maintext{width:50%;font-size:1.15em;}
+#funnelH2 {margin: 5px 0 5px;}
+#funneltext{width:50%;font-size:1.15em;}
 }
 
 
@@ -564,7 +430,7 @@ h2{font-size:2.28em;}
 .active{height:380px;}
 .caseItem,.docItem{width: 77%;height: 280px;background-size: initial;}
 .videoItem{width: 77%;height: 130px;background-size: initial;}
-    #funnel h2 {    margin: 76px 0 32px;}
+    #funnelH2 {    margin: 76px 0 32px;}
 
 }
 
