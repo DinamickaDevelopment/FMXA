@@ -64,7 +64,10 @@ jQuery(function ($) {
             FunenAnimReady = false;
             DisableScroll(true);
             $("#pseudoBody").css({ "transform": "scale(0.7)", "opacity": "0" });
-            $('#SVG-container').css({ 'top': 'calc(50% - 202px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '85px' });
+            if($(window).width() < 1368){$('#SVG-container').css({ 'top': 'calc(50% - 138px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '67px' });
+            } else {
+                $('#SVG-container').css({ 'top': 'calc(50% - 202px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '85px' });
+            }
 
             var reverstime, reverstime1, reverstime2;
             reverstime = setTimeout(function () {
