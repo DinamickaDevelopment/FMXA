@@ -52,8 +52,11 @@ jQuery(function ($) {
 
     DisableScroll(true);
     } else {
-        document.getElementById("mobileBody").appendChild(document.getElementById("pseudoBody"));
-        document.getElementById("pseudoBody").style.display = "block";
+        var PseudoBody = document.getElementById("pseudoBody")
+        document.getElementById("mobileBody").appendChild(PseudoBody);
+        PseudoBody.style.display = "block";
+        PseudoBody.style.opacity = "1";
+        PseudoBody.style.transform = "scale(1)";
     }
 
 
