@@ -45,7 +45,7 @@ jQuery(function ($) {
     //<------------------- BTN-click logic -----------------END----------------->
     // <------------------ Funnel Animation ---------------------------------->
     if (!isMobile.any()) {//disable for mobile version site
-    window.addEventListener('scroll', Animation_revers, false);    var FunenAnimReady;
+    window.addEventListener('scroll', Animation_revers, false);    var FunenAnimReady,reversProgres;
     var funAnim = setTimeout(function () {
         FunenAnimReady = true;
     }, 4820);
@@ -83,6 +83,7 @@ jQuery(function ($) {
                     $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,0px)');
                     $('#Stage_Icons_strips').css("left", '0');
                     FunenAnimReady = true;
+
                 },100);
             }, 1600)
         }
@@ -108,6 +109,7 @@ jQuery(function ($) {
         function WheelReversanim(e) {
             if (e.deltaY < 0) {
                 Animation_revers();
+                FunenAnimReady = false;
             }
         }
 
