@@ -122,17 +122,20 @@ jQuery(function ($) {
             //Animation
             if (FunenAnimReady && e.deltaY > 0) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
-            $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
-            var time1, time = setTimeout(function () {
-                $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
-                time1 = setTimeout(function () {
-                    $("#pseudoBody").css("display","block");
-                    DisableScroll(false);
-                    setTimeout(function () {
-                        $("#pseudoBody").css({ "transform": "scale(1)","opacity":"1" });
-                    }, 50)
-                }, 550);
-            }, 1100);
+                $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
+                var time1, time = setTimeout(function () {
+                    $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
+                    time1 = setTimeout(function () {
+                        $("#pseudoBody").css("display", "block");
+
+                        setTimeout(function () {
+                            $("#pseudoBody").css({ "transform": "scale(1)", "opacity": "1" });
+                            setTimeout(function () {
+                                DisableScroll(false);
+                            }, 1000)
+                        }, 50)
+                    }, 550);
+                }, 1100);
             }//Animation - end
         }
         function preventDefaultForScrollKeys(e) {
@@ -148,9 +151,12 @@ jQuery(function ($) {
                     $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
                     time1 = setTimeout(function () {
                         $("#pseudoBody").css("display", "block");
-                        DisableScroll(false);
+                        
                         setTimeout(function () {
                             $("#pseudoBody").css({ "transform": "scale(1)", "opacity": "1" });
+                            setTimeout(function () {
+                                DisableScroll(false);
+                            }, 1000)
                         }, 50)
                     }, 550);
                 }, 1100);
