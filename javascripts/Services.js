@@ -3,11 +3,6 @@
 
 jQuery(function ($) {
 
-    $(window).resize(function () {
-
-        location.reload();
-    });
-
     var isMobile = {
         Android: function () { return navigator.userAgent.match(/Android/i); },
         BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
@@ -16,6 +11,16 @@ jQuery(function ($) {
         Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
         any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
     };
+
+
+    if (!isMobile.any()) {
+   $(window).resize(function () {
+        location.reload();
+    });
+
+    }
+ 
+
 
     //<------------------- BTN-click logic ---------------------------------->
 
@@ -143,10 +148,9 @@ jQuery(function ($) {
         function preventDefaultForScrollKeys(e) {
             if (keys[e.keyCode]) {
                 preventDefault(e);
-                return false;
             }
             //Animation
-            if (FunenAnimReady && e.deltaY > 0) {
+            if (FunenAnimReady && e.keyCode == 40) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
                 $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
                 var time1, time = setTimeout(function () {
