@@ -11,10 +11,6 @@
     7.All styles for ContactForm and Footer located in Custom.css;
 */
 
-/*------------temp style--------------*/
-SVG-imitation{
-
-}
 /*-----------Global style--------*/
 h2{
     font-family: 'Droid Serif';
@@ -150,10 +146,10 @@ h2{
     transform-origin: top;
     z-index: 1;
     opacity: 0;
-    -moz-transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;
+    /*-moz-transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;
     -o-transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;
     -webkit-transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;
-    transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;
+    transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;*/
 }
 #pseudoBody {
     display: none;
@@ -248,10 +244,10 @@ h2{
     transition: clip ease-out 1s;
 }
 #Stage_Icons_strips {
-    -moz-transition: left ease-in-out 1s;
-    -o-transition: left ease-in-out 1s;
-    -webkit-transition: left ease-in-out 1s;
-    transition: left ease-in-out 1s;
+    /*-moz-transition: left ease-in 1s;
+    -o-transition: left ease-in 1s;
+    -webkit-transition: left ease-in 1s;
+    transition: left ease-in 1s;*/
 }
 
 .fadeout-anim {
@@ -384,8 +380,8 @@ h2{font-size:2.28em;}
 @media(min-width: 1170px){
     /*=-=-=-=-=-=-=-=- General 1170px*/
 h2{font-size:2.28em;}
-.mainimg{height:290px;}
-.bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 54px;}
+.mainimg{height:256px;}
+.bordered-btn{padding: 5px;font-size: 2.28em;margin: 24px 54px;}
 .title{margin:60px auto 35px;}
 
 #Stage {

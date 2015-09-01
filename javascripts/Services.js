@@ -14,9 +14,9 @@ jQuery(function ($) {
 
 
     if (!isMobile.any()) {
-   $(window).resize(function () {
-        location.reload();
-    });
+   //$(window).resize(function () {
+   //     location.reload();
+   // });
 
     }
  
@@ -50,7 +50,9 @@ jQuery(function ($) {
     //<------------------- BTN-click logic -----------------END----------------->
     // <------------------ Funnel Animation ---------------------------------->
     if (!isMobile.any()) {//disable for mobile version site
-    window.addEventListener('scroll', Animation_revers, false);    var FunenAnimReady,reversProgres;
+        window.addEventListener('scroll', Animation_revers, false);
+
+    var FunenAnimReady, reversProgres;
     var funAnim = setTimeout(function () {
         FunenAnimReady = true;
     }, 4820);
@@ -64,6 +66,14 @@ jQuery(function ($) {
         PseudoBody.style.transform = "scale(1)";
     }
 
+    function removeOldListeners(){
+        window.onwheel = null; // modern standard
+        window.onmousewheel = null;// older browsers, IE
+        document.onmousewheel = null// older browsers, IE
+        window.ontouchmove = null; // mobile
+        document.onkeydown = null;
+
+    }
 
     function Animation_revers() {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -95,42 +105,47 @@ jQuery(function ($) {
     }
     function DisableScroll(bool) {
         if (bool) {
+            removeOldListeners();
             if (window.addEventListener) // older FF
                 window.addEventListener('DOMMouseScroll', preventDefault, false);
             window.onwheel = preventDefault; // modern standard
-            window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+            window.onmousewheel = preventDefault;// older browsers, IE
+            document.onmousewheel = preventDefault// older browsers, IE
             window.ontouchmove  = preventDefault; // mobile
             document.onkeydown  = preventDefaultForScrollKeys;
         } else {
+            removeOldListeners();
             if (window.removeEventListener)
                 window.removeEventListener('DOMMouseScroll', preventDefault, false);
-            window.onmousewheel = document.onmousewheel = WheelReversanim;
+            window.onmousewheel = WheelReversanim;
+            document.onmousewheel = WheelReversanim;
             window.onwheel = WheelReversanim;
             window.ontouchmove = null;
             document.onkeydown = null;
         }
         var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
-        function WheelReversanim(e) {
-            if (e.deltaY < 0) {
+        function WheelReversanim(event) {//Case when after animation scroll top
+            if (event.deltaY < 0) {
                 Animation_revers();
                 FunenAnimReady = false;
             }
         }
 
-        function preventDefault(e) {
-            e = e || window.event;
-            if (e.preventDefault)
-                e.preventDefault();
-            e.returnValue = false;
-            //Case when after animation scroll top
+        function preventDefault(event) {
+            event = event || window.event;
+            if (event.preventDefault)
+                event.preventDefault();
+            event.returnValue = false;
+            var delta = event.deltaY || event.detail || (-event.wheelDelta);//cross-browser property delta
 
-
-            //Animation
-            if (FunenAnimReady && e.deltaY > 0) {
+            //Animation for wheel
+            if (FunenAnimReady && delta > 0) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
+                $('#Stage_Icons_strips').css({ "-moz-transition": 'left easy-in-out 1s', "-o-transition": 'left easy-in-out 1s', "-webkit-transition": 'left easy-in-out 1s', "transition": 'left easy-in-out 1s' });
                 $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
                 var time1, time = setTimeout(function () {
+                    $('#SVG-container').css({ "-moz-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-o-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-webkit-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s' });
                     $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
                     time1 = setTimeout(function () {
                         $("#pseudoBody").css("display", "block");
@@ -145,15 +160,17 @@ jQuery(function ($) {
                 }, 1100);
             }//Animation - end
         }
-        function preventDefaultForScrollKeys(e) {
-            if (keys[e.keyCode]) {
-                preventDefault(e);
+        function preventDefaultForScrollKeys(event) {
+            if (keys[event.keyCode]) {
+                preventDefault(event);
             }
-            //Animation
-            if (FunenAnimReady && e.keyCode == 40) {
+            //Animation for key
+            if (FunenAnimReady && event.keyCode == 40) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
+                $('#Stage_Icons_strips').css({ "-moz-transition": 'left easy-in-out 1s', "-o-transition": 'left easy-in-out 1s', "-webkit-transition": 'left easy-in-out 1s', "transition": 'left easy-in-out 1s' });
                 $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
                 var time1, time = setTimeout(function () {
+                    $('#SVG-container').css({ "-moz-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-o-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-webkit-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s' });
                     $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
                     time1 = setTimeout(function () {
                         $("#pseudoBody").css("display", "block");
