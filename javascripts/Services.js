@@ -49,7 +49,8 @@ jQuery(function ($) {
     }
     //<------------------- BTN-click logic -----------------END----------------->
     // <------------------ Funnel Animation ---------------------------------->
-    if (!isMobile.any()) {//disable for mobile version site
+    if (!isMobile.any())
+    {//disable for mobile version site
         window.addEventListener('scroll', Animation_revers, false);
 
     var FunenAnimReady, reversProgres;
@@ -58,7 +59,10 @@ jQuery(function ($) {
     }, 4820);
 
     DisableScroll(true);
-    } else {
+
+    }
+    else
+    {
         var PseudoBody = document.getElementById("pseudoBody")
         document.getElementById("mobileBody").appendChild(PseudoBody);
         PseudoBody.style.display = "block";
@@ -82,10 +86,19 @@ jQuery(function ($) {
             FunenAnimReady = false;
             DisableScroll(true);
             $("#pseudoBody").css({ "transform": "scale(0.7)", "opacity": "0" });
-            if($(window).width() < 1368){$('#SVG-container').css({ 'top': 'calc(50% - 138px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '67px' });
+
+            //if ($(window).width() < 1368) {
+            //    $('#SVG-container').css({ 'top': 'calc(50% - 138px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '67px' });
+            //} else {
+            //    $('#SVG-container').css({ 'top': 'calc(50% - 202px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '85px' });
+            //}
+
+            if ($(window).width() < 1368) {
+                $('#SVG-container').css({ 'top': '280px', 'left': '50%', 'width': '200px', 'height': '67px', 'margin': '0 0 0 -100px' });
             } else {
-                $('#SVG-container').css({ 'top': 'calc(50% - 202px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '85px' });
+                $('#SVG-container').css({ 'top': '280px', 'left': '50%', 'width': '200px', 'height': '85px', 'margin': '0 0 0 -100px' });
             }
+
 
             var reverstime, reverstime1, reverstime2;
             reverstime = setTimeout(function () {
@@ -106,17 +119,19 @@ jQuery(function ($) {
     function DisableScroll(bool) {
         if (bool) {
             removeOldListeners();
-            if (window.addEventListener) // older FF
-                window.addEventListener('DOMMouseScroll', preventDefault, false);
+            //if (window.addEventListener) // older FF
+                //window.addEventListener('DOMMouseScroll', preventDefault, false);
             window.onwheel = preventDefault; // modern standard
             window.onmousewheel = preventDefault;// older browsers, IE
             document.onmousewheel = preventDefault// older browsers, IE
             window.ontouchmove  = preventDefault; // mobile
             document.onkeydown  = preventDefaultForScrollKeys;
-        } else {
+        }
+        else
+        {
             removeOldListeners();
-            if (window.removeEventListener)
-                window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            //if (window.removeEventListener)
+                //window.removeEventListener('DOMMouseScroll', preventDefault, false);
             window.onmousewheel = WheelReversanim;
             document.onmousewheel = WheelReversanim;
             window.onwheel = WheelReversanim;
@@ -142,11 +157,14 @@ jQuery(function ($) {
             //Animation for wheel
             if (FunenAnimReady && delta > 0) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
-                $('#Stage_Icons_strips').css({ "-moz-transition": 'left easy-in-out 1s', "-o-transition": 'left easy-in-out 1s', "-webkit-transition": 'left easy-in-out 1s', "transition": 'left easy-in-out 1s' });
-                $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
+                //$('#Stage_Icons_strips').css({ "-moz-transition": 'left easy-in-out 1s', "-o-transition": 'left easy-in-out 1s', "-webkit-transition": 'left easy-in-out 1s', "transition": 'left easy-in-out 1s' });
+
+                document.getElementById("Stage_Icons_strips").style.left = 372 + "px";
+                //$('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
+
                 var time1, time = setTimeout(function () {
-                    $('#SVG-container').css({ "-moz-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-o-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-webkit-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s' });
-                    $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
+                    $('#SVG-container').css({ "-moz-transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s', "-o-transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s', "-webkit-transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s', "transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s' });
+                    $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1', 'margin': '90px 0 0 0' })
                     time1 = setTimeout(function () {
                         $("#pseudoBody").css("display", "block");
 
@@ -167,11 +185,15 @@ jQuery(function ($) {
             //Animation for key
             if (FunenAnimReady && event.keyCode == 40) {
                 $('#Stage_Text_strips').css("clip", 'rect(0px, 894px,468px,894px)');
-                $('#Stage_Icons_strips').css({ "-moz-transition": 'left easy-in-out 1s', "-o-transition": 'left easy-in-out 1s', "-webkit-transition": 'left easy-in-out 1s', "transition": 'left easy-in-out 1s' });
-                $('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
+                //$('#Stage_Icons_strips').css({ "-moz-transition": 'left easy-in-out 1s', "-o-transition": 'left easy-in-out 1s', "-webkit-transition": 'left easy-in-out 1s', "transition": 'left easy-in-out 1s' });
+
+                document.getElementById("Stage_Icons_strips").style.left = 372 + "px";
+
+                //$('#Stage_Icons_strips').css("left", 'calc(50% - 213px)');
+
                 var time1, time = setTimeout(function () {
-                    $('#SVG-container').css({ "-moz-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-o-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "-webkit-transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s', "transition": 'top 2s,left 2s,width 2s,height 2s,opacity .3s' });
-                    $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1' })
+                    $('#SVG-container').css({ "-moz-transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s', "-o-transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s', "-webkit-transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s', "transition": 'margin 2s, top 2s,left 2s,width 2s,height 2s,opacity .3s' });
+                    $('#SVG-container').css({ 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'opacity': '1', 'margin': '90px 0 0 0' })
                     time1 = setTimeout(function () {
                         $("#pseudoBody").css("display", "block");
                         

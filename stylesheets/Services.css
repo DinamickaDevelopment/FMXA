@@ -126,18 +126,25 @@ h2{
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-        background-size: contain;
+    background-size: contain;
 }
 /* styles for BtnClick logick - end*/
 /*Styles for 2-nd animation*/
-#SVG-container {
+#SVG-container 
+{
     position: absolute;
     width: 200px;
     background-color:#fafafa;
     height: 85px;
-    margin-top:90px;
-    top: calc(50% - 202px);
-    left: calc(50% - 100px);
+    margin: 0 0 0 -100px;
+    top:280px;
+    left:50%;
+
+    /*margin-top:90px;*/
+
+    /*top: calc(50% - 202px);
+    left: calc(50% - 100px);*/
+    
     background-image:url('../images/Icons1.svg');
     -moz-transform-origin: top;
     -ms-transform-origin: top;
@@ -152,6 +159,8 @@ h2{
     transition: top 2s,left 2s,width 2s,height 2s,opacity .3s;*/
 }
 #pseudoBody {
+
+
     display: none;
     opacity: 0;
     -moz-transform-origin: 50% 4.5%;
@@ -168,6 +177,8 @@ h2{
     -o-transition: transform 1s ease-in-out,opacity 1s;
     -webkit-transition: transform 1s ease-in-out,opacity 1s;
     transition: transform 1s ease-in-out,opacity 1s;
+
+    background-color:#fafafa;
 }
 
 /*Styles for 2-nd animation - end*/
@@ -244,10 +255,10 @@ h2{
     transition: clip ease-out 1s;
 }
 #Stage_Icons_strips {
-    /*-moz-transition: left ease-in 1s;
-    -o-transition: left ease-in 1s;
-    -webkit-transition: left ease-in 1s;
-    transition: left ease-in 1s;*/
+    -moz-transition: all ease-in 1s;
+    -o-transition: all ease-in 1s;
+    -webkit-transition: all ease-in 1s;
+    transition: all ease-in 1s;
 }
 
 .fadeout-anim {
@@ -399,7 +410,12 @@ h2{font-size:2.28em;}
 .videoItem{width: 77%;height: 130px;background-size: initial;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 1170px*/
-#SVG-container{height:67px;top:calc(50% - 138px)}
+#SVG-container
+{
+    height:67px;
+    top:280px;
+
+}
 #funnelH2 {margin: 5px 0 5px;}
 #funneltext{width:50%;font-size:1.15em;}
 }
@@ -433,7 +449,12 @@ h2{font-size:2.28em;}
 .caseItem,.docItem{width: 77%;height: 280px;background-size: initial;}
 .videoItem{width: 77%;height: 130px;background-size: initial;}
     #funnelH2 {    margin: 76px 0 32px;}
-    #SVG-container{height:85px;top:calc(50% - 202px)}
+    #SVG-container
+    {
+        height:85px;
+        top:280px
+
+    }
 
 }
 
