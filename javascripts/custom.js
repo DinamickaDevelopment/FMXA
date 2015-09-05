@@ -43,7 +43,7 @@ jQuery(function ($) {
 
     //======== 4.Very complicated onLoad Function =================================
 
-    $(document).ready(function () {
+    $(window).ready(function () {
         //Mobile Check
         var isMobile = {
             Android: function () { return navigator.userAgent.match(/Android/i); },
@@ -80,9 +80,7 @@ jQuery(function ($) {
                     node.parentNode.removeChild(node);
                 }
             }
-
             // Add picture for DISRUPTIVE block
-
             $("#Img_Disruptive").attr("data-src", "videos/slide5/DisruptiveMobile.jpg");
 
             sliderHeight = 670;
@@ -135,6 +133,7 @@ jQuery(function ($) {
                 height: sliderHeight
             });
 
+
             // Add click event for slider buttons in Descktop versions 
 
             all_Slider_Buttons.on('click', slideChangeClick);
@@ -155,7 +154,7 @@ jQuery(function ($) {
             document.getElementById("video1").addEventListener('ended', videoChange);
 
             var startTimeout = setTimeout(function () {//Asynchronous initialization
-
+                slider.api.pause();
                 slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
                     // Shortcut indikator logic
                     var number = slider.api.index();
