@@ -154,7 +154,6 @@ jQuery(function ($) {
             document.getElementById("video1").addEventListener('ended', videoChange);
 
             var startTimeout = setTimeout(function () {//Asynchronous initialization
-                slider.api.pause();
                 slider.api.addEventListener(MSSliderEvent.CHANGE_START, function () {
                     // Shortcut indikator logic
                     var number = slider.api.index();

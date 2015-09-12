@@ -1,2 +1,151 @@
-﻿body {
+﻿/*
+    DINAMICKA DEVELOPMENT
+    Documentation
+
+    1.tech_area
+    2.market_leaders
+    3.grovers
+    4.starups
+    5.All styles for Header, ContactForm and Footer located in Custom.css;
+*/
+
+
+/*for this need media querys
+
+ tech_areaH2    ->   funnelH2
+ tech_areatext  ->   funneltext
+*/
+
+
+
+
+
+
+/*-----------Global style--------*/
+h2,h3{
+    font-family: 'Droid Serif';
+    font-size: 2.28em;
+    letter-spacing: 0.1em;
+    color: #262626;
+    text-transform: uppercase;
+    line-height: 58px;
+    vertical-align: bottom;
+    display: inline-block;
+    margin: 76px 0 32px;
 }
+.maintext,p{
+    width:65%;
+    font-family:Roboto;
+    font-size: 16px;
+    letter-spacing:0.1em;
+    color:#262626;
+    text-align:left;
+}
+
+
+
+
+/*-----------Global style---end-----*/
+/*-----------tech_area--------*/
+#tech_area{
+    background-color:#262626;
+}
+#tech_areaH2{
+    color: #fafafa;
+    width: 100%;
+    text-align: center;
+    margin: 76px 0 32px;
+}
+#tech_areatext{
+    color: #fafafa;
+    text-align: center;
+    font-size: 16px;
+    width: 50%;
+    margin: 0 auto;
+}
+.filter-btn{
+    width:10%;
+    float:left;
+    margin:4% 1.2%;
+    cursor:pointer;
+}
+.filter-btn p{
+    font-family:Roboto;
+    font-size:14px;
+    color:#fafafa;
+    width:100%;
+    margin-bottom:0;
+    text-align:center;
+}
+.filter-sprite{
+    margin:auto;
+    width:108px;
+    height:126px;
+    background-image:url('../images/Blog_sprites.png');
+}
+.cybersecurity-sprt{background-position:10px 126px;}
+.iot-sprt {background-position:850px 126px;}
+.devops-sprt{background-position:720px 126px;}
+.bigdata-sprt{background-position:600px 126px;}
+.cloud-sprt{background-position:475px 126px;}
+.mobile-sprt{background-position:350px 126px;}
+.storage-sprt{background-position:225px 126px;}
+.enterprise-sprt{background-position:107px 126px;}
+
+.cybersecurity-sprt:hover,.cybersecurity-sprt-active{background-position:10px 0;background-color:#fafafa;}
+.iot-sprt:hover,.iot-sprt-active{background-position:850px 0;background-color:#fafafa;}
+.devops-sprt:hover,.devops-sprt-active{background-position:720px 0;background-color:#fafafa;}
+.bigdata-sprt:hover,.bigdata-sprt-active{background-position:600px 0;background-color:#fafafa;}
+.cloud-sprt:hover,.cloud-sprt-active{background-position:475px 0;background-color:#fafafa;}
+.mobile-sprt:hover,.mobile-sprt-active{background-position:350px 0;background-color:#fafafa;}
+.storage-sprt:hover,.storage-sprt-active{background-position:225px 0;background-color:#fafafa;}
+.enterprise-sprt:hover,.enterprise-sprt-active{background-position:107px 0;background-color:#fafafa;}
+/*-----------tech_area---end-----*/
+/*-----------market_leaders-----------*/
+.company{
+    margin:15px;
+    position:relative;
+    float:left;
+}
+.bookmarks{
+    width:100%;
+    position:absolute;
+   margin:auto;
+   text-align:center;
+/*text-align using for position marks blocks*/
+}
+.marks{
+    background-color:#fafafa;
+    width:40px;
+    height:40px;
+    display:inline-block;
+    margin:0 auto;
+    padding:4px;
+}
+.marks svg path,.marks svg rect{
+fill:#262626;
+}
+/*-----------market_leaders---end-----*/
+/*-----------grovers-----------*/
+
+
+/*-----------grovers---end-----*/
+/*-----------starups-----------*/
+
+
+/*-----------starups---end-----*/
+/*-----------precontact-----------*/
+#precontact{
+    background-color:#262626;
+    margin-top:32px;
+}
+#precontact p{
+    text-align:center!important;
+    color:#fafafa!important;
+    margin:10px auto;
+    font-size:20px;
+}
+#precontact div {
+    padding: 30px 0;
+}
+/*-----------precontact---end-----*/
