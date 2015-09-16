@@ -19,7 +19,6 @@ $(document).ready(function () {
 
     if (!isMobile.any()) {//mobile check
     //---------------Filter logick----------------
-    $('.filter-sprite').bind('click', filterLogick);
     var firstfilter = true;
     function filterLogick(e) {
         if (firstfilter) { AlldisplayNone(); }
@@ -45,6 +44,8 @@ $(document).ready(function () {
             }
         }
     }
+    $('.filter-sprite').bind('click', filterLogick);
+
     function AlldisplayNone() { $('.company').each(function (i) { this.style.display = "none"; }); firstfilter = false; }
     function filterCheck (e) {
         for (var i = 0; i < document.getElementsByClassName('filter-sprite').length; i++) {
