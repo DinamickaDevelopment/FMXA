@@ -1,6 +1,11 @@
 ﻿//  DINAMICKA DEVELOPMENT
 //  Documentation
 
+//1 BTN-click logic
+//2 Funnel Animation
+//3 Height Configuration
+
+
 jQuery(function ($) {
 
     var isMobile = {
@@ -24,29 +29,27 @@ jQuery(function ($) {
 
     //<------------------- BTN-click logic ---------------------------------->
 
-    for (var i = 0; i < document.getElementsByClassName("btn_container").length; i++) {
-        document.getElementsByClassName("btn_container")[i].addEventListener("click", ClickFunction, true);
-    }
+    //for (var i = 0; i < document.getElementsByClassName("btn_container").length; i++) {
+    //    document.getElementsByClassName("btn_container")[i].addEventListener("click", ClickFunction, true);
+    //}
 
-    function ClickFunction(e) {
-        if (e.target.className == "bordered-btn" || e.target.className == "bordered-btn active-btn") {
-            var id = "#" + e.target.dataset.idholder, section = "#" + e.target.dataset.section, selector;
-        selector = section + " " + id;
+    //function ClickFunction(e) {
+    //    if (e.target.className == "bordered-btn" || e.target.className == "bordered-btn active-btn") {
+    //        var id = "#" + e.target.dataset.idholder, section = "#" + e.target.dataset.section, selector;
+    //    selector = section + " " + id;
 
-        //Cleane all blocks from "active" style
+    //    //Cleane all blocks from "active" style
 
-        if ($(selector).hasClass("active")) {
-            $(selector).removeClass("active");
-            e.target.className = "bordered-btn";
-        } else {
-            $(selector).addClass("active");
-            e.target.className = "bordered-btn active-btn";
+    //    if ($(selector).hasClass("active")) {
+    //        $(selector).removeClass("active");
+    //        e.target.className = "bordered-btn";
+    //    } else {
+    //        $(selector).addClass("active");
+    //        e.target.className = "bordered-btn active-btn";
+    //    }
+    //    }
+    //}
 
-
-        }
-        }
-  
-    }
     //<------------------- BTN-click logic -----------------END----------------->
     // <------------------ Funnel Animation ---------------------------------->
     if (!isMobile.any())
@@ -94,9 +97,9 @@ jQuery(function ($) {
             //}
 
             if ($(window).width() < 1368) {
-                $('#SVG-container').css({ 'top': '280px', 'left': '50%', 'width': '200px', 'height': '67px', 'margin': '0 0 0 -100px' });
+                $('#SVG-container').css({ 'top': '255px', 'left': '50%', 'width': '200px', 'height': '67px', 'margin': '0 0 0 -100px' });
             } else {
-                $('#SVG-container').css({ 'top': '280px', 'left': '50%', 'width': '200px', 'height': '85px', 'margin': '0 0 0 -100px' });
+                $('#SVG-container').css({ 'top': '246px', 'left': '50%', 'width': '200px', 'height': '85px', 'margin': '0 0 0 -100px' });
             }
 
 
@@ -216,31 +219,34 @@ jQuery(function ($) {
     //Height Configuration
     if (!isMobile.any()) {
     var winHeight = $(window).height();
-    var SectionHeight = winHeight - 90, containerHeight = SectionHeight * 0.85, containerFluidheight = SectionHeight * 0.15;
+    var SectionHeight = winHeight - 99, containerHeight = SectionHeight * 0.85, containerFluidheight = SectionHeight * 0.17;
 
     //Funnel section
     $("#funnel").css("height", SectionHeight);
+//Temp function for block with video-case-doc
+    $(".container-fluid").css("height", containerFluidheight);
 
+        //When materials will add uncoment all (* .container-fluid .row:first-child) function and delet $(".container-fluid")
     //Go-To-Marketing section;
     $("#G2Market .container").css("height", containerHeight);
-    $("#G2Market .container-fluid .row:first-child").css("height", containerFluidheight);
-
+    //$("#G2Market .container-fluid .row:first-child").css("height", containerFluidheight);
+    //Sales section;
     $("#Sales .container").css("height", containerHeight);
-    $("#Sales .container-fluid .row:first-child").css("height", containerFluidheight);
-
+    //$("#Sales .container-fluid .row:first-child").css("height", containerFluidheight);
+    //Contact_info section;
     $("#Contact_info .container").css("height", containerHeight);
-    $("#Contact_info .container-fluid .row:first-child").css("height", containerFluidheight);
-
+    //$("#Contact_info .container-fluid .row:first-child").css("height", containerFluidheight);
+    //Awarness section;
     $("#Awarness .container").css("height", containerHeight);
-    $("#Awarness .container-fluid .row:first-child").css("height", containerFluidheight);
-
+    //$("#Awarness .container-fluid .row:first-child").css("height", containerFluidheight);
+    //Marketing section;
     $("#Marketing .container").css("height", containerHeight);
-    $("#Marketing .container-fluid .row:first-child").css("height", containerFluidheight);
+    //$("#Marketing .container-fluid .row:first-child").css("height", containerFluidheight);
     } else {
 
         $("#Stage").css('display', 'none');
         $("#funnel").css("height", 'auto');
         $('.forMobileBlock').css('display', 'block');
     }
-    // <------------------ mobile Check Function and Height Configuration --------END-------------------------->
+    // <------------------Height Configuration --------END-------------------------->
 });

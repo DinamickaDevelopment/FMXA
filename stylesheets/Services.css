@@ -396,7 +396,7 @@ h2{font-size:2.28em;}
 .title{margin:60px auto 35px;}
 
 #Stage {
-        margin:0 auto;
+        margin:-25px auto;
         -moz-transform: scale(.8);
         -ms-transform: scale(.8);
         -o-transform: scale(.8);
@@ -413,7 +413,7 @@ h2{font-size:2.28em;}
 #SVG-container
 {
     height:67px;
-    top:280px;
+    top:255px;
 
 }
 #funnelH2 {margin: 5px 0 5px;}
@@ -436,7 +436,7 @@ h2{font-size:2.28em;}
 .title{margin:60px auto 35px;}
 
 #Stage {
-        margin:35px auto 0;
+        margin:0 auto;
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
