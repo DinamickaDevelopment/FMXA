@@ -317,8 +317,54 @@ h2{
     background-image:url('../images/Assets/Rectangle 3 copy 4.png');
 }
 
-
-
+/*
+    <---------------- Mini Funnel ------------------->
+*/
+#mFunel-block {
+    position: fixed;
+    left: -95px;
+    top: 45%;
+    z-index: 2;
+    width: 95px;
+    height: 89px;
+    background-image: url('../images/minFun/Nav_funnel.png');
+    -moz-transition: left 0.8s ease-out;
+    -o-transition: left 0.8s ease-out;
+    -webkit-transition: left 0.8s ease-out;
+    transition: left 0.8s ease-out;
+}
+.mFunel {
+    height: 12px;
+    margin: 4px auto;
+}
+.funnel_1{
+    width:63px;
+    background-image:url('../images/minFun/Sprite1.png');
+    background-position:0 0;
+}
+.funnel_2{
+    width:54px;
+    background-image:url('../images/minFun/Sprite2.png');
+    background-position:0 0;
+}
+.funnel_3{
+    width:44px;
+    background-image:url('../images/minFun/Sprite3.png');
+    background-position:0 0;
+}
+.funnel_4{
+    width:34px;
+    background-image:url('../images/minFun/Sprite4.png');
+    background-position:0 0;
+}
+.funnel_5{
+    width:24px;
+    background-image:url('../images/minFun/Sprite5.png');
+    background-position:0 0;
+}
+/*
+    <---------------- Mini Funnel --------end-------->
+*/
 
 
 /*
@@ -436,7 +482,7 @@ h2{font-size:2.28em;}
 .title{margin:60px auto 35px;}
 
 #Stage {
-        margin:0 auto;
+        margin:10px auto 0;
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);

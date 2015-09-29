@@ -80,6 +80,44 @@ jQuery(function ($) {
         window.ontouchmove = null; // mobile
         document.onkeydown = null;
 
+    }    function resetMinfun() {
+        for (var i = 0; i < document.getElementsByClassName('mFunel').length; i++) {
+            document.getElementsByClassName('mFunel')[i].style.backgroundPosition = '0 0';
+        }
+    }
+    function trigMinFun(bool) {
+        if (bool) {
+            $('#mFunel-block').css('left', '0');
+            $('.funnel_1').css('background-position', '63px 0');
+        } else {
+            $('#mFunel-block').css('left', '-95px');
+            resetMinfun();
+        }
+    }
+
+    window.addEventListener('scroll', MinFunlogick, false);
+    function MinFunlogick() {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        resetMinfun();
+        if (scrolled >= 0 && scrolled < 456) {
+            $('.funnel_1').css('background-position', '63px 0');
+        } else {
+            if (scrolled > 457 && scrolled < 1010) {
+                $('.funnel_2').css('background-position', '54px 0');
+            } else {
+                if (scrolled > 1011 && scrolled < 1570) {
+                    $('.funnel_3').css('background-position', '44px 0');
+                } else {
+                    if (scrolled > 1571 && scrolled < 2120) {
+                        $('.funnel_4').css('background-position', '34px 0');
+                    } else {
+                        if (scrolled >2121) {
+                            $('.funnel_5').css('background-position', '24px 0');
+                        }
+                    }
+                }
+            }
+        }
     }
 
     function Animation_revers() {
@@ -87,6 +125,7 @@ jQuery(function ($) {
 
         if ($("#pseudoBody").css("display") == "block" && scrolled == 0) {
             FunenAnimReady = false;
+            trigMinFun(false);
             DisableScroll(true);
             $("#pseudoBody").css({ "transform": "scale(0.7)", "opacity": "0" });
 
@@ -174,6 +213,7 @@ jQuery(function ($) {
                         setTimeout(function () {
                             $("#pseudoBody").css({ "transform": "scale(1)", "opacity": "1" });
                             setTimeout(function () {
+                                trigMinFun(true);
                                 DisableScroll(false);
                             }, 1000)
                         }, 50)
@@ -203,6 +243,7 @@ jQuery(function ($) {
                         setTimeout(function () {
                             $("#pseudoBody").css({ "transform": "scale(1)", "opacity": "1" });
                             setTimeout(function () {
+                                trigMinFun(true);
                                 DisableScroll(false);
                             }, 1000)
                         }, 50)
