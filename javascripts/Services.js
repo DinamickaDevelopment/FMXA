@@ -102,16 +102,16 @@ jQuery(function ($) {
         if (scrolled >= 0 && scrolled < 456) {
             $('.funnel_1').css('background-position', '63px 0');
         } else {
-            if (scrolled > 457 && scrolled < 1010) {
+            if (scrolled >= 457 && scrolled < 1010) {
                 $('.funnel_2').css('background-position', '54px 0');
             } else {
-                if (scrolled > 1011 && scrolled < 1570) {
+                if (scrolled >= 1011 && scrolled < 1570) {
                     $('.funnel_3').css('background-position', '44px 0');
                 } else {
-                    if (scrolled > 1571 && scrolled < 2120) {
+                    if (scrolled >= 1571 && scrolled < 2120) {
                         $('.funnel_4').css('background-position', '34px 0');
                     } else {
-                        if (scrolled >2121) {
+                        if (scrolled >= 2121) {
                             $('.funnel_5').css('background-position', '24px 0');
                         }
                     }
