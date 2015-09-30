@@ -102,6 +102,8 @@ jQuery(function ($) {
             MarketingTop = $('#Marketing').offset().top - 150,
             scrolled = $(window).scrollTop();
 
+        if(MarketingTop<0){return};
+
         resetMinfun();
         if (scrolled > MarketingTop) {
             $('.funnel_5').css('background-position', '24px 0');
