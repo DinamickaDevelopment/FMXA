@@ -104,20 +104,25 @@ jQuery(function ($) {
 
         if(MarketingTop<0){return};
 
-        resetMinfun();
+        
         if (scrolled > MarketingTop) {
+            resetMinfun();
             $('.funnel_5').css('background-position', '24px 0');
         } else {
             if (scrolled > AwarnessTop) {
+                resetMinfun();
                 $('.funnel_4').css('background-position', '34px 0');
             } else {
                 if (scrolled > ContactInfoTop) {
+                    resetMinfun();
                     $('.funnel_3').css('background-position', '44px 0');
                 } else {
                     if (scrolled > SalesTop) {
+                        resetMinfun();
                         $('.funnel_2').css('background-position', '54px 0');
                     } else {
                         if (scrolled > G2MarketTop) {
+                            resetMinfun();
                             $('.funnel_1').css('background-position', '63px 0');
                         }
                     }
