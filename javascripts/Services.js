@@ -79,11 +79,10 @@ jQuery(function ($) {
         document.onmousewheel = null// older browsers, IE
         window.ontouchmove = null; // mobile
         document.onkeydown = null;
-
-    }    function resetMinfun() {
-        for (var i = 0; i < document.getElementsByClassName('mFunel').length; i++) {
-            document.getElementsByClassName('mFunel')[i].style.backgroundPosition = '0 0';
-        }
+    }
+    // <------------------ Navigation panel ---------------------------------->
+    function resetMinfun() {
+        $('.mFunel').css('background-position', '0 0');
     }
     function trigMinFun(bool) {
         if (bool) {
@@ -94,31 +93,39 @@ jQuery(function ($) {
             resetMinfun();
         }
     }
-
-    window.addEventListener('scroll', MinFunlogick, false);
+    
     function MinFunlogick() {
-        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var G2MarketTop = $('#G2Market').offset().top - 150,
+            SalesTop = $('#Sales').offset().top - 150,
+            ContactInfoTop = $('#Contact_info').offset().top - 150,
+            AwarnessTop = $('#Awarness').offset().top - 150,
+            MarketingTop = $('#Marketing').offset().top - 150,
+            scrolled = $(window).scrollTop();
+
         resetMinfun();
-        if (scrolled >= 0 && scrolled < 456) {
-            $('.funnel_1').css('background-position', '63px 0');
+        if (scrolled > MarketingTop) {
+            $('.funnel_5').css('background-position', '24px 0');
         } else {
-            if (scrolled >= 457 && scrolled < 1010) {
-                $('.funnel_2').css('background-position', '54px 0');
+            if (scrolled > AwarnessTop) {
+                $('.funnel_4').css('background-position', '34px 0');
             } else {
-                if (scrolled >= 1011 && scrolled < 1570) {
+                if (scrolled > ContactInfoTop) {
                     $('.funnel_3').css('background-position', '44px 0');
                 } else {
-                    if (scrolled >= 1571 && scrolled < 2120) {
-                        $('.funnel_4').css('background-position', '34px 0');
+                    if (scrolled > SalesTop) {
+                        $('.funnel_2').css('background-position', '54px 0');
                     } else {
-                        if (scrolled >= 2121) {
-                            $('.funnel_5').css('background-position', '24px 0');
+                        if (scrolled > G2MarketTop) {
+                            $('.funnel_1').css('background-position', '63px 0');
                         }
                     }
                 }
             }
         }
+
     }
+    $(window).scroll(MinFunlogick);
+    // <------------------ Navigation panel -------------end--------------------->
 
     function Animation_revers() {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
