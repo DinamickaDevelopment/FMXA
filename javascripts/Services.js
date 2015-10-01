@@ -89,7 +89,6 @@ jQuery(function ($) {
             $('#mFunel-block').css('left', '0');
         } else {
             $('#mFunel-block').css('left', '-95px');
-            resetMinfun();
         }
     }
     
