@@ -87,7 +87,6 @@ jQuery(function ($) {
     function trigMinFun(bool) {
         if (bool) {
             $('#mFunel-block').css('left', '0');
-            $('.funnel_1').css('background-position', '63px 0');
         } else {
             $('#mFunel-block').css('left', '-95px');
             resetMinfun();
