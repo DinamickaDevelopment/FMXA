@@ -147,10 +147,10 @@ jQuery(function ($) {
             //    $('#SVG-container').css({ 'top': 'calc(50% - 202px)', 'left': 'calc(50% - 100px)', 'width': '200px', 'height': '85px' });
             //}
 
-            if ($(window).width() < 1368) {
-                $('#SVG-container').css({ 'top': '255px', 'left': '50%', 'width': '200px', 'height': '67px', 'margin': '0 0 0 -100px' });
+            if ($(window).width() < 1405) {
+                $('#SVG-container').css({ 'top': '237px', 'left': '50%', 'width': '200px', 'height': '67px', 'margin': '0 0 0 -100px' });
             } else {
-                $('#SVG-container').css({ 'top': '246px', 'left': '50%', 'width': '200px', 'height': '85px', 'margin': '0 0 0 -100px' });
+                $('#SVG-container').css({ 'top': '369px', 'left': '50%', 'width': '200px', 'height': '85px', 'margin': '0 0 0 -100px' });
             }
 
 
