@@ -18,7 +18,7 @@ h2{
     letter-spacing: 0.1em;
     color: #262626;
     text-transform: uppercase;
-    line-height: 58px;
+    line-height: 45px;
     margin: 0;
     vertical-align: bottom;
     display: inline-block
@@ -442,7 +442,7 @@ h2{font-size:2.28em;}
 .title{margin:60px auto 35px;}
 
 #Stage {
-        margin:-25px auto;
+        margin:-30px auto;
         -moz-transform: scale(.8);
         -ms-transform: scale(.8);
         -o-transform: scale(.8);
@@ -457,50 +457,31 @@ h2{font-size:2.28em;}
 
 /* =-=-=-=-=-=-=-=-=- funnel 1170px*/
 #SVG-container
-{
-    height:67px;
-    top:255px;
-
-}
+{height:67px;top:255px;}
 #funnelH2 {margin: 5px 0 5px;}
 #funneltext{width:50%;font-size:1.15em;}
 }
 
 
-@media(min-width:1368px){
-
+@media(min-width:1405px){
 .mainimg{height:520px;}
-
 #funnel .maintext{font-size:1.15em;}
-
 h2{font-size:2.28em;}
-
 .maintext{font-size:1.8em;}
-
 .bordered-btn{padding: 5px;font-size: 2.28em;margin: 35px 54px;}
-
 .title{margin:60px auto 35px;}
-
-#Stage {
-        margin:15px auto 0;
+#Stage {margin:30px auto 0;
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
         -webkit-transform: scale(1);
-        transform: scale(1);
-}
-
+        transform: scale(1);}
 .unvisible{width:67%;}
 .active{height:380px;}
 .caseItem,.docItem{width: 77%;height: 280px;background-size: initial;}
 .videoItem{width: 77%;height: 130px;background-size: initial;}
-    #funnelH2 {    margin: 15px 0 5px;}
-    #SVG-container
-    {
-        height:85px;
-        top:280px
-
-    }
+#funnelH2 {margin: 100px 0 16px;}
+#SVG-container{height:85px;top:369px}
 
 }
 
